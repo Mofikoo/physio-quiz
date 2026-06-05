@@ -9,10 +9,10 @@ const QUESTIONS = [
     category: "Introduction",
     question: "What is the literal definition of physiology?",
     answers: [
-      { text: "The study of chemical composition and molecular structure of living organisms", correct: false },
+      { text: "The study of chemical composition and molecular structure of living organisms and their metabolic reactions", correct: false },
       { text: "The study of how the human body functions, from molecular mechanisms to whole-organism tasks", correct: true },
-      { text: "The study of the anatomical structure of organs, tissues, and body systems", correct: false },
-      { text: "The study of diseases, their causes, and the mechanisms of tissue damage", correct: false },
+      { text: "The study of the anatomical structure and spatial organization of organs, tissues, and body systems", correct: false },
+      { text: "The study of diseases, their causes, and the underlying mechanisms of tissue injury and organ failure", correct: false },
     ],
     explanation: "Physiology (from Greek: Physis = Nature, Logos = Knowledge) is the study of biological FUNCTION — how the body works, from molecular mechanisms within cells to the actions of tissues, organs, and systems. Anatomy studies structure; pathology studies disease; biochemistry studies chemical composition."
   },
@@ -74,10 +74,10 @@ const QUESTIONS = [
     category: "Introduction",
     question: "In a negative feedback loop, the response:",
     answers: [
-      { text: "Enhances and amplifies the original stimulus, pushing the variable further from the set point", correct: false },
+      { text: "Enhances and amplifies the original stimulus", correct: false },
       { text: "Reverses and opposes the original stimulus to restore balance", correct: true },
-      { text: "Has no direct effect on the original stimulus — it only prevents future deviations from occurring", correct: false },
-      { text: "Triggers a cascade of changes in the same direction, which is why it is the most common feedback type in the body", correct: false },
+      { text: "Has no effect at all on the original stimulus", correct: false },
+      { text: "Triggers more change in the same direction as the original stimulus", correct: false },
     ],
     explanation: "In NEGATIVE feedback, the response opposes (reverses) the original stimulus. It is the most common type: regulation of blood glucose, arterial pressure, blood gas concentrations, and endocrine regulation all use negative feedback. This is what keeps the internal environment stable."
   },
@@ -100,10 +100,10 @@ const QUESTIONS = [
     category: "Introduction",
     question: "Which of the following is an example of POSITIVE feedback?",
     answers: [
-      { text: "Regulation of blood glucose by insulin — the more glucose, the more insulin, creating a reinforcing loop", correct: false },
-      { text: "Regulation of body temperature at 37°C — sweating and shivering are amplified until core temperature is restored", correct: false },
+      { text: "Blood glucose regulated by insulin and glucagon", correct: false },
+      { text: "Body temperature kept constant at 37°C via sweating", correct: false },
       { text: "Oxytocin-driven uterine contractions during labor", correct: true },
-      { text: "Regulation of arterial blood pressure — baroreceptors amplify pressure changes until equilibrium is re-established", correct: false },
+      { text: "Arterial blood pressure regulated by baroreceptors", correct: false },
     ],
     explanation: "Labor induction is a classic example of positive feedback: pressure on the cervix triggers oxytocin release → uterine contractions → more pressure → more oxytocin release, until delivery. Blood glucose regulation (insulin), temperature control (37°C), and arterial pressure are all examples of NEGATIVE feedback — they oppose the stimulus."
   },
@@ -113,10 +113,10 @@ const QUESTIONS = [
     category: "Introduction",
     question: "Alteration of homeostasis leads to:",
     answers: [
-      { text: "Adaptation", correct: false },
       { text: "Disease", correct: true },
-      { text: "Habituation", correct: false },
-      { text: "Allostasis", correct: false },
+      { text: "Stress", correct: false },
+      { text: "Fatigue", correct: false },
+      { text: "Atrophy", correct: false },
     ],
     explanation: "According to the course, alteration of homeostasis = DISEASE. Various situations can cause an imbalance: external factors (heat, cold, mechanical trauma, lack of oxygen, virus, bacteria), internal factors (exercise, high blood pressure, pain, tumors, anxiety), or extreme situations (bleeding, intoxication, severe infection, surgery)."
   },
@@ -269,10 +269,10 @@ const QUESTIONS = [
     category: "Cell Physiology",
     question: "Facilitated diffusion differs from simple diffusion in that it:",
     answers: [
-      { text: "It requires ATP hydrolysis and moves molecules against their concentration gradient", correct: false },
+      { text: "It requires ATP hydrolysis and moves molecules against their concentration gradient uphill", correct: false },
       { text: "It uses a carrier protein (carrier-mediated transport) showing specificity, competition, and saturation", correct: true },
       { text: "It applies only to the movement of water molecules via aquaporin channel proteins", correct: false },
-      { text: "It does not depend on concentration gradients — it is purely driven by electrical charge", correct: false },
+      { text: "It does not depend on concentration gradients — driven purely by membrane electrical potential", correct: false },
     ],
     explanation: "Facilitated diffusion is PASSIVE (no energy, moves down gradient) but CARRIER-MEDIATED — the substance binds to a carrier protein, causing a conformational change that transports it across. Key properties: SPECIFICITY (each carrier is specific to a substrate), COMPETITION (similar molecules compete for the same carrier), and SATURATION (maximum transport rate when all carriers are occupied). Examples: glucose (GLUT transporters), amino acids."
   },
@@ -295,10 +295,10 @@ const QUESTIONS = [
     category: "Cell Physiology",
     question: "Which of the following solutions is ISOTONIC to blood cells?",
     answers: [
-      { text: "Pure water (0 osmotic pressure)", correct: false },
-      { text: "A 10% NaCl solution", correct: false },
       { text: "NaCl 0.9% or Glucose 5%", correct: true },
-      { text: "Any solution that contains solutes", correct: false },
+      { text: "Pure water (0 mOsm/L)", correct: false },
+      { text: "NaCl 10% saline solution", correct: false },
+      { text: "Any solution with solutes", correct: false },
     ],
     explanation: "ISOTONIC solutions have equivalent solute concentration to the inside of the cell — no net water movement occurs. NaCl 0.9% (normal saline) and Glucose 5% are the classic isotonic solutions used clinically. HYPERTONIC solutions have MORE solutes than the cell (water exits → cell shrinks). HYPOTONIC solutions have LESS solutes (water enters → cell swells → may lyse)."
   },
@@ -386,10 +386,10 @@ const QUESTIONS = [
     category: "Cell Physiology",
     question: "What is the difference between symport (cotransport) and antiport (countertransport)?",
     answers: [
-      { text: "Symport uses ATP directly; antiport relies on the Na⁺ electrochemical gradient only", correct: false },
+      { text: "Symport uses ATP; antiport relies exclusively on the established Na⁺ electrochemical gradient", correct: false },
       { text: "In symport, both molecules move in the SAME direction; in antiport, they move in OPPOSITE directions", correct: true },
-      { text: "Symport transports ions only; antiport is reserved exclusively for large molecules", correct: false },
-      { text: "Symport occurs only in intestinal cells; antiport occurs only in neuronal membranes", correct: false },
+      { text: "Symport is reserved exclusively for small ions; antiport handles only large polar organic molecules", correct: false },
+      { text: "Symport operates only in intestinal epithelial cells; antiport occurs only in neuronal plasma membranes", correct: false },
     ],
     explanation: "Both are types of secondary active transport, but differ in direction: SYMPORT/COTRANSPORT: both molecules move in the SAME direction (e.g., Na⁺-Glucose cotransport in the small intestine and kidney — both move inward). ANTIPORT/COUNTERTRANSPORT: molecules move in OPPOSITE directions (e.g., Na⁺-Ca²⁺ exchanger — Na⁺ enters while Ca²⁺ exits)."
   },
@@ -477,10 +477,10 @@ const QUESTIONS = [
     category: "Cell Physiology",
     question: "Why is the inside of the cell negatively charged relative to the outside?",
     answers: [
-      { text: "Because Na⁺ is pumped into the cell in large quantities, creating a positive interior", correct: false },
+      { text: "Because Na⁺ is pumped into the cell in large quantities, generating a strongly positive interior", correct: false },
       { text: "Because of fixed intracellular anions, selective K⁺ permeability, and net outward Na⁺/K⁺ pump activity", correct: true },
-      { text: "Because Cl⁻ accumulates inside the cell and exceeds intracellular cation concentrations", correct: false },
-      { text: "Because the cell wall acts as a negatively charged barrier excluding all cations", correct: false },
+      { text: "Because Cl⁻ accumulates inside the cell, exceeding intracellular cation concentrations at rest", correct: false },
+      { text: "Because the cell wall acts as a negatively charged barrier excluding all positively charged cations", correct: false },
     ],
     explanation: "Three factors create the negative intracellular charge (membrane potential): (1) FIXED ANIONS — proteins, phosphate groups of ATP, and other organic molecules are negatively charged and cannot leave the cell; (2) SELECTIVE PERMEABILITY — the membrane is more permeable to K⁺ than other cations, causing K⁺ to accumulate intracellularly attracted by fixed anions; (3) Na⁺/K⁺ PUMP — pumps 3 Na⁺ out for 2 K⁺ in → net export of positive charge."
   },
@@ -542,10 +542,10 @@ const QUESTIONS = [
     category: "Cell Physiology",
     question: "The membrane potential is described as making each cell 'act like a tiny battery'. What is the significance of this?",
     answers: [
-      { text: "It allows certain cells to convert light energy into electrical signals for metabolism", correct: false },
+      { text: "It allows certain cells to convert light energy into electrical signals for photosynthesis", correct: false },
       { text: "It provides electrochemical energy for muscle contraction, heartbeat regulation, and nerve impulse generation", correct: true },
-      { text: "It allows mitochondria to generate ATP via reverse electron transport through the membrane", correct: false },
-      { text: "It serves only as a structural feature with no direct role in cell signaling or function", correct: false },
+      { text: "It allows mitochondria to generate ATP via reverse electron transport through the plasma membrane", correct: false },
+      { text: "It serves only as a structural feature with no direct role in cell signaling or excitability", correct: false },
     ],
     explanation: "The unequal distribution of charges (+ outside, − inside) creates a potential difference (measured in volts) that is physiologically critical for: MUSCLE CONTRACTION, REGULATION OF HEARTBEAT, and GENERATION OF NERVE IMPULSES. Changes in membrane permeability (opening of ion channels) cause changes in this potential difference, generating the electrical signals that drive neuromuscular function."
   },
@@ -555,10 +555,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "According to anatomy, how is the nervous system divided?",
     answers: [
-      { text: "Somatic NS (controls skeletal muscle) and Autonomic NS (controls viscera) — a functional classification", correct: false },
+      { text: "Somatic NS and Autonomic NS", correct: false },
       { text: "CNS (brain + spinal cord) and PNS (nerves)", correct: true },
-      { text: "Afferent NS (sensory, carrying signals inward) and Efferent NS (motor, carrying signals outward) — a directional classification", correct: false },
-      { text: "Sympathetic NS (stress and fight-or-flight responses) and Parasympathetic NS (rest and digest functions)", correct: false },
+      { text: "Afferent NS (sensory) and Efferent NS (motor)", correct: false },
+      { text: "Sympathetic NS and Parasympathetic NS", correct: false },
     ],
     explanation: "Anatomically, the NS divides into: CNS (Central Nervous System) = brain + spinal cord; and PNS (Peripheral Nervous System) = nerves, which include 31 pairs of spinal nerves (from the spinal cord) and 12 pairs of cranial nerves (from the base of the brain). The somatic/autonomic and afferent/efferent classifications are FUNCTIONAL divisions, not anatomical ones."
   },
@@ -581,10 +581,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Which neurons exclusively belong to the CNS?",
     answers: [
-      { text: "Afferent neurons", correct: false },
-      { text: "Efferent neurons", correct: false },
       { text: "Interneurons", correct: true },
-      { text: "Sensory neurons", correct: false },
+      { text: "Motoneurons", correct: false },
+      { text: "Proprioceptors", correct: false },
+      { text: "Efferent neurons", correct: false },
     ],
     explanation: "INTERNEURONS (association neurons) join afferent (sensory) neurons to motor (efferent) neurons and belong EXCLUSIVELY to the CNS (brain and spinal cord). Sensory neurons have their cell body in PNS ganglia. Motor neurons have their cell body in the CNS but send axons into the PNS. Only interneurons are entirely confined within the CNS."
   },
@@ -594,10 +594,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "In the CNS, what is the difference between grey matter and white matter?",
     answers: [
-      { text: "Grey matter = myelinated axons; white matter = cell bodies", correct: false },
+      { text: "Grey matter = myelinated axons only; white matter = cell bodies and unmyelinated axons", correct: false },
       { text: "Grey matter = cell bodies + neuroglia + unmyelinated axons; white matter = myelinated axons", correct: true },
-      { text: "Grey matter is only found in the spinal cord; white matter only in the brain", correct: false },
-      { text: "Grey matter and white matter have the same composition, just different locations", correct: false },
+      { text: "Grey matter is found only in the spinal cord; white matter only in the cerebral cortex", correct: false },
+      { text: "Grey matter and white matter are identical in composition; they differ only in anatomical location", correct: false },
     ],
     explanation: "GREY MATTER contains: neuron cell bodies, neuroglia, and unmyelinated axons. WHITE MATTER contains myelinated axons (the myelin sheath gives the white colour). In the brain, grey matter forms the outer cortex; white matter is deeper. In the spinal cord, the arrangement is reversed: grey matter is the internal 'butterfly' shape, white matter surrounds it. In the PNS: cell bodies → ganglia; axons → nerves."
   },
@@ -659,10 +659,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "What is the key functional advantage of saltatory conduction in myelinated axons?",
     answers: [
-      { text: "It enables action potentials to travel in both directions along the axon simultaneously", correct: false },
-      { text: "It produces less signal loss and higher conduction speed — action potentials 'leap' between Nodes of Ranvier", correct: true },
-      { text: "It lowers the threshold stimulus required to trigger an action potential in the axon", correct: false },
-      { text: "It allows unmyelinated axon segments to conduct signals faster than myelinated segments", correct: false },
+      { text: "It enables action potentials to travel in both directions along myelinated axons simultaneously", correct: false },
+      { text: "It produces less signal loss and higher conduction speed — action potentials leap between Nodes of Ranvier", correct: true },
+      { text: "It lowers the threshold stimulus required to trigger an action potential in the myelinated axon", correct: false },
+      { text: "It allows unmyelinated segments to conduct impulses faster than the myelinated segments between nodes", correct: false },
     ],
     explanation: "In myelinated axons, myelin INSULATES the axon and prevents ion movement through the membrane except at the NODES OF RANVIER (gaps between Schwann cells/oligodendrocytes). Action potentials 'leap' from node to node — SALTATORY CONDUCTION. Advantages: (1) LESS signal loss; (2) HIGHER speed than unmyelinated axons. Myelinated axons in CNS have no neurilemma; in PNS they have the sheath of Schwann (neurilemma) external to the myelin."
   },
@@ -724,10 +724,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Local anesthetics like lidocaine work by:",
     answers: [
-      { text: "They block K⁺ channels in the axon, permanently preventing the repolarization phase", correct: false },
-      { text: "They reversibly bind voltage-gated Na⁺ channels, preventing opening and blocking action potential generation", correct: true },
+      { text: "They block K⁺ channels in the axon, permanently preventing repolarization after an action potential", correct: false },
+      { text: "They reversibly bind voltage-gated Na⁺ channels, preventing their opening and blocking action potentials", correct: true },
       { text: "They inhibit the Na⁺/K⁺ ATPase pump, progressively depleting electrochemical ion gradients", correct: false },
-      { text: "They block presynaptic Ca²⁺ channels, preventing neurotransmitter release at the terminal", correct: false },
+      { text: "They block presynaptic Ca²⁺ channels, preventing neurotransmitter release at the axon terminal", correct: false },
     ],
     explanation: "Local anesthetics (lidocaine, procaine) reversibly BIND TO VOLTAGE-GATED Na⁺ CHANNELS in the axon membrane, preventing them from opening. Without Na⁺ influx, depolarization cannot occur → no action potential → sensory axons cannot transmit pain signals. The effect is REVERSIBLE (the drug dissociates over time). This is purely a Na⁺ channel effect, not K⁺ or Ca²⁺."
   },
@@ -751,9 +751,9 @@ const QUESTIONS = [
     question: "In a chemical synapse, what is the role of Ca²⁺ in neurotransmitter release?",
     answers: [
       { text: "Ca²⁺ directly opens postsynaptic ligand-gated ion channels causing immediate depolarization", correct: false },
-      { text: "The AP activates presynaptic voltage-gated Ca²⁺ channels; Ca²⁺ influx triggers vesicle fusion and exocytosis of NT", correct: true },
-      { text: "Ca²⁺ is released from the postsynaptic cell to signal the presynaptic terminal to release NT", correct: false },
-      { text: "Ca²⁺ blocks presynaptic Na⁺ channels to terminate the action potential before NT release", correct: false },
+      { text: "AP activates presynaptic voltage-gated Ca²⁺ channels; Ca²⁺ influx triggers vesicle fusion and NT exocytosis", correct: true },
+      { text: "Ca²⁺ is released by the postsynaptic cell to signal the presynaptic terminal to release NT", correct: false },
+      { text: "Ca²⁺ blocks presynaptic Na⁺ channels to terminate the action potential before NT release occurs", correct: false },
     ],
     explanation: "Sequence in a chemical synapse: (1) Action potential arrives at presynaptic terminal → activates VOLTAGE-GATED Ca²⁺ CHANNELS; (2) Ca²⁺ enters the presynaptic cytoplasm; (3) rise in cytosolic Ca²⁺ causes pre-existing NT vesicles to FUSE with the plasma membrane; (4) NT is released into the synaptic cleft by EXOCYTOSIS; (5) NT diffuses across the cleft (20-40 nm wide) to bind postsynaptic receptors. There is a synaptic delay of ~0.5 ms."
   },
@@ -789,10 +789,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "What are the TWO main categories of postsynaptic receptors?",
     answers: [
-      { text: "Nicotinic and muscarinic receptors — both are subtypes of the same receptor family", correct: false },
-      { text: "Ligand-gated ion channels (ionotropic receptors) and G-protein-coupled receptors (metabotropic receptors)", correct: true },
+      { text: "Nicotinic and muscarinic receptors — both are subtypes of the cholinergic receptor superfamily", correct: false },
+      { text: "Ligand-gated ion channels (ionotropic) and G-protein-coupled receptors (metabotropic)", correct: true },
       { text: "Adrenergic receptors and cholinergic receptors — classified by the NT they respond to", correct: false },
-      { text: "Alpha (α) receptors and beta (β) receptors — classified by their affinity for catecholamines", correct: false },
+      { text: "Alpha and beta receptors — classified by their affinity for catecholamines", correct: false },
     ],
     explanation: "The two main receptor categories are: (1) IONOTROPIC (ligand-gated ion channels): NT binding directly opens an ion channel → FAST response (milliseconds). Examples: nicotinic ACh receptors (open Na⁺/K⁺ channels), GABA-A receptors (open Cl⁻ channels). (2) METABOTROPIC (G-protein-coupled receptors): NT binding activates a G-protein → activates enzymes or ion channels via second messengers → SLOWER but longer-lasting response. Examples: muscarinic ACh receptors, adrenergic receptors."
   },
@@ -804,7 +804,7 @@ const QUESTIONS = [
     answers: [
       { text: "Nicotinic = smooth muscle and glands (G-protein); Muscarinic = skeletal muscle and ganglia (ionotropic)", correct: false },
       { text: "Nicotinic (ionotropic, Na⁺/K⁺) = brain, ganglia, skeletal muscle; Muscarinic (G-protein) = smooth/cardiac muscle, glands", correct: true },
-      { text: "Both receptor subtypes are found exclusively in the central nervous system and not in the PNS", correct: false },
+      { text: "Both receptor subtypes are found exclusively within the central nervous system and nowhere in the PNS", correct: false },
       { text: "Nicotinic = metabotropic (G-protein coupled); Muscarinic = ionotropic (ligand-gated ion channel)", correct: false },
     ],
     explanation: "NICOTINIC receptors (named because nicotine activates them): IONOTROPIC (form Na⁺/K⁺ channels), found in brain, autonomic ganglia, and skeletal muscle (neuromuscular junction). Antagonist: curare. MUSCARINIC receptors (activated by muscarine from mushrooms): METABOTROPIC (G-protein coupled, M1-M5 subtypes), found in smooth muscle, cardiac muscle, glands, and brain. Antagonist: atropine (from belladonna). Remember: nicotinic = fast; muscarinic = slow."
@@ -815,10 +815,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "GABA is described as the most prevalent NT in the brain. What is its effect?",
     answers: [
-      { text: "GABA is excitatory and opens Na⁺ channels", correct: false },
       { text: "GABA is inhibitory: opens Cl⁻ channels → hyperpolarization → IPSP", correct: true },
-      { text: "GABA is the main excitatory NT of the spinal cord", correct: false },
-      { text: "GABA binds nicotinic receptors and causes muscle contraction", correct: false },
+      { text: "GABA is excitatory and opens Na⁺ channels, generating EPSPs throughout the brain", correct: false },
+      { text: "GABA is the main excitatory NT of the spinal cord and peripheral NS", correct: false },
+      { text: "GABA binds nicotinic receptors and produces muscle contraction at the NMJ", correct: false },
     ],
     explanation: "GABA (γ-aminobutyric acid, derived from glutamic acid) is the primary INHIBITORY neurotransmitter of the CNS — the most prevalent NT in the brain. GABA receptors are ligand-gated Cl⁻ channels: GABA binding → Cl⁻ enters → hyperpolarization → IPSP. Clinically important: BENZODIAZEPINES (e.g., Valium/diazepam) bind to GABA receptors, enhancing their effect → reducing anxiety, promoting sleep, treating muscle spasms. Contrast with GLUTAMATE, the main EXCITATORY NT."
   },
@@ -841,10 +841,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Serotonin (5-HT) is primarily involved in which functions?",
     answers: [
-      { text: "Movement control and Parkinson's disease", correct: false },
+      { text: "Movement control and the pathophysiology of Parkinson's disease", correct: false },
       { text: "Mood and behavior regulation, appetite, and cerebral circulation", correct: true },
-      { text: "CNS inhibition — it is the most prevalent inhibitory NT in the brain", correct: false },
-      { text: "Pain analgesia — it mimics the effects of opioids", correct: false },
+      { text: "CNS inhibition — the most prevalent inhibitory neurotransmitter in the brain", correct: false },
+      { text: "Pain analgesia — it mimics the effects of endogenous opioid peptides", correct: false },
     ],
     explanation: "SEROTONIN (5-hydroxytryptamine, 5-HT) is released by neurons in the brain stem. Functions: regulation of MOOD and BEHAVIOUR, APPETITE, and CEREBRAL CIRCULATION. LSD is a structural analog of serotonin (explains hallucinogenic effects). ANTIDEPRESSANTS like fluoxetine (Prozac®) work by inhibiting serotonin reuptake (SSRIs = Selective Serotonin Reuptake Inhibitors), increasing synaptic serotonin levels. Movement/Parkinson's = dopamine. Inhibition/anxiety = GABA. Analgesia = endogenous opioids."
   },
@@ -854,9 +854,9 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Endocannabinoids are unique neurotransmitters because:",
     answers: [
-      { text: "They are peptides stored in vesicles and released from the presynaptic axon terminal", correct: false },
+      { text: "They are peptides stored in presynaptic vesicles and released from axon terminals like classical NTs", correct: false },
       { text: "They are lipids produced from the postsynaptic membrane, released retrograde to inhibit presynaptic NT release", correct: true },
-      { text: "They are peptides manufactured and released by astrocytes rather than by neurons directly", correct: false },
+      { text: "They are peptides manufactured and released exclusively by astrocytes rather than by neurons", correct: false },
       { text: "They are gases like nitric oxide that diffuse nonspecifically in all directions from axon terminals", correct: false },
     ],
     explanation: "Endocannabinoids are unique in several ways: (1) They are LIPIDS (the only fatty NTs) — not stored in vesicles but produced FROM THE PLASMA MEMBRANE on demand; (2) They are released from the POSTSYNAPTIC neuron (dendrites/cell body); (3) They act RETROGRADE: diffuse BACKWARD to the presynaptic axon; (4) There they bind presynaptic receptors and INHIBIT NT release (GABA or glutamate). THC from marijuana acts on the same receptors. They may strengthen synaptic transmission during learning."
@@ -894,9 +894,9 @@ const QUESTIONS = [
     question: "What is the correct hierarchical structure of the brain?",
     answers: [
       { text: "Brain = Cerebrum + Brainstem + Cerebellum; Cerebrum = Telencephalon + Diencephalon; Brainstem = Midbrain + Pons + Medulla", correct: true },
-      { text: "Brain = Telencephalon + Brainstem only; Brainstem includes both the Cerebellum and Medulla oblongata", correct: false },
-      { text: "Brain = Cerebrum + Cerebellum only; the Cerebrum is subdivided into Diencephalon and Brainstem", correct: false },
-      { text: "Brain = CNS + PNS + Cerebellum — the CNS contains both brain and spinal cord structures", correct: false },
+      { text: "Brain = Brainstem + Telencephalon + Cerebellum; Brainstem = Midbrain + Diencephalon + Medulla oblongata", correct: false },
+      { text: "Brain = Cerebrum + Cerebellum + Pons; Cerebrum = Diencephalon only; Brainstem = Telencephalon + Medulla", correct: false },
+      { text: "Brain = Telencephalon + Diencephalon + Cerebellum; Brainstem = Cerebrum + Pons + Medulla oblongata", correct: false },
     ],
     explanation: "Complete brain hierarchy: CNS = Brain + Spinal cord. Brain = CEREBRUM (forebrain) + BRAINSTEM + CEREBELLUM. Cerebrum = TELENCEPHALON (cerebral cortex, limbic system) + DIENCEPHALON (thalamus, hypothalamus, pineal gland). Brainstem = MIDBRAIN + PONS + MEDULLA OBLONGATA (contains cardiorespiratory centers). This hierarchy is important for understanding clinical syndromes — brainstem lesions affect vital functions; cortical lesions affect higher functions."
   },
@@ -932,10 +932,10 @@ const QUESTIONS = [
     category: "CNS",
     question: "What is the role of the pineal gland and melatonin?",
     answers: [
-      { text: "The pineal gland produces cortisol in response to stress via the HPA axis pathway", correct: false },
-      { text: "The pineal gland modifies melatonin secretion based on light levels, regulating circadian rhythms and sleep timing", correct: true },
-      { text: "The pineal gland produces ADH (vasopressin) to control renal water reabsorption and plasma osmolarity", correct: false },
-      { text: "The pineal gland produces insulin-like peptides to regulate blood glucose in the brain", correct: false },
+      { text: "The pineal gland modifies melatonin secretion based on light levels, regulating circadian rhythms and sleep", correct: true },
+      { text: "The pineal gland produces cortisol in response to stress signals from the HPA axis system", correct: false },
+      { text: "The pineal gland produces ADH (vasopressin) to control renal water reabsorption and osmolarity", correct: false },
+      { text: "The pineal gland produces insulin-like growth factors to help regulate blood glucose in the brain", correct: false },
     ],
     explanation: "The PINEAL GLAND (part of the diencephalon) is the body's biological clock mechanism. It secretes MELATONIN: HIGH light levels → LOW melatonin; LOW light levels → HIGH melatonin. High melatonin signals to the body that it is bedtime. CSF serves as a pathway for pineal secretions to reach the pituitary gland. This circadian rhythm regulation is important in sleep disorders, jet lag, and seasonal affective disorder (SAD)."
   },
@@ -945,10 +945,10 @@ const QUESTIONS = [
     category: "CNS",
     question: "Broca's area and Wernicke's area: what do they each do?",
     answers: [
-      { text: "Broca's area = comprehension of spoken language; Wernicke's area = motor articulation of speech", correct: false },
-      { text: "Broca's area = controls muscles for speech production and articulation; Wernicke's area = understanding language meaning", correct: true },
+      { text: "Broca's = controls muscles for speech production/articulation; Wernicke's = understanding language meaning", correct: true },
+      { text: "Broca's = hearing comprehension area; Wernicke's = controls motor speech production and articulation", correct: false },
       { text: "Both areas are located in the right hemisphere and govern exclusively non-verbal communication", correct: false },
-      { text: "Broca's area interprets visual stimuli; Wernicke's area processes and categorizes auditory input", correct: false },
+      { text: "Broca's area interprets all visual stimuli; Wernicke's processes and categorizes incoming auditory input", correct: false },
     ],
     explanation: "BROCA'S AREA: frontal lobe (left in most people), above Silvio's fissure — MOTOR area for speech; controls muscles needed to SPEAK and articulate sounds. Damage → Broca's aphasia (can understand but can't produce speech fluently). WERNICKE'S AREA: border between temporal and parietal lobes — ASSOCIATION area; allows understanding of the MEANING of speech and its emotional content. Damage → Wernicke's aphasia (fluent but meaningless speech, poor comprehension)."
   },
@@ -984,10 +984,10 @@ const QUESTIONS = [
     category: "CNS",
     question: "Memory formation is related to synaptic plasticity. How do habituation and sensitization differ?",
     answers: [
-      { text: "Habituation strengthens synaptic pathways via repeated use; sensitization progressively weakens them", correct: false },
       { text: "Habituation = discards unimportant info (synaptic depression); sensitization = stores important info (synaptic facilitation)", correct: true },
-      { text: "Both habituation and sensitization uniformly strengthen all activated synaptic connections equally", correct: false },
-      { text: "Both processes are restricted exclusively to the cerebellum and apply only to motor learning", correct: false },
+      { text: "Habituation strengthens synaptic pathways through repeated stimulation; sensitization progressively weakens them", correct: false },
+      { text: "Both habituation and sensitization uniformly strengthen all activated synaptic connections in the CNS equally", correct: false },
+      { text: "Both processes are restricted to the cerebellum and apply exclusively to lower limb motor learning", correct: false },
     ],
     explanation: "Memory is produced by changes in synaptic transmission strength (SYNAPTIC PLASTICITY). Two forms: HABITUATION (negative memory) — the brain INHIBITS unimportant, repetitive information → depression of synaptic transmission (e.g., you stop noticing background noise). SENSITIZATION (positive memory) — the brain stores important information → FACILITATION of synaptic pathways (e.g., you remember a surprising or emotionally charged event). Short-term memory lasts minutes without repetition; long-term memory involves more permanent synaptic changes."
   },
@@ -1012,7 +1012,7 @@ const QUESTIONS = [
     answers: [
       { text: "12 pairs: 4 cervical, 4 thoracic, 2 lumbar, 2 sacral", correct: false },
       { text: "31 pairs: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal", correct: true },
-      { text: "24 pairs: evenly distributed along the spine", correct: false },
+      { text: "24 pairs: evenly distributed in equal groups along the full length of the spine", correct: false },
       { text: "31 pairs: 12 cervical, 8 thoracic, 5 lumbar, 4 sacral, 2 coccygeal", correct: false },
     ],
     explanation: "There are 31 pairs of spinal nerves: C1-C8 (8 pairs cervical), T1-T12 (12 thoracic), L1-L5 (5 lumbar), S1-S5 (5 sacral), and 1 coccygeal pair. All exit through the intervertebral foramen EXCEPT C1, which emerges between the atlas and occipital bone. All spinal nerves contain BOTH motor and sensory fibers → they are MIXED NERVES. Each innervates a specific skin area (DERMATOME) and muscle group (MYOTOME)."
@@ -1036,10 +1036,10 @@ const QUESTIONS = [
     category: "PNS",
     question: "Which cranial nerve has the most widespread parasympathetic influence on the body?",
     answers: [
-      { text: "Trigeminal nerve (V)", correct: false },
-      { text: "Facial nerve (VII)", correct: false },
       { text: "Vagus nerve (X)", correct: true },
-      { text: "Glossopharyngeal nerve (IX)", correct: false },
+      { text: "Trigeminal (V)", correct: false },
+      { text: "Facial nerve (VII)", correct: false },
+      { text: "Glossopharyngeal (IX)", correct: false },
     ],
     explanation: "The VAGUS NERVE (X) is the most extensive cranial nerve: SENSORY: receives from epiglottis, pharynx, and controls blood pressure and respiratory function. SOMATIC MOTOR: swallowing, coughing, phonation. PARASYMPATHETIC MOTOR: innervates smooth muscles and glands of the ENTIRE DIGESTIVE TRACT and the MYOCARDIUM — the widest parasympathetic distribution of any cranial nerve. 'Vagus' means 'wandering' in Latin, reflecting its extensive distribution."
   },
@@ -1049,10 +1049,10 @@ const QUESTIONS = [
     category: "PNS",
     question: "What is a dermatome?",
     answers: [
-      { text: "A muscle or muscle group innervated by a single spinal nerve (motor)", correct: false },
-      { text: "An area of SKIN surface innervated by a single spinal nerve (sensory)", correct: true },
-      { text: "A layer of the meninges surrounding the spinal cord", correct: false },
-      { text: "A type of glial cell found in the peripheral ganglia", correct: false },
+      { text: "A muscle group receiving motor axons from a given spinal nerve (motor)", correct: false },
+      { text: "An area of skin surface innervated by a single spinal nerve (sensory)", correct: true },
+      { text: "A protective layer of the meninges surrounding the spinal cord", correct: false },
+      { text: "A type of glial cell found within the peripheral sensory ganglia", correct: false },
     ],
     explanation: "DERMATOME: each area of SKIN innervated by a SINGLE spinal nerve. There is a systematic relationship between spinal nerve level and body region innervated. Clinically essential: pain in a specific dermatome indicates which spinal nerve/level is involved (e.g., herpes zoster follows a dermatome). MYOTOME (to distinguish): a MUSCLE GROUP that receives motor axons from a given spinal nerve. Both dermatomes and myotomes are used in neurological assessment."
   },
@@ -1140,10 +1140,10 @@ const QUESTIONS = [
     category: "Nervous System Drugs",
     question: "What is the neurochemical imbalance underlying Parkinson's disease, and why can't dopamine be given directly?",
     answers: [
-      { text: "Excess dopamine and deficiency of acetylcholine; dopamine is too large to absorb orally", correct: false },
+      { text: "Excess dopamine and deficiency of ACh; dopamine cannot cross the BBB so is given orally as a hormone", correct: false },
       { text: "Deficiency of dopamine → excess of cholinergic activity; dopamine cannot cross the blood-brain barrier", correct: true },
-      { text: "Deficiency of serotonin and noradrenaline; serotonin degrades too quickly in plasma", correct: false },
-      { text: "Excess of GABA causing over-inhibition; GABA cannot be blocked selectively enough", correct: false },
+      { text: "Deficiency of serotonin and noradrenaline; serotonin degrades too quickly in plasma to be effective", correct: false },
+      { text: "Excess of GABA causing over-inhibition; GABA cannot be blocked selectively enough without major side effects", correct: false },
     ],
     explanation: "Parkinson's disease is caused by degeneration of dopaminergic neurons in the basal ganglia → DOPAMINE DEFICIENCY → relative excess of cholinergic activity → symptoms: shaking, rigidity, slowness of movement (bradykinesia), difficulty walking. Dopamine CANNOT CROSS THE BBB, so giving it directly is ineffective. L-DOPA (levodopa), its precursor, crosses the BBB and is then converted to dopamine in the brain. MAO-B inhibitors (e.g., selegiline) and COMT inhibitors (e.g., entacapone) slow the breakdown of dopamine/L-DOPA to prolong its effect."
   },
@@ -1205,10 +1205,10 @@ const QUESTIONS = [
     category: "Nervous System Drugs",
     question: "What is the mechanism of antipsychotic drugs, and which neurotransmitter system is primarily targeted?",
     answers: [
-      { text: "They enhance serotonin reuptake into presynaptic terminals and simultaneously block GABA receptors", correct: false },
-      { text: "They block D2 dopamine receptors; atypical antipsychotics additionally target serotonin receptors for negative symptoms", correct: true },
-      { text: "They increase dopamine release specifically in the prefrontal cortex to improve cognitive function", correct: false },
-      { text: "They block nicotinic ACh receptors at the neuromuscular junction to reduce psychomotor symptoms", correct: false },
+      { text: "They enhance serotonin reuptake and simultaneously block GABA receptors to reduce psychomotor agitation", correct: false },
+      { text: "They block D2 dopamine receptors; atypical antipsychotics also target serotonin receptors for negative symptoms", correct: true },
+      { text: "They increase dopamine release in the prefrontal cortex to restore cognitive and executive functions", correct: false },
+      { text: "They block nicotinic ACh receptors at the neuromuscular junction to reduce motor symptoms", correct: false },
     ],
     explanation: "Antipsychotics primarily BLOCK D2 DOPAMINE RECEPTORS — this produces the therapeutic (antipsychotic) effect. CONVENTIONAL (typical) antipsychotics (chlorpromazine, haloperidol): potent D2 blockers → high risk of extrapyramidal effects (pharmacological parkinsonism). ATYPICAL antipsychotics (clozapine, olanzapine, risperidone): block D2 + serotonin receptors → better for negative symptoms (which result from ↓ dopaminergic + ↑ serotoninergic activity) + fewer extrapyramidal side effects. Important for physio: D2 blockade can decrease reflexes and cause pharmacological parkinsonism."
   },
@@ -1231,10 +1231,10 @@ const QUESTIONS = [
     category: "Nervous System Drugs",
     question: "β-blockers (sympatholytic drugs) are used for which conditions, and what is their key precaution for physiotherapists?",
     answers: [
-      { text: "Used for Parkinson's disease and epilepsy; precaution: increased risk of seizures during exercise", correct: false },
-      { text: "Used for angina, arrhythmias, and hypertension; precaution: orthostatic hypotension risk — avoid rapid postural changes", correct: true },
+      { text: "Used for angina, arrhythmias, and hypertension; precaution: orthostatic hypotension — avoid rapid postural changes", correct: true },
+      { text: "Used for Parkinson's and epilepsy; precaution: increased seizure risk during physiotherapy exercise sessions", correct: false },
       { text: "Used for anxiety and depression; precaution: drugs cause excessive sweating and tachycardia during exercise", correct: false },
-      { text: "Used exclusively for glaucoma treatment; no specific physiotherapy precautions are needed", correct: false },
+      { text: "Used exclusively for glaucoma treatment only; no specific precautions needed in physiotherapy practice", correct: false },
     ],
     explanation: "β-BLOCKERS (propranolol, carvedilol, atenolol) block β-adrenergic receptors → used for ANGINA PECTORIS, ARRHYTHMIAS, and HYPERTENSION. α-BLOCKERS → hypertension and migraines. Physiotherapy precautions: (1) MONITOR BLOOD PRESSURE; (2) AVOID RAPID POSTURAL CHANGES — orthostatic hypotension risk (disorientation, loss of balance, falls); (3) Exercise response may be altered due to bronchoconstriction and peripheral vasoconstriction. Must be withdrawn PROGRESSIVELY (abrupt cessation can cause rebound hypertension or angina)."
   },
@@ -1244,9 +1244,9 @@ const QUESTIONS = [
     category: "Nervous System Drugs",
     question: "Parasympathomimetic (cholinergic) drugs enhance ACh effects. What are their clinical uses?",
     answers: [
-      { text: "Muscarinic agonists for hypertension; anticholinesterases for Parkinson's disease management", correct: false },
-      { text: "Pilocarpine (muscarinic agonist) for glaucoma; anticholinesterases (donepezil, rivastigmine) for Alzheimer's disease", correct: true },
-      { text: "Muscarinic agonists for asthma via bronchodilation; anticholinesterases for intestinal spasm relief", correct: false },
+      { text: "Muscarinic agonists for hypertension; anticholinesterases for Parkinson's disease treatment", correct: false },
+      { text: "Pilocarpine (muscarinic agonist) for glaucoma; anticholinesterases (donepezil, rivastigmine) for Alzheimer's", correct: true },
+      { text: "Muscarinic agonists for asthma bronchodilation; anticholinesterases for intestinal spasm relief", correct: false },
       { text: "Cholinergic drugs used exclusively as nasal decongestants and to treat cardiac arrhythmias", correct: false },
     ],
     explanation: "PARASYMPATHOMIMETIC drugs reproduce parasympathetic NS effects: DIRECT (stimulate muscarinic receptors): pilocarpine → pupil constriction + ciliary muscle contraction → reduces intraocular pressure → used for GLAUCOMA. INDIRECT (anticholinesterases — inhibit AChE → more ACh at synapse): neostigmine (myasthenia gravis), donepezil and rivastigmine (ALZHEIMER's disease — improve cholinergic transmission in the brain). Physio precaution: may cause muscle weakness; ophthalmic drugs → myopia/reduced night vision → risk of falls."
@@ -1258,8 +1258,8 @@ const QUESTIONS = [
     question: "Parasympatholytic (anticholinergic) drugs BLOCK muscarinic receptors. Match the drug to its clinical use:",
     answers: [
       { text: "Ipratropium → Parkinson's (blocks cholinergic excess); biperiden → asthma; scopolamine → intestinal spasms", correct: false },
-      { text: "Scopolamine → intestinal spasms; ipratropium/tiotropium → asthma (bronchodilation); biperiden → Parkinson's disease", correct: true },
-      { text: "All anticholinergic drugs are used exclusively for the treatment of asthma and COPD", correct: false },
+      { text: "Scopolamine → intestinal spasms; ipratropium/tiotropium → asthma (bronchodilation); biperiden → Parkinson's", correct: true },
+      { text: "All anticholinergic drugs are used exclusively for asthma and COPD treatment", correct: false },
       { text: "Scopolamine → Parkinson's; ipratropium → intestinal spasms; biperiden → glaucoma treatment", correct: false },
     ],
     explanation: "ANTICHOLINERGIC drugs block muscarinic receptors: SCOPOLAMINE/HYOSCINE → blocks muscarinic receptors in GI smooth muscle → reduces motility → used for INTESTINAL SPASMS. IPRATROPIUM/TIOTROPIUM BROMIDE → blocks muscarinic receptors in airways → bronchodilation → used for ASTHMA/COPD. BIPERIDEN/TRIHEXYPHENIDYL → blocks cholinergic transmission → reduces excess ACh activity in Parkinson's (remember: Parkinson's = dopamine deficiency + excess cholinergic activity). Physio precaution for ALL anticholinergics: elderly more sensitive → confusion, disorientation; drowsiness + blurred vision → fall prevention needed."
@@ -1296,10 +1296,10 @@ const QUESTIONS = [
     category: "Sensory Physiology",
     question: "Classify the following receptors by location: exteroceptors, interoceptors/visceroceptors, and proprioceptors:",
     answers: [
-      { text: "Exteroceptors = muscles/joints; proprioceptors = skin surface; interoceptors = blood vessel walls", correct: false },
       { text: "Exteroceptors = external body surface; interoceptors = viscera (unconscious); proprioceptors = muscles, tendons, joints", correct: true },
-      { text: "All three receptor location categories are found exclusively within the skin's dermal layers", correct: false },
-      { text: "Exteroceptors = retina and cochlea only; interoceptors = joint capsules; proprioceptors = skin", correct: false },
+      { text: "Exteroceptors = muscles and joints; proprioceptors = external skin surface; interoceptors = blood vessel walls", correct: false },
+      { text: "All three receptor location classes are found exclusively within the various layers of the skin", correct: false },
+      { text: "Exteroceptors = retina and cochlea; interoceptors = joint capsules and tendons; proprioceptors = skin surface only", correct: false },
     ],
     explanation: "Classification by LOCATION: EXTEROCEPTORS: at/near external body surface → respond to external stimuli (touch, temperature, pain, pressure of skin). INTEROCEPTORS/VISCEROCEPTORS: in blood vessels and internal organs → produce impulses usually NOT consciously perceived (blood pressure, organ distension). PROPRIOCEPTORS: in muscles, tendons, and joints → provide information about body POSITION and JOINT MOVEMENT — crucial for balance, coordination, and physiotherapy rehabilitation."
   },
@@ -1309,10 +1309,10 @@ const QUESTIONS = [
     category: "Sensory Physiology",
     question: "Match the following enclosed nerve endings (mechanoreceptors) to their location and function:",
     answers: [
-      { text: "Meissner corpuscle = dermis, detects pressure; Pacinian corpuscle = epidermis, detects light touch", correct: false },
       { text: "Pacinian = dermis/pressure; Meissner = epidermis/touch; Muscle spindle = muscle length; Golgi tendon = muscle tension", correct: true },
-      { text: "Muscle spindle = tendon, detects tension; Golgi tendon organ = skeletal muscle, detects length changes", correct: false },
-      { text: "All enclosed nerve endings (Pacinian, Meissner, Ruffini, Krausse) are found only in the skin", correct: false },
+      { text: "Meissner corpuscle = dermis, detects deep pressure; Pacinian corpuscle = epidermis, detects fine light touch", correct: false },
+      { text: "Muscle spindle = tendon, detects tension load; Golgi tendon organ = skeletal muscle, detects length changes", correct: false },
+      { text: "All enclosed nerve endings (Pacinian, Meissner, Ruffini, Krausse) are found exclusively in the skin layers", correct: false },
     ],
     explanation: "ENCLOSED nerve endings (mechanoreceptors, have connective tissue capsule): PACINIAN corpuscle: dermis → PRESSURE. MEISSNER corpuscle: epidermis → TOUCH. Krausse end bulbs: mucous membranes → touch. Ruffini endings: dermis → touch. MUSCLE SPINDLE: skeletal muscle → provides information about MUSCLE LENGTH (stretch reflex). GOLGI TENDON ORGAN: tendon → provides information about TENSION the muscle exerts on tendons. Both muscle spindles and Golgi tendon organs are key proprioceptors for physiotherapy assessment and rehabilitation."
   },
@@ -1322,10 +1322,10 @@ const QUESTIONS = [
     category: "Sensory Physiology",
     question: "What is the difference between the utricle/saccule and the semicircular canals in balance?",
     answers: [
-      { text: "Utricle/saccule detect rotational acceleration; semicircular canals detect linear acceleration only", correct: false },
-      { text: "Utricle/saccule detect LINEAR acceleration (horizontal/vertical); semicircular canals detect ROTATIONAL/ANGULAR acceleration", correct: true },
-      { text: "Utricle and saccule are part of the cochlea and function exclusively in sound frequency detection", correct: false },
-      { text: "Both structures detect the same type of motion but respond to movements in different anatomical planes", correct: false },
+      { text: "Utricle/saccule detect LINEAR acceleration (horizontal/vertical); semicircular canals detect ROTATIONAL acceleration", correct: true },
+      { text: "Utricle/saccule detect rotational and angular acceleration; semicircular canals detect linear speed changes only", correct: false },
+      { text: "Utricle/saccule are part of the cochlea and function exclusively in sound frequency detection and localization", correct: false },
+      { text: "Both structures detect the same type of acceleration but respond to motions in different anatomical planes", correct: false },
     ],
     explanation: "Both structures are part of the VESTIBULAR APPARATUS (inner ear). They work by head movement → fluid movement → bending of hair cell cilia → action potentials. UTRICLE and SACCULE: detect LINEAR ACCELERATION — changes in speed when moving horizontally or vertically (e.g., driving, jumping rope, elevator). SEMICIRCULAR CANALS (3 canals in 3 planes): detect ROTATIONAL/ANGULAR ACCELERATION — turning the head, spinning around, acrobatics. Both contribute to the sense of balance. Innervated by CN VIII (vestibulocochlear nerve)."
   },
@@ -1400,10 +1400,10 @@ const QUESTIONS = [
     category: "Sensory Drugs",
     question: "Define the following sensory disorder terms: hypoalgesia, allodynia, and hyperalgesia:",
     answers: [
-      { text: "Hypoalgesia = total loss of all sensation; allodynia = exaggerated pain to any stimulus; hyperalgesia = decreased pain", correct: false },
-      { text: "Hypoalgesia = decreased pain sensitivity; allodynia = pain from normally non-painful stimuli; hyperalgesia = exaggerated pain sensitivity", correct: true },
-      { text: "All three terms describe the same condition — complete and irreversible loss of pain sensation", correct: false },
-      { text: "Hypoalgesia = increased pain sensitivity; allodynia = decreased pain; hyperalgesia = normal pain response", correct: false },
+      { text: "Hypoalgesia = decreased pain sensitivity; allodynia = pain from normally non-painful stimuli; hyperalgesia = exaggerated pain", correct: true },
+      { text: "Hypoalgesia = total loss of all bodily sensation; allodynia = grossly exaggerated response to pain; hyperalgesia = decreased pain sensitivity", correct: false },
+      { text: "All three terms describe the same underlying condition — a complete and irreversible loss of all pain sensation", correct: false },
+      { text: "Hypoalgesia = increased pain sensitivity to stimuli; allodynia = decreased pain; hyperalgesia = normal pain response", correct: false },
     ],
     explanation: "Key sensory disorder terminology: HYPESTHESIA: decreased sensitivity (general). ANESTHESIA: total loss of ALL sensation. HYPOALGESIA: decreased sensitivity specifically to PAIN. ANALGESIA: complete loss of pain sensation. HYPERESTHESIA: exaggerated TACTILE sensitivity. HYPERALGESIA: exaggerated sensitivity to PAIN (even normal stimuli cause excessive pain). ALLODYNIA: pain produced by a stimulus that NORMALLY does NOT cause pain (e.g., light touch causing pain in a sunburn or nerve injury). These terms are essential for physiotherapy clinical assessment documentation."
   },
@@ -1783,6 +1783,253 @@ const QUESTIONS = [
       { text: "Metformin delays carbohydrate digestion in the small intestine; sulfonylureas increase insulin resistance to prevent hypoglycemia", correct: false },
     ],
     explanation: "ORAL HYPOGLYCEMICS for Type 2 diabetes: BIGUANIDES (METFORMIN): 1st CHOICE — very effective, acts on both fasting and post-meal glucose. Mechanism: DECREASES INSULIN RESISTANCE (increases peripheral cell sensitivity to insulin). SULFONYLUREAS (tolbutamide, glibenclamide) and MEGLITINIDES (repaglinide): stimulate PANCREATIC β CELLS to secrete more insulin. THIAZOLIDINEDIONES/GLITAZONES (pioglitazone, rosiglitazone): decrease insulin resistance. α-GLUCOSIDASE INHIBITORS (acarbose, miglitol): delay digestion of polysaccharides in the small intestine → slower glucose absorption → blunted post-meal glucose spike. All are for Type 2; Type 1 requires insulin."
+  },
+
+  {
+    id: 138,
+    category: "Muscle System",
+    question: "Skeletal muscle accounts for what proportion of body weight, and what are its three main functions?",
+    answers: [
+      { text: "40–50% of body weight; functions: movement, heat production, and posture maintenance through continuous partial contraction", correct: true },
+      { text: "20–30% of body weight; functions: movement, oxygen storage, and thermoregulation via vasodilation of surface capillaries", correct: false },
+      { text: "40–50% of body weight; functions: movement, hormone secretion, and blood pressure regulation via vessel compression", correct: false },
+      { text: "60–70% of body weight; functions: posture, force generation, and calcium homeostasis via mineral storage in myofibrils", correct: false },
+    ],
+    explanation: "Skeletal muscle makes up 40–50% of body weight and there are more than 600 muscles in the body. Its three main functions are: (1) MOVEMENT — contracting to pull bones and create movement; (2) HEAT PRODUCTION — muscle activity generates significant heat, maintaining body temperature; (3) POSTURE MAINTENANCE — continuous partial contraction (muscle tone) allows standing, sitting, and stable positioning. Muscle tone is controlled by the NS (specifically the spinal cord) and is lost with loss of consciousness."
+  },
+
+  {
+    id: 139,
+    category: "Muscle System",
+    question: "What are the structural layers of connective tissue wrapping a skeletal muscle from outermost to innermost?",
+    answers: [
+      { text: "Fascia (outside epimysium) → epimysium (whole muscle) → perimysium (around fascicles) → endomysium (around individual fibers)", correct: true },
+      { text: "Endomysium (outside) → perimysium (around whole muscle) → epimysium (around fascicles) → sarcolemma (innermost)", correct: false },
+      { text: "Epimysium (outside) → endomysium (around fascicles) → perimysium (around individual fibers) → sarcolemma (innermost)", correct: false },
+      { text: "Fascia (outside) → perimysium (around whole muscle) → epimysium (around fascicles) → endomysium (around fibers)", correct: false },
+    ],
+    explanation: "From outside in: FASCIA (fibrous connective tissue outside the epimysium, surrounding the whole muscle and tendon) → EPIMYSIUM (rough layer wrapping the whole muscle) → PERIMYSIUM (connective tissue holding fascicles together) → ENDOMYSIUM (thin membrane covering individual specialized muscle fibers). FASCICLE = a bundle of muscle fibers. Each muscle fiber = one muscle cell. TENDON connects muscle to bone."
+  },
+
+  {
+    id: 140,
+    category: "Muscle System",
+    question: "What is the function of T tubules in skeletal muscle cells?",
+    answers: [
+      { text: "They carry electrical impulses from the sarcolemma deep into the cell interior, triggering Ca²⁺ release from the sarcoplasmic reticulum", correct: true },
+      { text: "They store Ca²⁺ and release it directly into the surrounding sarcomere when the motor neuron fires an action potential, completely bypassing the sarcoplasmic reticulum", correct: false },
+      { text: "They transport ATP molecules from the adjacent mitochondria to the myosin heads along the full length of the sarcomere during each contraction cycle", correct: false },
+      { text: "They form the Z discs that anchor and align thin actin filaments, thereby defining the structural boundaries of each individual sarcomere unit", correct: false },
+    ],
+    explanation: "T TUBULES (transverse tubules) are extensions of the SARCOLEMMA that penetrate transversely into the sarcoplasm. Their function: allow the electrical action potential traveling along the sarcolemma to reach deep into the cell, triggering Ca²⁺ release from the SARCOPLASMIC RETICULUM (SR). The TRIAD = SR + T tubule + SR. The SR stores Ca²⁺ and pumps it back (ATP-dependent) during relaxation. The sarcolemma = plasma membrane of muscle fibers; sarcoplasm = cytoplasm; SR = endoplasmic reticulum equivalent."
+  },
+
+  {
+    id: 141,
+    category: "Muscle System",
+    question: "What are the four protein molecules in muscle filaments, and which belong to thick vs. thin filaments?",
+    answers: [
+      { text: "Thin filaments: actin + tropomyosin + troponin; thick filaments: myosin (with cross-bridge heads). Actin and myosin are attracted but blocked at rest by tropomyosin", correct: true },
+      { text: "Thin filaments: myosin + tropomyosin; thick filaments: actin + troponin. At rest, troponin covers the myosin heads to prevent premature cross-bridge formation", correct: false },
+      { text: "Thin filaments: actin + myosin; thick filaments: tropomyosin + troponin. The thick filaments do not form cross-bridges until Ca²⁺ removes troponin from the thin filaments", correct: false },
+      { text: "Thin filaments: troponin + troponin; thick filaments: myosin + actin. Both filaments are blocked by tropomyosin until ATP activates the myosin heads", correct: false },
+    ],
+    explanation: "Four proteins: THIN FILAMENTS: (1) ACTIN (main structural protein); (2) TROPOMYOSIN (covers actin active sites at rest); (3) TROPONIN (binds Ca²⁺ to trigger tropomyosin shift). THICK FILAMENTS: (4) MYOSIN (shaped like golf sticks, with ATPase-active cross-bridge heads). At rest, actin and myosin are chemically attracted but TROPOMYOSIN blocks actin's active sites, preventing cross-bridge formation. When Ca²⁺ binds to TROPONIN, tropomyosin shifts to expose the active sites, enabling myosin binding."
+  },
+
+  {
+    id: 142,
+    category: "Muscle System",
+    question: "In the sarcomere, what distinguishes the A band, I band, H band, and M line?",
+    answers: [
+      { text: "A band: thick + thin filaments overlap. I band: thin filaments only (no overlap). H band: thick filaments only (no thin filaments). M line: protein joining thick filaments at centre", correct: true },
+      { text: "A band: thin filaments only. I band: thick + thin filaments. H band: Z discs anchoring actin. M line: mid-sarcomere anchor for thin filaments only", correct: false },
+      { text: "A band: changes length during contraction. I band: stays constant in length. H band: marks where Z discs are. M line: where elastic filaments attach to thin filaments", correct: false },
+      { text: "A band: elastic filaments connecting Z discs. I band: myosin-only region. H band: actin-only band. M line: boundary separating adjacent sarcomeres", correct: false },
+    ],
+    explanation: "SARCOMERE = segment between two Z discs (anchors for thin filaments). A BAND: contains BOTH thick and thin filaments (does NOT shorten during contraction). I BAND: Z disc + ends of thin filaments NOT overlapping thick filaments (shortens during contraction). H BAND: thick filaments ONLY (no thin filaments) — narrows during contraction. M LINE: protein filaments in the middle of the A band that join thick filaments together and stabilize them. ELASTIC FILAMENTS: run from M line to Z discs, stabilizing thick filament position and aiding return to resting length."
+  },
+
+  {
+    id: 143,
+    category: "Muscle System",
+    question: "What is a motor unit?",
+    answers: [
+      { text: "One somatic motor neuron plus all the muscle fibers it innervates — the functional unit of muscle control", correct: true },
+      { text: "One muscle fiber plus all the motor neurons that innervate it, allowing graded control of single fiber tension", correct: false },
+      { text: "A group of muscle fibers sharing one sarcomere that contract together as the smallest functional unit of the whole muscle", correct: false },
+      { text: "The entire neuromuscular junction including the axon terminal, synaptic cleft, and motor end plate membrane", correct: false },
+    ],
+    explanation: "A MOTOR UNIT = one SOMATIC MOTOR NEURON + ALL the MUSCLE FIBERS it innervates. Each motor neuron axon branches to innervate multiple muscle fibers. Each muscle fiber receives input from only ONE motor neuron. The NEUROMUSCULAR JUNCTION is the chemical synapse between a motor neuron and a muscle fiber. The MOTOR END PLATE is the specialized sarcolemma region at the NMJ. Fine motor control (e.g., fingers, eye muscles) = small motor units (few fibers per neuron). Powerful movements (e.g., leg muscles) = large motor units (many fibers per neuron)."
+  },
+
+  {
+    id: 144,
+    category: "Muscle System",
+    question: "List the correct sequence of events in skeletal muscle contraction (sliding filament theory):",
+    answers: [
+      { text: "AP arrives → ACh released → sarcolemma depolarizes → impulse travels via T tubules → Ca²⁺ released from SR → Ca²⁺ binds troponin → tropomyosin shifts → myosin binds actin → power stroke → filaments slide → sarcomere shortens", correct: true },
+      { text: "AP arrives → Ca²⁺ released from SR → ACh binds nicotinic receptors → sarcolemma depolarizes → troponin blocks actin → myosin heads energized by ATP → filaments slide apart → sarcomere lengthens", correct: false },
+      { text: "AP arrives → myosin heads hydrolyze ATP first → sarcolemma depolarizes → Ca²⁺ binds tropomyosin directly → actin active sites blocked → cross-bridges form → power stroke pushes filaments outward", correct: false },
+      { text: "AP arrives → ACh released → T tubules depolarize first → Ca²⁺ binds myosin directly → troponin unblocks the thick filaments → actin pulls myosin toward Z discs → sarcomere shortens", correct: false },
+    ],
+    explanation: "Complete sequence: (1) AP depolarizes motor axon terminal → ACh released by exocytosis; (2) ACh binds NICOTINIC receptors on motor end plate → sarcolemma depolarizes; (3) AP travels along sarcolemma and through T TUBULES; (4) T tubule AP triggers Ca²⁺ RELEASE from sarcoplasmic reticulum; (5) Ca²⁺ binds TROPONIN → tropomyosin shifts → ACTIN ACTIVE SITES EXPOSED; (6) ATP binds myosin heads (ATPase) → myosin heads energized; (7) Myosin binds actin → CROSS-BRIDGE; (8) Pi release → POWER STROKE (myosin pulls thin filaments toward sarcomere center); (9) ADP released, new ATP binds → cross-bridge detaches → cycle repeats. = SLIDING FILAMENT THEORY."
+  },
+
+  {
+    id: 145,
+    category: "Muscle System",
+    question: "Why is ATP required for BOTH muscle contraction AND muscle relaxation?",
+    answers: [
+      { text: "Contraction: ATP energizes myosin heads for the power stroke. Relaxation: ATP-dependent pump returns Ca²⁺ to the sarcoplasmic reticulum — without it, Ca²⁺ remains in the sarcoplasm causing contracture", correct: true },
+      { text: "Contraction alone requires ATP for cross-bridge cycling; relaxation is entirely passive — Ca²⁺ diffuses back into the SR down its concentration gradient without any active energy expenditure", correct: false },
+      { text: "Relaxation requires ATP to actively break myosin-actin cross-bridges; the contraction power stroke itself is entirely passive once Ca²⁺ binds troponin and exposes actin active sites", correct: false },
+      { text: "Both contraction and relaxation use ATP exclusively to power Ca²⁺ transport — the myosin power stroke consumes no ATP at all and is driven entirely by spring-like elastic recoil of the myosin neck", correct: false },
+    ],
+    explanation: "ATP is essential for BOTH phases: CONTRACTION: ATP binds myosin heads → hydrolyzed by ATPase → energizes heads for the power stroke; ATP also needed to detach myosin from actin after the power stroke. RELAXATION: Ca²⁺ must be actively pumped BACK into the SR by an ATP-dependent Ca²⁺-ATPase (active transport). WITHOUT ATP: Ca²⁺ stays in sarcoplasm → myosin remains bound to actin → continuous contraction = CONTRACTURE. This explains rigor mortis (ATP depletes after death → permanent cross-bridges → muscle stiffness)."
+  },
+
+  {
+    id: 146,
+    category: "Muscle System",
+    question: "What is the Treppe effect (staircase phenomenon) and what mechanisms explain it?",
+    answers: [
+      { text: "After repeated contractions, a muscle contracts more forcefully — the physiological basis of warm-up: faster Ca²⁺ spread, metabolic product accumulation, and temperature increase", correct: true },
+      { text: "After prolonged rest, a muscle contracts more forcefully on first use — the reverse of fatigue, caused by ATP accumulation and myosin head priming during inactivity", correct: false },
+      { text: "A muscle progressively weakens with each contraction due to glycogen depletion — the physiological basis of warm-up preventing early fatigue in training", correct: false },
+      { text: "Each successive contraction shortens the sarcomere less than the previous one due to length-tension mismatch as thick filaments collide at the M line", correct: false },
+    ],
+    explanation: "TREPPE EFFECT (staircase phenomenon): after several contractions, a muscle produces progressively GREATER FORCE than on the first contraction — the basis of WARM-UP. Three contributing mechanisms: (1) In warmed-up fibers, Ca²⁺ diffuses FASTER through the sarcoplasm → more actin-myosin interactions; (2) Accumulation of METABOLIC PRODUCTS; (3) TEMPERATURE INCREASE enhances enzyme activity and cross-bridge cycling speed. This is why athletes warm up before performance — the first few contractions 'prime' the muscle system."
+  },
+
+  {
+    id: 147,
+    category: "Muscle System",
+    question: "What are the three energy sources for muscle contraction in order of activation speed?",
+    answers: [
+      { text: "1st: phosphocreatine (extremely fast, lasts 5–8 s). 2nd: anaerobic glycolysis (very fast, limited — 2–3 ATP/glucose). 3rd: oxidative phosphorylation (slow, unlimited — 36 ATP/glucose)", correct: true },
+      { text: "1st: oxidative phosphorylation (fastest — mitochondria always ready). 2nd: anaerobic glycolysis. 3rd: phosphocreatine (slowest to activate but most energy per molecule)", correct: false },
+      { text: "1st: anaerobic glycolysis (fastest — no oxygen needed). 2nd: phosphocreatine (slower — requires creatine kinase activation). 3rd: oxidative phosphorylation (slowest but highest yield)", correct: false },
+      { text: "1st: phosphocreatine (lasts ~30 s). 2nd: oxidative phosphorylation (activates at 10 s). 3rd: anaerobic glycolysis (last resort, only during hypoxia)", correct: false },
+    ],
+    explanation: "Three ATP sources in order of speed: (1) PHOSPHOCREATINE (creatine phosphate): EXTREMELY FAST, limited reserve (lasts ~5–8 seconds), catalyzed by creatine kinase (CK). (2) ANAEROBIC GLYCOLYSIS: VERY FAST, limited yield (2–3 ATP/glucose), produces lactate and H⁺ (lowers pH → contributes to fatigue). (3) OXIDATIVE PHOSPHORYLATION: SLOW but UNLIMITED capacity (36 ATP/glucose), uses glucose, fatty acids, and amino acids. Distribution of ATP use: 70% for contraction, 30% for Ca²⁺ transport by SR (relaxation)."
+  },
+
+  {
+    id: 148,
+    category: "Muscle System",
+    question: "Compare slow/Type I and fast/Type IIx muscle fibers across the key characteristics:",
+    answers: [
+      { text: "Type I: high myoglobin (red), aerobic, many mitochondria, fatigue-resistant, for endurance (e.g. soleus). Type IIx: low myoglobin (white), anaerobic, few mitochondria, fatigues quickly, for explosive short bursts (e.g. ocular muscles)", correct: true },
+      { text: "Type I: low myoglobin (white), uses anaerobic metabolism exclusively, fast contraction speed, paradoxically high fatigue resistance. Type IIx: high myoglobin (red), aerobic, slow contraction, fatigues quickly during any sustained low-intensity activity", correct: false },
+      { text: "Type I: intermediate myoglobin content, mixed aerobic and anaerobic capacity, moderate fatigue resistance, used primarily for high-speed sprinting activities. Type IIx: very high myoglobin content, purely aerobic metabolism, essentially never fatigues, found exclusively in postural muscles", correct: false },
+      { text: "Both Type I and Type IIx fibers have identical fatigue resistance and capillary density; they differ only in contraction speed and the relative proportion of troponin isoforms within their thin filaments", correct: false },
+    ],
+    explanation: "TYPE I (slow/red): HIGH myoglobin (O₂ storage), AEROBIC metabolism, MANY mitochondria, HIGH capillary supply, HIGH fatigue resistance, for moderate sustained activity (postural muscles e.g. SOLEUS). TYPE IIA (intermediate): mixed aerobic/anaerobic, medium fatigue resistance (e.g. GASTROCNEMIUS). TYPE IIX (fast/white): LOW myoglobin, ANAEROBIC metabolism, FEW mitochondria, LOW capillary supply, LOW fatigue resistance, for intense short bursts (e.g. OCULAR MUSCLES). Training can convert a small percentage of IIx → I (but NOT the reverse). Each muscle contains a mix of all three types."
+  },
+
+  {
+    id: 149,
+    category: "Muscle System",
+    question: "What are the main causes of muscle fatigue?",
+    answers: [
+      { text: "Glycogen depletion, ATP deficiency, accumulation of metabolites (lactate, H⁺, inorganic phosphate Pi) — all impair the ability to generate force", correct: true },
+      { text: "Excess Ca²⁺ in the sarcoplasm, over-activation of troponin, and saturation of myosin heads with too many bound actin cross-bridges simultaneously", correct: false },
+      { text: "Depletion of tropomyosin and troponin proteins from thin filaments, preventing cross-bridge formation in subsequent contraction cycles", correct: false },
+      { text: "Accumulation of ATP and creatine phosphate that competitively inhibit myosin ATPase, slowing the cross-bridge cycle progressively", correct: false },
+    ],
+    explanation: "MUSCLE FATIGUE = reversible, exercise-induced reduction in force-generating capacity. Main causes: (1) GLYCOGEN DEPLETION (loss of fuel substrate); (2) ATP DEFICIENCY (insufficient energy for cross-bridge cycling and Ca²⁺ pumping); (3) METABOLITE ACCUMULATION — LACTATE and H⁺ (low pH inhibits enzyme activity), INORGANIC PHOSPHATE (Pi) (impairs power stroke). Fatigue is REVERSIBLE with rest. Note: aerobic training increases mitochondria, myoglobin, and capillary density → delays fatigue onset. Anaerobic training builds hypertrophy but does not directly delay metabolic fatigue."
+  },
+
+  {
+    id: 150,
+    category: "Muscle System",
+    question: "What is myofibrillar hypertrophy and how does it differ from sarcoplasmic hypertrophy?",
+    answers: [
+      { text: "Myofibrillar: increase in size/number of actin and myosin filaments → greater strength. Sarcoplasmic: increase in non-contractile elements (collagen, organelles, sarcoplasm) → larger appearance but no strength increase", correct: true },
+      { text: "Myofibrillar hypertrophy involves an increase in the total number of whole muscle fibers (hyperplasia). Sarcoplasmic hypertrophy involves an increase in sarcomere number per fiber → greater force output without increased muscle cross-section", correct: false },
+      { text: "Myofibrillar hypertrophy involves an expansion of SR volume and total Ca²⁺ storage capacity → enabling faster and more powerful contraction onset. Sarcoplasmic hypertrophy involves increased myosin head ATPase activity → greater peak force without any visible size change", correct: false },
+      { text: "Myofibrillar and sarcoplasmic hypertrophy are essentially identical physiological processes triggered by different training volumes — both produce equally significant increases in both muscle strength and cross-sectional area", correct: false },
+    ],
+    explanation: "ANAEROBIC training increases muscle mass (hypertrophy) but does NOT increase fiber NUMBER (no hyperplasia). MYOFIBRILLAR HYPERTROPHY: increase in size and number of ACTIN AND MYOSIN FILAMENTS (contractile elements) → associated with INCREASED STRENGTH. New myofibrils form by splitting of thick existing myofibrils into two. SARCOPLASMIC HYPERTROPHY: increase in NON-CONTRACTILE elements (collagen, organelles, sarcoplasm) + glycogen + water (each gram glycogen stored with 3 g water) → larger muscle appearance but NO increase in strength. 13% of muscle mass is non-contractile tissue."
+  },
+
+  {
+    id: 151,
+    category: "Muscle System",
+    question: "Why can't skeletal muscle fibers regenerate like most other tissues, and what cells allow limited repair?",
+    answers: [
+      { text: "Skeletal muscle fibers cannot divide once mature; SATELLITE CELLS (between sarcolemma and endomysium) are normally quiescent but activate at injury sites to differentiate into myoblasts for limited regeneration", correct: true },
+      { text: "Skeletal muscle fibers regenerate freely by mitosis; however the process is too slow to replace fibers lost to intense exercise, so scar tissue fills the gap temporarily", correct: false },
+      { text: "Skeletal muscle fibers regenerate via de-differentiation of mature fibers back to myoblast stage; satellite cells are responsible only for myelin formation around motor axons", correct: false },
+      { text: "Skeletal muscle fibers have unlimited regeneration capacity via satellite cells that continuously divide; scar tissue only forms when satellite cells are also destroyed by the injury", correct: false },
+    ],
+    explanation: "Mature skeletal muscle fibers CANNOT DIVIDE — once destroyed, remaining healthy fibers cannot replace them by mitosis. However, SATELLITE CELLS provide limited regeneration capacity: located between the SARCOLEMMA and ENDOMYSIUM; normally QUIESCENT; activated by muscle injury → differentiate into MYOBLASTS → fuse to form new muscle fibers (MUSCLE REGENERATION). Physical injury often overwhelms this capacity → injured tissue is replaced by FIBROUS CONNECTIVE TISSUE (SCAR) — a dense fibrous mass, not functional muscle. This is why significant muscle tears do not heal to full original capacity."
+  },
+
+  {
+    id: 152,
+    category: "Muscle System",
+    question: "What is the muscle stretch reflex and why is it described as monosynaptic?",
+    answers: [
+      { text: "A skeletal muscle contracts in response to being stretched; monosynaptic = the sensory (Ia) neuron synapses DIRECTLY on the motor neuron in the spinal cord — no interneuron involved", correct: true },
+      { text: "A skeletal muscle relaxes in response to being stretched; monosynaptic = the motor neuron signals the muscle spindle directly without passing through the spinal cord", correct: false },
+      { text: "It is a polysynaptic reflex that always requires at least one interneuron in the spinal cord between the sensory input and motor output to the muscle", correct: false },
+      { text: "A skeletal muscle contracts when its tendon is compressed; monosynaptic = the Golgi tendon organ connects directly to the muscle fiber without passing through the CNS", correct: false },
+    ],
+    explanation: "MUSCLE STRETCH REFLEX: a skeletal muscle CONTRACTS in response to being STRETCHED. It is the SIMPLEST reflex and is MONOSYNAPTIC: sensory neuron (from MUSCLE SPINDLE, sensing muscle LENGTH) → synapses DIRECTLY on the α-MOTONEURON in the spinal cord (NO interneuron). The α-motoneuron → muscle fiber contraction. γ-MOTONEURONS innervate INTRAFUSAL fibers (within the spindle); α-motoneurons innervate EXTRAFUSAL fibers (ordinary muscle fibers). Clinical example: KNEE-JERK (patellar tendon) REFLEX, integrated in L2–L4. Reflexes allow neurological diagnosis."
+  },
+
+  {
+    id: 153,
+    category: "Muscle System",
+    question: "How does smooth muscle differ from skeletal muscle in its contraction mechanism?",
+    answers: [
+      { text: "Smooth muscle: Ca²⁺ comes from OUTSIDE the cell and binds CALMODULIN (not troponin); no sarcomeres/striations; actin:myosin ratio 16:1; can contract when greatly stretched", correct: true },
+      { text: "Smooth muscle: Ca²⁺ comes from the sarcoplasmic reticulum and binds troponin; has clear sarcomeres and striations; actin:myosin ratio identical to skeletal muscle", correct: false },
+      { text: "Smooth muscle: uses phosphocreatine exclusively for ATP; contracts via the same sliding filament mechanism but with inverted actin and myosin roles", correct: false },
+      { text: "Smooth muscle: contains T tubules and a well-developed SR identical to skeletal muscle; differs only in having no Z discs and using calmodulin instead of troponin for Ca²⁺ binding", correct: false },
+    ],
+    explanation: "SMOOTH MUSCLE differences from skeletal/cardiac: (1) NO STRIATIONS — no sarcomeres; filaments form a network; thin filaments attach to DENSE BODIES (analogous to Z discs); (2) HIGH ACTIN:MYOSIN ratio (16:1); (3) Ca²⁺ comes from OUTSIDE THE CELL (not SR) and binds CALMODULIN (not troponin) → calmodulin-Ca²⁺ complex activates myosin; (4) Myosin stacks vertically → BALL-SHAPED contraction; (5) Can contract when greatly stretched (essential for hollow organs like bladder, uterus); (6) SINGLE-UNIT type has gap junctions → behaves as syncytium (like cardiac). MULTIUNIT type: each cell individually innervated (iris, arrector pili)."
+  },
+
+  {
+    id: 154,
+    category: "Muscle System",
+    question: "What distinguishes cardiac muscle from skeletal and smooth muscle?",
+    answers: [
+      { text: "Cardiac: striated with sarcomeres; involuntary; cells joined by intercalated discs (gap junctions) → acts as a syncytium; generates APs automatically but is regulated by the ANS", correct: true },
+      { text: "Cardiac: no striations; voluntary control; each cell independently innervated; Ca²⁺ binds calmodulin; does not generate action potentials automatically", correct: false },
+      { text: "Cardiac: striated; voluntarily controlled for heart rate adjustments; cells connected by tight junctions that prevent electrical spread between cardiomyocytes", correct: false },
+      { text: "Cardiac: no sarcomeres; involuntary; connected by desmosomes that mechanically link cells without electrical conduction between adjacent cardiomyocytes", correct: false },
+    ],
+    explanation: "CARDIAC MUSCLE: STRIATED — contains actin and myosin in sarcomeres (same sliding filament mechanism). INVOLUNTARY. Cells (cardiomyocytes) are SHORT, BRANCHED, and connected by INTERCALATED DISCS (gap junctions) → electrical impulses spread to ALL connected cells → myocardium behaves as a SYNCYTIUM (single functional unit). Can generate action potentials AUTOMATICALLY (autorhythmicity — pacemaker potentials). Regulated by the ANS (sympathetic speeds up, parasympathetic slows down). Does NOT fatigue. Relies more on extracellular Ca²⁺ than skeletal muscle for contraction."
+  },
+
+  {
+    id: 155,
+    category: "Muscle Drugs",
+    question: "What distinguishes cramps, convulsions, and fibrillation as muscle disorders?",
+    answers: [
+      { text: "Cramps: painful involuntary contraction from fatigue or electrolyte deficit. Convulsions: abnormal uncoordinated contractions from NS hyperactivity. Fibrillation: asynchronous fiber contractions causing muscle flutter — most dangerous in the heart", correct: true },
+      { text: "Cramps: abnormal NS over-stimulation causing whole-limb uncontrolled movements affecting multiple muscle groups. Convulsions: single-fiber asynchronous contractions causing local flutter. Fibrillation: a painful electrolyte-driven cramp that is limited exclusively to cardiac muscle", correct: false },
+      { text: "Cramps: caused exclusively by severe dehydration with no electrolyte imbalance involved. Convulsions: caused entirely by progressive muscle fatigue and glycogen depletion. Fibrillation: a normal electrophysiological feature of cardiac pacemaker cells that fire spontaneously", correct: false },
+      { text: "All three disorders are mechanistically identical — all involve painful involuntary contractions caused by accumulation of excess ACh at the neuromuscular junction, overwhelming the normal refractory period of the muscle fiber", correct: false },
+    ],
+    explanation: "CRAMPS: painful INVOLUNTARY muscle contraction. Causes: muscle swelling from fatigue OR lack of electrolytes (Na⁺, K⁺, Mg²⁺). CONVULSIONS: ABNORMAL, UNCOORDINATED contractions from NS dysfunction — motor nerve stimulation increases (e.g., epilepsy). FIBRILLATION: muscle fibers contract ASYNCHRONOUSLY rather than simultaneously → ineffective 'flutter'. Most important clinically in the HEART (ventricular fibrillation = cardiac emergency — no coordinated pumping). For physio: cryotherapy reduces pain and edema but can impair anti-inflammatory drug penetration (vasoconstriction); heat has a synergistic effect with NSAIDs for pain and joint stiffness."
+  },
+
+  {
+    id: 156,
+    category: "Muscle Drugs",
+    question: "What is the clinical distinction between rheumatoid arthritis and osteoarthritis (arthrosis), and how do their treatments differ?",
+    answers: [
+      { text: "RA: autoimmune — immune system attacks synovium → joint inflammation and pain (same joint bilaterally). Arthrosis: degenerative — cartilage wear and tear → pain, stiffness, decreased mobility. RA uses DMARDs (methotrexate); arthrosis uses paracetamol and cartilage protectors", correct: true },
+      { text: "RA: a degenerative cartilage disease predominantly affecting elderly patients, treated with cartilage protectors such as chondroitin sulphate. Arthrosis: an autoimmune condition affecting young adults, treated with methotrexate and sulfasalazine as first-line disease-modifying agents", correct: false },
+      { text: "RA and arthrosis are pathologically identical joint diseases; RA simply refers to the early inflammatory stage while arthrosis describes the end-stage requiring total surgical joint replacement", correct: false },
+      { text: "RA: caused by uric acid crystal deposition in joint spaces; treated with colchicine and allopurinol as first-line agents. Arthrosis: an autoimmune synovitis primarily treated with biological agents and anti-TNF therapies as the first therapeutic choice", correct: false },
+    ],
+    explanation: "RHEUMATOID ARTHRITIS (RA): AUTOIMMUNE — immune system attacks the SYNOVIUM (joint lining) → inflammation, pain; typically BILATERAL (same joint both sides), commonly hands, knees, ankles. Treatment: (1) NSAIDs (early pain management); (2) glucocorticoids (low dose oral or intra-articular); (3) DMARDs — METHOTREXATE, SULFASALAZINE (delay disease PROGRESSION). OSTEOARTHRITIS/ARTHROSIS: DEGENERATIVE — chronic wear of joint CARTILAGE → pain, stiffness, reduced mobility. Treatment: (1) PARACETAMOL + intra-articular glucocorticoids (pain); (2) CARTILAGE PROTECTORS — chondroitin sulphate (best), glucosamine sulphate, hyaluronic acid."
   },
 
 ];
