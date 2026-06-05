@@ -11,7 +11,7 @@ const QUESTIONS = [
 
   {
     id: 1,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "What is the literal definition of physiology?",
     answers: [
       { text: "The study of the chemical composition of living organisms", correct: false },
@@ -24,7 +24,7 @@ const QUESTIONS = [
 
   {
     id: 2,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "Homeostasis refers to:",
     answers: [
       { text: "The complete absence of change in the internal environment", correct: false },
@@ -37,7 +37,7 @@ const QUESTIONS = [
 
   {
     id: 3,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "Which physiological values are maintained under homeostatic control? (Select all that apply — choose the MOST complete answer)",
     answers: [
       { text: "Temperature (37°C) and pH (7.4) only", correct: false },
@@ -50,7 +50,7 @@ const QUESTIONS = [
 
   {
     id: 4,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "What are the THREE components of a homeostatic control system?",
     answers: [
       { text: "Receptor, nerve, muscle", correct: false },
@@ -63,7 +63,7 @@ const QUESTIONS = [
 
   {
     id: 5,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "What is the key difference between the nervous system and the endocrine system as integrating centers?",
     answers: [
       { text: "The nervous system uses hormones; the endocrine system uses nerve impulses", correct: false },
@@ -76,7 +76,7 @@ const QUESTIONS = [
 
   {
     id: 6,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "In a negative feedback loop, the response:",
     answers: [
       { text: "Enhances and amplifies the original stimulus", correct: false },
@@ -89,7 +89,7 @@ const QUESTIONS = [
 
   {
     id: 7,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "Positive feedback is characterized by:",
     answers: [
       { text: "A response that opposes the stimulus and restores equilibrium", correct: false },
@@ -102,7 +102,7 @@ const QUESTIONS = [
 
   {
     id: 8,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "Which of the following is an example of POSITIVE feedback?",
     answers: [
       { text: "Regulation of blood glucose by insulin", correct: false },
@@ -115,7 +115,7 @@ const QUESTIONS = [
 
   {
     id: 9,
-    category: "Introduction & Homeostasis",
+    category: "Introduction",
     question: "Alteration of homeostasis leads to:",
     answers: [
       { text: "Adaptation", correct: false },
@@ -132,7 +132,7 @@ const QUESTIONS = [
 
   {
     id: 10,
-    category: "Cell Physiology — Body Fluids",
+    category: "Cell Physiology",
     question: "What percentage of the adult body is composed of fluid, and how is it distributed?",
     answers: [
       { text: "50% total: 30% intracellular, 20% extracellular", correct: false },
@@ -145,7 +145,7 @@ const QUESTIONS = [
 
   {
     id: 11,
-    category: "Cell Physiology — Body Fluids",
+    category: "Cell Physiology",
     question: "Which ion has the HIGHEST concentration in the extracellular fluid (plasma)?",
     answers: [
       { text: "K⁺ (140 mEq/L)", correct: false },
@@ -158,7 +158,7 @@ const QUESTIONS = [
 
   {
     id: 12,
-    category: "Cell Physiology — Body Fluids",
+    category: "Cell Physiology",
     question: "What is the main difference between plasma and interstitial fluid?",
     answers: [
       { text: "Plasma has higher K⁺ concentration than interstitial fluid", correct: false },
@@ -171,7 +171,7 @@ const QUESTIONS = [
 
   {
     id: 13,
-    category: "Cell Physiology — Body Fluids",
+    category: "Cell Physiology",
     question: "Which ion is the predominant cation INSIDE the cell (intracellular fluid)?",
     answers: [
       { text: "Na⁺ (142 mEq/L intracellular)", correct: false },
@@ -188,7 +188,7 @@ const QUESTIONS = [
 
   {
     id: 14,
-    category: "Cell Physiology — Plasma Membrane",
+    category: "Cell Physiology",
     question: "What is the approximate composition of the plasma membrane?",
     answers: [
       { text: "90% lipids, 5% proteins, 5% carbohydrates", correct: false },
@@ -201,7 +201,7 @@ const QUESTIONS = [
 
   {
     id: 15,
-    category: "Cell Physiology — Plasma Membrane",
+    category: "Cell Physiology",
     question: "What is the role of cholesterol in the plasma membrane?",
     answers: [
       { text: "It forms the hydrophilic pores through which ions pass", correct: false },
@@ -214,7 +214,7 @@ const QUESTIONS = [
 
   {
     id: 16,
-    category: "Cell Physiology — Plasma Membrane",
+    category: "Cell Physiology",
     question: "Phospholipids are described as 'amphipathic'. This means they have:",
     answers: [
       { text: "Two phosphate groups on the same molecule", correct: false },
@@ -227,7 +227,7 @@ const QUESTIONS = [
 
   {
     id: 17,
-    category: "Cell Physiology — Plasma Membrane",
+    category: "Cell Physiology",
     question: "The 'fluid-mosaic model' of the plasma membrane refers to:",
     answers: [
       { text: "A rigid, fixed structure with proteins permanently embedded at set locations", correct: false },
@@ -240,7 +240,7 @@ const QUESTIONS = [
 
   {
     id: 18,
-    category: "Cell Physiology — Plasma Membrane",
+    category: "Cell Physiology",
     question: "What is the difference between peripheral and integral membrane proteins?",
     answers: [
       { text: "Peripheral proteins span the membrane completely; integral proteins are on only one surface", correct: false },
@@ -257,7 +257,7 @@ const QUESTIONS = [
 
   {
     id: 19,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "What is the fundamental difference between passive and active transport?",
     answers: [
       { text: "Passive transport requires a carrier protein; active transport does not", correct: false },
@@ -270,7 +270,7 @@ const QUESTIONS = [
 
   {
     id: 20,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "Which substances can cross the plasma membrane by SIMPLE DIFFUSION directly through the lipid bilayer?",
     answers: [
       { text: "Glucose, amino acids, and Na⁺", correct: false },
@@ -283,7 +283,7 @@ const QUESTIONS = [
 
   {
     id: 21,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "Facilitated diffusion differs from simple diffusion in that it:",
     answers: [
       { text: "Requires ATP and moves molecules against their concentration gradient", correct: false },
@@ -296,7 +296,7 @@ const QUESTIONS = [
 
   {
     id: 22,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "What is osmosis?",
     answers: [
       { text: "The movement of solutes from an area of low to high concentration", correct: false },
@@ -309,7 +309,7 @@ const QUESTIONS = [
 
   {
     id: 23,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "Which of the following solutions is ISOTONIC to blood cells?",
     answers: [
       { text: "Pure water (0 osmotic pressure)", correct: false },
@@ -322,7 +322,7 @@ const QUESTIONS = [
 
   {
     id: 24,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "What is oncotic (colloidosmotic) pressure?",
     answers: [
       { text: "The osmotic pressure generated by ions (Na⁺, K⁺) in the extracellular fluid", correct: false },
@@ -335,7 +335,7 @@ const QUESTIONS = [
 
   {
     id: 25,
-    category: "Cell Physiology — Membrane Transport",
+    category: "Cell Physiology",
     question: "Ion channels open and close in response to which stimuli?",
     answers: [
       { text: "Only chemical ligands binding to the channel", correct: false },
@@ -352,7 +352,7 @@ const QUESTIONS = [
 
   {
     id: 26,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "The Na⁺/K⁺ pump transports:",
     answers: [
       { text: "2 Na⁺ out and 3 K⁺ in per cycle", correct: false },
@@ -365,7 +365,7 @@ const QUESTIONS = [
 
   {
     id: 27,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "What are the THREE main functions of the Na⁺/K⁺ pump?",
     answers: [
       { text: "Glucose uptake, protein synthesis, and cell division", correct: false },
@@ -378,7 +378,7 @@ const QUESTIONS = [
 
   {
     id: 28,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "The Ca²⁺ pump removes calcium from the cytoplasm by pumping it into:",
     answers: [
       { text: "The nucleus", correct: false },
@@ -391,7 +391,7 @@ const QUESTIONS = [
 
   {
     id: 29,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "In secondary active transport, where does the energy come from?",
     answers: [
       { text: "Directly from ATP hydrolysis by ATPases", correct: false },
@@ -404,7 +404,7 @@ const QUESTIONS = [
 
   {
     id: 30,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "What is the difference between symport (cotransport) and antiport (countertransport)?",
     answers: [
       { text: "Symport uses ATP; antiport does not", correct: false },
@@ -417,7 +417,7 @@ const QUESTIONS = [
 
   {
     id: 31,
-    category: "Cell Physiology — Active Transport",
+    category: "Cell Physiology",
     question: "The Na⁺-Glucose cotransport (symport) is a key mechanism in:",
     answers: [
       { text: "Glucose entry into neurons", correct: false },
@@ -434,7 +434,7 @@ const QUESTIONS = [
 
   {
     id: 32,
-    category: "Cell Physiology — Bulk Transport",
+    category: "Cell Physiology",
     question: "What is endocytosis?",
     answers: [
       { text: "The secretion of cellular products into the extracellular environment via vesicles", correct: false },
@@ -447,7 +447,7 @@ const QUESTIONS = [
 
   {
     id: 33,
-    category: "Cell Physiology — Bulk Transport",
+    category: "Cell Physiology",
     question: "Phagocytosis is primarily carried out by which cells, and what does it destroy?",
     answers: [
       { text: "Neurons and red blood cells; it destroys hormones", correct: false },
@@ -460,7 +460,7 @@ const QUESTIONS = [
 
   {
     id: 34,
-    category: "Cell Physiology — Bulk Transport",
+    category: "Cell Physiology",
     question: "What distinguishes pinocytosis from phagocytosis?",
     answers: [
       { text: "Pinocytosis requires ATP; phagocytosis does not", correct: false },
@@ -473,7 +473,7 @@ const QUESTIONS = [
 
   {
     id: 35,
-    category: "Cell Physiology — Bulk Transport",
+    category: "Cell Physiology",
     question: "In exocytosis:",
     answers: [
       { text: "The cell imports large molecules by membrane invagination", correct: false },
@@ -486,7 +486,7 @@ const QUESTIONS = [
 
   {
     id: 36,
-    category: "Cell Physiology — Bulk Transport",
+    category: "Cell Physiology",
     question: "What is transcytosis?",
     answers: [
       { text: "The transport of molecules between the nucleus and cytoplasm", correct: false },
@@ -503,7 +503,7 @@ const QUESTIONS = [
 
   {
     id: 37,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "Why is the inside of the cell negatively charged relative to the outside?",
     answers: [
       { text: "Because Na⁺ is pumped into the cell, creating positive intracellular charge", correct: false },
@@ -516,7 +516,7 @@ const QUESTIONS = [
 
   {
     id: 38,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "What is the resting membrane potential of a neuron?",
     answers: [
       { text: "+66 mV", correct: false },
@@ -529,7 +529,7 @@ const QUESTIONS = [
 
   {
     id: 39,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "The K⁺ equilibrium potential (Ek) is approximately -90 mV. This means:",
     answers: [
       { text: "At -90 mV, K⁺ would be pumped maximally out of the cell", correct: false },
@@ -542,7 +542,7 @@ const QUESTIONS = [
 
   {
     id: 40,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "According to the Nernst equation, what does the equilibrium potential (Ex) represent?",
     answers: [
       { text: "The maximum speed at which an ion can cross the membrane", correct: false },
@@ -555,7 +555,7 @@ const QUESTIONS = [
 
   {
     id: 41,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "Why does a change in extracellular K⁺ concentration have the GREATEST effect on resting membrane potential?",
     answers: [
       { text: "Because K⁺ is the most abundant ion in the extracellular fluid", correct: false },
@@ -568,7 +568,7 @@ const QUESTIONS = [
 
   {
     id: 42,
-    category: "Cell Physiology — Membrane Potential",
+    category: "Cell Physiology",
     question: "The membrane potential is described as making each cell 'act like a tiny battery'. What is the significance of this?",
     answers: [
       { text: "It allows cells to photosynthesize light energy", correct: false },
@@ -586,7 +586,7 @@ const QUESTIONS = [
 
   {
     id: 43,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "According to anatomy, how is the nervous system divided?",
     answers: [
       { text: "Somatic NS and Autonomic NS", correct: false },
@@ -599,7 +599,7 @@ const QUESTIONS = [
 
   {
     id: 44,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "What distinguishes afferent from efferent pathways?",
     answers: [
       { text: "Afferent pathways are motor; efferent are sensory", correct: false },
@@ -612,7 +612,7 @@ const QUESTIONS = [
 
   {
     id: 45,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "Which neurons exclusively belong to the CNS?",
     answers: [
       { text: "Afferent neurons", correct: false },
@@ -625,7 +625,7 @@ const QUESTIONS = [
 
   {
     id: 46,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "In the CNS, what is the difference between grey matter and white matter?",
     answers: [
       { text: "Grey matter = myelinated axons; white matter = cell bodies", correct: false },
@@ -638,7 +638,7 @@ const QUESTIONS = [
 
   {
     id: 47,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "Neurons are metabolically remarkable. Which of the following statements about their energy consumption is correct?",
     answers: [
       { text: "Neurons use fat as their primary fuel and represent 10% of body weight", correct: false },
@@ -655,7 +655,7 @@ const QUESTIONS = [
 
   {
     id: 48,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "Which glial cell forms the myelin sheath in the CNS?",
     answers: [
       { text: "Schwann cells", correct: false },
@@ -668,7 +668,7 @@ const QUESTIONS = [
 
   {
     id: 49,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "What is the role of astrocytes?",
     answers: [
       { text: "They form myelin in the PNS and repair damaged axons", correct: false },
@@ -681,7 +681,7 @@ const QUESTIONS = [
 
   {
     id: 50,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "Microglia are best described as:",
     answers: [
       { text: "The cells responsible for forming myelin in the CNS", correct: false },
@@ -694,7 +694,7 @@ const QUESTIONS = [
 
   {
     id: 51,
-    category: "NS — Organization & Structure",
+    category: "Nervous System",
     question: "What is the key functional advantage of saltatory conduction in myelinated axons?",
     answers: [
       { text: "It allows action potentials to travel in both directions simultaneously", correct: false },
@@ -711,7 +711,7 @@ const QUESTIONS = [
 
   {
     id: 52,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "What is the threshold potential of a neuron, and what happens when it is reached?",
     answers: [
       { text: "-70 mV; the resting membrane potential is maintained", correct: false },
@@ -724,7 +724,7 @@ const QUESTIONS = [
 
   {
     id: 53,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "Describe the correct sequence of ion movements during a full action potential:",
     answers: [
       { text: "K⁺ rushes in (depolarization) → Na⁺ exits (repolarization) → return to rest", correct: false },
@@ -737,7 +737,7 @@ const QUESTIONS = [
 
   {
     id: 54,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "The absolute refractory period means:",
     answers: [
       { text: "A very strong stimulus can still trigger an action potential during this period", correct: false },
@@ -750,7 +750,7 @@ const QUESTIONS = [
 
   {
     id: 55,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "How does stimulus intensity translate into nervous system signaling, given the all-or-none law?",
     answers: [
       { text: "Stronger stimuli produce larger amplitude action potentials", correct: false },
@@ -763,7 +763,7 @@ const QUESTIONS = [
 
   {
     id: 56,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "Local anesthetics like lidocaine work by:",
     answers: [
       { text: "Blocking K⁺ channels, preventing repolarization", correct: false },
@@ -776,7 +776,7 @@ const QUESTIONS = [
 
   {
     id: 57,
-    category: "NS — Action Potentials",
+    category: "Nervous System",
     question: "What is the difference between pacemaker potentials and plateau potentials?",
     answers: [
       { text: "Pacemaker potentials are typical of neurons; plateau potentials are found in skeletal muscle", correct: false },
@@ -793,7 +793,7 @@ const QUESTIONS = [
 
   {
     id: 58,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "In a chemical synapse, what is the role of Ca²⁺ in neurotransmitter release?",
     answers: [
       { text: "Ca²⁺ directly opens postsynaptic ion channels", correct: false },
@@ -806,7 +806,7 @@ const QUESTIONS = [
 
   {
     id: 59,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "What is an EPSP vs. an IPSP?",
     answers: [
       { text: "EPSP = action potential; IPSP = resting potential", correct: false },
@@ -819,7 +819,7 @@ const QUESTIONS = [
 
   {
     id: 60,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "How is neurotransmitter removed from the synaptic cleft after release?",
     answers: [
       { text: "Only by enzymatic degradation in the cleft", correct: false },
@@ -832,7 +832,7 @@ const QUESTIONS = [
 
   {
     id: 61,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "What are the TWO main categories of postsynaptic receptors?",
     answers: [
       { text: "Nicotinic and muscarinic receptors", correct: false },
@@ -845,7 +845,7 @@ const QUESTIONS = [
 
   {
     id: 62,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "Acetylcholine (ACh) acts on two receptor types. Match them correctly:",
     answers: [
       { text: "Nicotinic = smooth muscle & glands; Muscarinic = skeletal muscle & autonomic ganglia", correct: false },
@@ -858,7 +858,7 @@ const QUESTIONS = [
 
   {
     id: 63,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "GABA is described as the most prevalent NT in the brain. What is its effect?",
     answers: [
       { text: "GABA is excitatory and opens Na⁺ channels", correct: false },
@@ -871,7 +871,7 @@ const QUESTIONS = [
 
   {
     id: 64,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "Regarding catecholamines (dopamine, noradrenaline, adrenaline), which statement is correct?",
     answers: [
       { text: "Dopamine deficiency causes Parkinson's; adrenaline/noradrenaline can act as both NT and hormones; all bind adrenergic receptors", correct: true },
@@ -884,7 +884,7 @@ const QUESTIONS = [
 
   {
     id: 65,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "Serotonin (5-HT) is primarily involved in which functions?",
     answers: [
       { text: "Movement control and Parkinson's disease", correct: false },
@@ -897,7 +897,7 @@ const QUESTIONS = [
 
   {
     id: 66,
-    category: "NS — Synapses & Neurotransmitters",
+    category: "Nervous System",
     question: "Endocannabinoids are unique neurotransmitters because:",
     answers: [
       { text: "They are stored in vesicles and released from the presynaptic neuron like all other NTs", correct: false },
@@ -1061,7 +1061,7 @@ const QUESTIONS = [
 
   {
     id: 78,
-    category: "PNS — Spinal & Cranial Nerves",
+    category: "PNS",
     question: "How many pairs of spinal nerves are there, and how are they distributed?",
     answers: [
       { text: "12 pairs: 4 cervical, 4 thoracic, 2 lumbar, 2 sacral", correct: false },
@@ -1074,7 +1074,7 @@ const QUESTIONS = [
 
   {
     id: 79,
-    category: "PNS — Spinal & Cranial Nerves",
+    category: "PNS",
     question: "What is the functional difference between the ventral root and the dorsal root of a spinal nerve?",
     answers: [
       { text: "Ventral root = sensory; dorsal root = motor", correct: false },
@@ -1087,7 +1087,7 @@ const QUESTIONS = [
 
   {
     id: 80,
-    category: "PNS — Spinal & Cranial Nerves",
+    category: "PNS",
     question: "Which cranial nerve has the most widespread parasympathetic influence on the body?",
     answers: [
       { text: "Trigeminal nerve (V)", correct: false },
@@ -1100,7 +1100,7 @@ const QUESTIONS = [
 
   {
     id: 81,
-    category: "PNS — Spinal & Cranial Nerves",
+    category: "PNS",
     question: "What is a dermatome?",
     answers: [
       { text: "A muscle or muscle group innervated by a single spinal nerve (motor)", correct: false },
@@ -1117,7 +1117,7 @@ const QUESTIONS = [
 
   {
     id: 82,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "What is the key structural difference between the somatic motor pathway and the ANS motor pathway?",
     answers: [
       { text: "The somatic pathway uses 2 neurons; the ANS uses 1 neuron", correct: false },
@@ -1130,7 +1130,7 @@ const QUESTIONS = [
 
   {
     id: 83,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "Which neurotransmitters are used at each synapse in the sympathetic and parasympathetic systems?",
     answers: [
       { text: "All ANS synapses use NA (noradrenaline)", correct: false },
@@ -1143,7 +1143,7 @@ const QUESTIONS = [
 
   {
     id: 84,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "Compare the anatomical features of sympathetic vs. parasympathetic preganglionic and postganglionic fibers:",
     answers: [
       { text: "Sympathetic: short pre, long post; parasympathetic: long pre, short post; ganglia near the organ for parasympathetic (terminal ganglia)", correct: true },
@@ -1156,7 +1156,7 @@ const QUESTIONS = [
 
   {
     id: 85,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "Which of the following effects are produced by SYMPATHETIC activation (fight-or-flight)?",
     answers: [
       { text: "Pupil constriction, bradycardia, increased digestive secretions, sphincter relaxation", correct: false },
@@ -1169,7 +1169,7 @@ const QUESTIONS = [
 
   {
     id: 86,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "Why do adrenergic (sympathetic) effects last LONGER than cholinergic (parasympathetic) effects after stimulation stops?",
     answers: [
       { text: "Because NA has a higher affinity for its receptors than ACh", correct: false },
@@ -1182,7 +1182,7 @@ const QUESTIONS = [
 
   {
     id: 87,
-    category: "PNS — Autonomic Nervous System",
+    category: "PNS",
     question: "Which brain areas control the ANS?",
     answers: [
       { text: "Only the cerebral cortex controls the ANS", correct: false },
@@ -1191,6 +1191,348 @@ const QUESTIONS = [
       { text: "The ANS is entirely independent of CNS control", correct: false }
     ],
     explanation: "Multiple CNS levels control the ANS: SPINAL CORD: reflex control of cardiovascular, pulmonary, urinary, reproductive and digestive systems. HYPOTHALAMUS: temperature, hunger, thirst — considered the MAIN ANS regulator. LIMBIC SYSTEM: mediates emotional ANS responses (blushing, pallor, fainting, cold sweat, rapid heart rate when frightened). CEREBELLUM: nausea, sweating, cardiovascular changes. The ANS is NOT fully autonomous — it is constantly modulated by higher CNS centers, which is why emotional states affect heart rate, digestion, etc."
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  NERVOUS DISORDERS & DRUGS — PATHOPHYSIOLOGY
+  // ══════════════════════════════════════════════════════════
+
+  {
+    id: 88,
+    category: "Nervous System Drugs",
+    question: "What is the neurochemical imbalance underlying Parkinson's disease, and why can't dopamine be given directly?",
+    answers: [
+      { text: "Excess dopamine and deficiency of acetylcholine; dopamine is too large to absorb orally", correct: false },
+      { text: "Deficiency of dopamine → excess of cholinergic activity; dopamine cannot cross the blood-brain barrier", correct: true },
+      { text: "Deficiency of serotonin and noradrenaline; serotonin degrades too quickly in plasma", correct: false },
+      { text: "Excess of GABA causing over-inhibition; GABA cannot be blocked selectively enough", correct: false }
+    ],
+    explanation: "Parkinson's disease is caused by degeneration of dopaminergic neurons in the basal ganglia → DOPAMINE DEFICIENCY → relative excess of cholinergic activity → symptoms: shaking, rigidity, slowness of movement (bradykinesia), difficulty walking. Dopamine CANNOT CROSS THE BBB, so giving it directly is ineffective. L-DOPA (levodopa), its precursor, crosses the BBB and is then converted to dopamine in the brain. MAO-B inhibitors (e.g., selegiline) and COMT inhibitors (e.g., entacapone) slow the breakdown of dopamine/L-DOPA to prolong its effect."
+  },
+
+  {
+    id: 89,
+    category: "Nervous System Drugs",
+    question: "What is the cause of depression according to this course, and what is the main mechanism of antidepressant drugs?",
+    answers: [
+      { text: "Excess of dopamine and serotonin; antidepressants block dopamine receptors", correct: false },
+      { text: "Deficiency/imbalance of serotonin (5-HT) and noradrenaline (NA); antidepressants inhibit their reuptake or prevent their enzymatic breakdown (MAO inhibitors)", correct: true },
+      { text: "Excess of GABA causing over-inhibition; antidepressants block GABA receptors", correct: false },
+      { text: "Deficiency of acetylcholine; antidepressants are anticholinesterases", correct: false }
+    ],
+    explanation: "Depression is caused by a DEFICIENCY/IMBALANCE of 5-HT (serotonin) and NA (noradrenaline). Main drug classes: (1) SSRIs (fluoxetine/Prozac®, citalopram, sertraline): block serotonin reuptake → more 5-HT in synapse; (2) SSNRIs (duloxetine, venlafaxine): block both 5-HT and NA reuptake; (3) TCAs (amitriptyline, imipramine): block NA and 5-HT reuptake (less selective, more side effects); (4) MAO-A inhibitors: prevent breakdown of NA and 5-HT. All take ~2 weeks to produce effect."
+  },
+
+  {
+    id: 90,
+    category: "Nervous System Drugs",
+    question: "What is the difference between anxiety and stress?",
+    answers: [
+      { text: "Stress is always pathological; anxiety is a normal preparatory response", correct: false },
+      { text: "Stress is a normal warning sign of imminent danger; anxiety is stress that CONTINUES after the stressing factor has disappeared — only pathological when it exceeds adaptive capacity", correct: true },
+      { text: "They are the same condition with different names", correct: false },
+      { text: "Anxiety is caused by excess dopamine; stress by excess cortisol", correct: false }
+    ],
+    explanation: "STRESS: a normal feeling of physical/emotional tension — a warning sign that prepares the organism to deal with a threat. ANXIETY: stress that CONTINUES after the stressful factor has disappeared. Anxiety is normal before certain situations (exams, public speaking) — it becomes PATHOLOGICAL only when it exceeds the person's adaptive capacity. Treatment: relaxation techniques + psychological assistance + anxiolytics (benzodiazepines) ± antidepressants if needed."
+  },
+
+  {
+    id: 91,
+    category: "Nervous System Drugs",
+    question: "Benzodiazepines are the 1st-choice anxiolytics. What is their mechanism of action?",
+    answers: [
+      { text: "They block dopamine D2 receptors, reducing psychomotor agitation", correct: false },
+      { text: "They enhance GABA action → hyperpolarization → CNS depression (anxiolytic, hypnotic, muscle relaxant, anticonvulsant effects)", correct: true },
+      { text: "They inhibit serotonin reuptake, increasing mood-stabilizing effects", correct: false },
+      { text: "They block Na⁺ channels in neurons, reducing neuronal excitability", correct: false }
+    ],
+    explanation: "Benzodiazepines (BZDs) ENHANCE GABA action at GABA-A receptors → increased Cl⁻ influx → hyperpolarization → CNS depression. This produces: ANXIOLYTIC (anxiety reduction), HYPNOTIC (sleep induction), MUSCLE RELAXANT, and ANTICONVULSANT effects. Short-acting BZDs (alprazolam, midazolam) are preferred for insomnia; long-acting BZDs (diazepam/Valium®, flurazepam) for anxiety. Key ADRs: sedation, ataxia, motor incoordination, amnesia, dependence. Interactions: alcohol, opioids, antihistamines all enhance CNS depression."
+  },
+
+  {
+    id: 92,
+    category: "Nervous System Drugs",
+    question: "How do antiepileptic drugs reduce neuronal excitability?",
+    answers: [
+      { text: "By enhancing dopamine activity in the basal ganglia", correct: false },
+      { text: "By BLOCKING Na⁺ channels (reducing excitability) and/or ENHANCING GABA action (increasing inhibition)", correct: true },
+      { text: "By blocking Ca²⁺ channels at the neuromuscular junction", correct: false },
+      { text: "By inhibiting acetylcholinesterase, reducing ACh levels", correct: false }
+    ],
+    explanation: "Antiepileptics work via two main mechanisms: (1) Na⁺ CHANNEL BLOCKERS (phenytoin, carbamazepine): prevent repetitive neuronal firing by stabilizing Na⁺ channels in their inactivated state → inhibit neuronal excitability; (2) GABA ENHANCERS (valproic acid, phenobarbital, benzodiazepines): increase inhibitory GABAergic transmission → hyperpolarization → neuronal inhibition. Epilepsy is caused by excessive and abnormal activity of brain neurons — both mechanisms reduce this hyperexcitability."
+  },
+
+  {
+    id: 93,
+    category: "Nervous System Drugs",
+    question: "What is the mechanism of antipsychotic drugs, and which neurotransmitter system is primarily targeted?",
+    answers: [
+      { text: "They enhance serotonin reuptake and block GABA receptors", correct: false },
+      { text: "They block D2 dopamine receptors; atypical antipsychotics also affect serotonin (for negative symptoms)", correct: true },
+      { text: "They increase dopamine release in the prefrontal cortex", correct: false },
+      { text: "They block nicotinic ACh receptors at the neuromuscular junction", correct: false }
+    ],
+    explanation: "Antipsychotics primarily BLOCK D2 DOPAMINE RECEPTORS — this produces the therapeutic (antipsychotic) effect. CONVENTIONAL (typical) antipsychotics (chlorpromazine, haloperidol): potent D2 blockers → high risk of extrapyramidal effects (pharmacological parkinsonism). ATYPICAL antipsychotics (clozapine, olanzapine, risperidone): block D2 + serotonin receptors → better for negative symptoms (which result from ↓ dopaminergic + ↑ serotoninergic activity) + fewer extrapyramidal side effects. Important for physio: D2 blockade can decrease reflexes and cause pharmacological parkinsonism."
+  },
+
+  {
+    id: 94,
+    category: "Nervous System Drugs",
+    question: "Regarding sympathomimetic (adrenergic) drugs — what are their mechanisms and a clinical example?",
+    answers: [
+      { text: "They block adrenergic receptors; used as antihypertensives and beta-blockers", correct: false },
+      { text: "They mimic sympathetic stimulation — directly (stimulate adrenergic receptors) or indirectly (increase NA release, e.g. amphetamines); clinical use: nasal decongestants (vasoconstriction via α receptors)", correct: true },
+      { text: "They enhance parasympathetic tone by activating muscarinic receptors", correct: false },
+      { text: "They block Na⁺ channels in sensory axons to prevent pain transmission", correct: false }
+    ],
+    explanation: "SYMPATHOMIMETIC drugs reproduce effects of sympathetic NS stimulation via: (1) DIRECT: stimulate adrenergic receptors (phenylephrine, oxymetazoline, tetrazoline → α1 agonists → vasoconstriction → nasal decongestants); (2) INDIRECT: increase NA release (amphetamines); (3) MIXED: ephedrine, pseudoephedrine (nasal decongestants). For physiotherapists: these drugs affect the CV system → CHECK VITAL SIGNS (BP, HR, respiratory rate). Exercise response may be altered."
+  },
+
+  {
+    id: 95,
+    category: "Nervous System Drugs",
+    question: "β-blockers (sympatholytic drugs) are used for which conditions, and what is their key precaution for physiotherapists?",
+    answers: [
+      { text: "Used for Parkinson's disease and epilepsy; precaution: increased risk of seizures during exercise", correct: false },
+      { text: "Used for angina pectoris, arrhythmias, and hypertension; precaution: risk of orthostatic hypotension — avoid rapid postural changes", correct: true },
+      { text: "Used for anxiety and depression; precaution: the drugs cause excessive sweating during exercise", correct: false },
+      { text: "Used for glaucoma only; no specific physiotherapy precautions needed", correct: false }
+    ],
+    explanation: "β-BLOCKERS (propranolol, carvedilol, atenolol) block β-adrenergic receptors → used for ANGINA PECTORIS, ARRHYTHMIAS, and HYPERTENSION. α-BLOCKERS → hypertension and migraines. Physiotherapy precautions: (1) MONITOR BLOOD PRESSURE; (2) AVOID RAPID POSTURAL CHANGES — orthostatic hypotension risk (disorientation, loss of balance, falls); (3) Exercise response may be altered due to bronchoconstriction and peripheral vasoconstriction. Must be withdrawn PROGRESSIVELY (abrupt cessation can cause rebound hypertension or angina)."
+  },
+
+  {
+    id: 96,
+    category: "Nervous System Drugs",
+    question: "Parasympathomimetic (cholinergic) drugs enhance ACh effects. What are their clinical uses?",
+    answers: [
+      { text: "Treatment of hypertension (muscarinic agonists) and Parkinson's disease (anticholinesterases)", correct: false },
+      { text: "Pilocarpine (direct muscarinic agonist) for glaucoma; anticholinesterases (neostigmine, donepezil, rivastigmine) for Alzheimer's", correct: true },
+      { text: "Treatment of asthma (bronchodilation) and intestinal spasms (reduced motility)", correct: false },
+      { text: "Nasal decongestants and cardiac arrhythmias", correct: false }
+    ],
+    explanation: "PARASYMPATHOMIMETIC drugs reproduce parasympathetic NS effects: DIRECT (stimulate muscarinic receptors): pilocarpine → pupil constriction + ciliary muscle contraction → reduces intraocular pressure → used for GLAUCOMA. INDIRECT (anticholinesterases — inhibit AChE → more ACh at synapse): neostigmine (myasthenia gravis), donepezil and rivastigmine (ALZHEIMER's disease — improve cholinergic transmission in the brain). Physio precaution: may cause muscle weakness; ophthalmic drugs → myopia/reduced night vision → risk of falls."
+  },
+
+  {
+    id: 97,
+    category: "Nervous System Drugs",
+    question: "Parasympatholytic (anticholinergic) drugs BLOCK muscarinic receptors. Match the drug to its clinical use:",
+    answers: [
+      { text: "Ipratropium/tiotropium → Parkinson's; biperiden → asthma; scopolamine → intestinal spasms", correct: false },
+      { text: "Scopolamine/hyoscine → intestinal spasms; ipratropium/tiotropium → asthma (bronchodilation); biperiden/trihexyphenidyl → Parkinson's disease", correct: true },
+      { text: "All anticholinergics are used exclusively for asthma", correct: false },
+      { text: "Scopolamine → Parkinson's; ipratropium → intestinal spasms; biperiden → glaucoma", correct: false }
+    ],
+    explanation: "ANTICHOLINERGIC drugs block muscarinic receptors: SCOPOLAMINE/HYOSCINE → blocks muscarinic receptors in GI smooth muscle → reduces motility → used for INTESTINAL SPASMS. IPRATROPIUM/TIOTROPIUM BROMIDE → blocks muscarinic receptors in airways → bronchodilation → used for ASTHMA/COPD. BIPERIDEN/TRIHEXYPHENIDYL → blocks cholinergic transmission → reduces excess ACh activity in Parkinson's (remember: Parkinson's = dopamine deficiency + excess cholinergic activity). Physio precaution for ALL anticholinergics: elderly more sensitive → confusion, disorientation; drowsiness + blurred vision → fall prevention needed."
+  },
+
+  // ══════════════════════════════════════════════════════════
+  //  SENSORY PHYSIOLOGY — RECEPTORS & PATHWAYS
+  // ══════════════════════════════════════════════════════════
+
+  {
+    id: 98,
+    category: "Sensory Physiology",
+    question: "Somatic sensory pathways always involve how many neurons, and what is decussation?",
+    answers: [
+      { text: "2 neurons; decussation = the splitting of sensory and motor signals at the thalamus", correct: false },
+      { text: "At least 3 neurons (primary: periphery → CNS; secondary: CNS → thalamus; tertiary: thalamus → cortex); decussation = crossing to the opposite side of the brain", correct: true },
+      { text: "1 neuron that travels directly from receptor to cortex; decussation does not occur in sensory pathways", correct: false },
+      { text: "4 neurons; decussation = duplication of signals for bilateral processing", correct: false }
+    ],
+    explanation: "Somatic sensory pathways always pass through AT LEAST 3 NEURON STATIONS: (1) PRIMARY neuron: periphery → spinal cord or brainstem; (2) SECONDARY neuron: spinal cord/brainstem → thalamus; (3) TERTIARY neuron: thalamus → cerebral cortex (sensory areas). Most sensory pathways are CROSSED (DECUSSATION): each side of the brain registers sensations from the OPPOSITE side of the body. This is why a stroke in the LEFT cortex causes sensory loss on the RIGHT side of the body."
+  },
+
+  {
+    id: 99,
+    category: "Sensory Physiology",
+    question: "What is receptor ADAPTATION, and which receptors do NOT adapt?",
+    answers: [
+      { text: "Adaptation = permanent sensitization to a stimulus; nociceptors never adapt", correct: false },
+      { text: "Adaptation = the magnitude of the action potential DECREASES over time with a continuous stimulus; proprioceptors (muscles, tendons, joints) do NOT adapt — they continuously report position", correct: true },
+      { text: "Adaptation = the receptor changes its type of stimulus it responds to; thermoreceptors never adapt", correct: false },
+      { text: "Adaptation = complete loss of receptor function over time; photoreceptors never adapt", correct: false }
+    ],
+    explanation: "ADAPTATION: the action potential magnitude (and sensation intensity) DECREASES over time with a CONTINUOUS stimulus — e.g., you stop feeling your clothes after putting them on. TOUCH receptors adapt QUICKLY. In contrast, PROPRIOCEPTORS (in muscles, tendons, joints) do NOT adapt — they continuously send impulses to the brain about body position and movement, which is essential for maintaining posture and coordination. This distinction is clinically important: proprioceptive training relies on these non-adapting receptors."
+  },
+
+  {
+    id: 100,
+    category: "Sensory Physiology",
+    question: "Classify the following receptors by location: exteroceptors, interoceptors/visceroceptors, and proprioceptors:",
+    answers: [
+      { text: "Exteroceptors = in muscles/joints; proprioceptors = in the skin; interoceptors = in blood vessels", correct: false },
+      { text: "Exteroceptors = near external body surface (respond to external stimuli); interoceptors = in viscera/blood vessels (usually unconscious); proprioceptors = in muscles, tendons, joints (body position and movement)", correct: true },
+      { text: "All three types are found exclusively in the skin", correct: false },
+      { text: "Exteroceptors = in the retina and cochlea; interoceptors = in joints; proprioceptors = in the skin", correct: false }
+    ],
+    explanation: "Classification by LOCATION: EXTEROCEPTORS: at/near external body surface → respond to external stimuli (touch, temperature, pain, pressure of skin). INTEROCEPTORS/VISCEROCEPTORS: in blood vessels and internal organs → produce impulses usually NOT consciously perceived (blood pressure, organ distension). PROPRIOCEPTORS: in muscles, tendons, and joints → provide information about body POSITION and JOINT MOVEMENT — crucial for balance, coordination, and physiotherapy rehabilitation."
+  },
+
+  {
+    id: 101,
+    category: "Sensory Physiology",
+    question: "Match the following enclosed nerve endings (mechanoreceptors) to their location and function:",
+    answers: [
+      { text: "Meissner corpuscle = dermis, pressure; Pacinian corpuscle = epidermis, touch", correct: false },
+      { text: "Pacinian corpuscle = dermis, pressure; Meissner corpuscle = epidermis, touch; Muscle spindle = skeletal muscle, muscle length; Golgi tendon organ = tendon, muscle tension", correct: true },
+      { text: "Muscle spindle = tendon, tension; Golgi tendon organ = skeletal muscle, length", correct: false },
+      { text: "All enclosed nerve endings are found exclusively in the skin", correct: false }
+    ],
+    explanation: "ENCLOSED nerve endings (mechanoreceptors, have connective tissue capsule): PACINIAN corpuscle: dermis → PRESSURE. MEISSNER corpuscle: epidermis → TOUCH. Krausse end bulbs: mucous membranes → touch. Ruffini endings: dermis → touch. MUSCLE SPINDLE: skeletal muscle → provides information about MUSCLE LENGTH (stretch reflex). GOLGI TENDON ORGAN: tendon → provides information about TENSION the muscle exerts on tendons. Both muscle spindles and Golgi tendon organs are key proprioceptors for physiotherapy assessment and rehabilitation."
+  },
+
+  {
+    id: 102,
+    category: "Sensory Physiology",
+    question: "What is the difference between the utricle/saccule and the semicircular canals in balance?",
+    answers: [
+      { text: "Utricle/saccule detect rotational acceleration; semicircular canals detect linear acceleration", correct: false },
+      { text: "Utricle/saccule detect LINEAR acceleration (horizontal/vertical speed changes); semicircular canals detect ROTATIONAL/ANGULAR acceleration (head turning, spinning)", correct: true },
+      { text: "Utricle/saccule are part of the cochlea for hearing; semicircular canals are exclusively for balance", correct: false },
+      { text: "Both structures detect the same type of movement but in different planes", correct: false }
+    ],
+    explanation: "Both structures are part of the VESTIBULAR APPARATUS (inner ear). They work by head movement → fluid movement → bending of hair cell cilia → action potentials. UTRICLE and SACCULE: detect LINEAR ACCELERATION — changes in speed when moving horizontally or vertically (e.g., driving, jumping rope, elevator). SEMICIRCULAR CANALS (3 canals in 3 planes): detect ROTATIONAL/ANGULAR ACCELERATION — turning the head, spinning around, acrobatics. Both contribute to the sense of balance. Innervated by CN VIII (vestibulocochlear nerve)."
+  },
+
+  {
+    id: 103,
+    category: "Sensory Physiology",
+    question: "Osmoreceptors are specialized receptors. Where are they located and what do they detect?",
+    answers: [
+      { text: "Located in the kidneys; detect changes in blood glucose concentration", correct: false },
+      { text: "Located in the hypothalamus; detect osmolarity changes in body fluids and stimulate the thirst centre", correct: true },
+      { text: "Located in the carotid body; detect changes in blood oxygen levels", correct: false },
+      { text: "Located in the skin; detect changes in external humidity", correct: false }
+    ],
+    explanation: "OSMORECEPTORS are specialized receptors located in the HYPOTHALAMUS. They detect osmolarity (concentration of solutes) in EXTRACELLULAR BODY FLUIDS. When osmolarity rises (dehydration, excess solutes): osmoreceptors are activated → stimulate the HYPOTHALAMIC THIRST CENTRE → sensation of thirst → drinking behavior → ADH (antidiuretic hormone) release → kidneys retain water → osmolarity is restored. This is a key homeostatic mechanism linking sensory physiology to fluid regulation."
+  },
+
+  // ══════════════════════════════════════════════════════════
+  //  SENSORY PHYSIOLOGY — PAIN
+  // ══════════════════════════════════════════════════════════
+
+  {
+    id: 104,
+    category: "Sensory Physiology",
+    question: "What is the KEY distinction between acute and chronic pain?",
+    answers: [
+      { text: "Acute pain lasts more than 6 months; chronic pain less than 6 months", correct: false },
+      { text: "Acute pain: <6 months, perceived 0.1 s after stimulus, disappears when cause heals (stabbing/electric quality); chronic pain: >6 months, appears ≥1 s after injury, not well localized, persists even after healing", correct: true },
+      { text: "Acute and chronic pain are identical except chronic pain only affects internal organs", correct: false },
+      { text: "Acute pain is always visceral; chronic pain is always somatic", correct: false }
+    ],
+    explanation: "ACUTE PAIN: lasts <6 months, perceived 0.1 s after stimulus (fast), associated with tissue injury, well localized, disappears with healing, described as intense/stabbing/electric (e.g., finger prick, burn). CHRONIC PAIN: lasts >6 months, appears 1+ second after injury, poorly localized, intensity increases slowly, persists up to 1 month even after the acute injury heals, involves deep tissue destruction, described as pulsatile/nauseous. Understanding this distinction is fundamental for physiotherapy pain management."
+  },
+
+  {
+    id: 105,
+    category: "Sensory Physiology",
+    question: "What is neuropathic pain, and how does it differ from nociceptive pain?",
+    answers: [
+      { text: "Neuropathic pain is always acute; nociceptive pain is always chronic", correct: false },
+      { text: "Neuropathic pain results from disease/injury to the nervous system itself (pathological, usually chronic); nociceptive pain is normal pain from undamaged nerves transmitting signals from tissue injury (protective, transient)", correct: true },
+      { text: "They are the same type of pain arising from the same mechanism", correct: false },
+      { text: "Nociceptive pain only affects visceral organs; neuropathic pain only affects the skin", correct: false }
+    ],
+    explanation: "NOCICEPTIVE PAIN: NORMAL pain — undamaged nerves transmit pain signals from injured somatic or visceral tissues. PROTECTIVE function, transient. Subtypes: SOMATIC (skin, muscle, joints, ligaments, bones — well localized) and VISCERAL (internal organs — vague, diffuse, poorly localized, may cause REFERRED PAIN). NEUROPATHIC PAIN: PATHOLOGICAL pain from disease/injury to the nervous system itself. Usually CHRONIC. Examples: trigeminal neuralgia, multiple sclerosis pain, spinal cord injury pain. Types: CENTRAL (CNS dysfunction) or PERIPHERAL (PNS dysfunction)."
+  },
+
+  {
+    id: 106,
+    category: "Sensory Physiology",
+    question: "What is referred pain?",
+    answers: [
+      { text: "Pain that intensifies when referred to a specialist", correct: false },
+      { text: "Pain perceived in a part of the body AWAY from the site where it actually originates — typical of visceral pain", correct: true },
+      { text: "Pain that is the same on both sides of the body simultaneously", correct: false },
+      { text: "Pain that only occurs when the patient describes it to another person", correct: false }
+    ],
+    explanation: "REFERRED PAIN: pain perceived in a location DISTANT from its actual origin. This occurs because visceral afferent neurons enter the spinal cord at the same level as somatic neurons from another body region — the brain 'misinterprets' the origin. Classic clinical examples: cardiac ischemia (heart attack) → pain felt in left arm, jaw, shoulder; kidney stones → pain in groin; liver/gallbladder disease → right shoulder pain; appendicitis → starts around umbilicus, then right lower quadrant. Vital concept for physiotherapy differential diagnosis."
+  },
+
+  {
+    id: 107,
+    category: "Sensory Physiology",
+    question: "The body's analgesic system releases endogenous substances that reduce pain. What are they and what triggers their release?",
+    answers: [
+      { text: "Prostaglandins and histamine, triggered by tissue damage", correct: false },
+      { text: "Enkephalins, endorphins, and serotonin — released by physical exercise, positive emotions, and good mood", correct: true },
+      { text: "GABA and glycine, triggered by sleep and rest", correct: false },
+      { text: "Dopamine and noradrenaline, triggered only by severe injury", correct: false }
+    ],
+    explanation: "The body's intrinsic ANALGESIC SYSTEM produces ENDOGENOUS OPIOIDS: ENKEPHALINS and ENDORPHINS (bind opioid receptors → reduce pain transmission), and SEROTONIN (also part of descending pain modulation). Released by: PHYSICAL EXERCISE (explains 'runner's high' and exercise-induced analgesia), POSITIVE EMOTIONS, and GOOD MOOD. This is the physiological basis for using exercise, physiotherapy, and psychological wellbeing as pain management strategies — directly relevant to physiotherapy practice."
+  },
+
+  // ══════════════════════════════════════════════════════════
+  //  SENSORY DISORDERS & DRUGS
+  // ══════════════════════════════════════════════════════════
+
+  {
+    id: 108,
+    category: "Sensory Drugs",
+    question: "Define the following sensory disorder terms: hypoalgesia, allodynia, and hyperalgesia:",
+    answers: [
+      { text: "Hypoalgesia = total loss of sensation; allodynia = exaggerated pain; hyperalgesia = decreased pain sensitivity", correct: false },
+      { text: "Hypoalgesia = decreased sensitivity to pain; allodynia = pain produced by a stimulus that normally does NOT cause pain; hyperalgesia = exaggerated sensitivity to pain", correct: true },
+      { text: "All three describe the same condition — complete loss of pain sensation", correct: false },
+      { text: "Hypoalgesia = increased pain; allodynia = decreased pain; hyperalgesia = normal pain response", correct: false }
+    ],
+    explanation: "Key sensory disorder terminology: HYPESTHESIA: decreased sensitivity (general). ANESTHESIA: total loss of ALL sensation. HYPOALGESIA: decreased sensitivity specifically to PAIN. ANALGESIA: complete loss of pain sensation. HYPERESTHESIA: exaggerated TACTILE sensitivity. HYPERALGESIA: exaggerated sensitivity to PAIN (even normal stimuli cause excessive pain). ALLODYNIA: pain produced by a stimulus that NORMALLY does NOT cause pain (e.g., light touch causing pain in a sunburn or nerve injury). These terms are essential for physiotherapy clinical assessment documentation."
+  },
+
+  {
+    id: 109,
+    category: "Sensory Drugs",
+    question: "What is the mechanism of NSAIDs (non-steroidal anti-inflammatory drugs), and what are their main adverse effects?",
+    answers: [
+      { text: "They block opioid receptors and cause respiratory depression", correct: false },
+      { text: "They inhibit COX enzymes → reduce prostaglandin synthesis → analgesic, antipyretic, anti-inflammatory, antiplatelet effects; main ADR: gastrointestinal damage (COX-1 inhibition), bleeding, renal failure", correct: true },
+      { text: "They enhance GABA activity and cause CNS depression", correct: false },
+      { text: "They block Na⁺ channels in sensory neurons → local anesthesia", correct: false }
+    ],
+    explanation: "NSAIDs inhibit COX (cyclooxygenase) enzymes → ↓ prostaglandin synthesis. COX-1 inhibition → GI mucosal protection ↓, platelet aggregation ↓ → GI ADRs (the main problem: heartburn, ulcers, bleeding). COX-2 inhibition → ANTI-INFLAMMATORY effect (desired). Main ADRs: GI damage (heartburn, gastritis, ulcers, bleeding), BLEEDING, renal failure. Omeprazole (PPI) only needed in HIGH-RISK patients. Never combine 2+ NSAIDs (increases toxicity without extra benefit). For physio: NSAIDs interact with oral anticoagulants → increased bleeding/bruising risk during sessions."
+  },
+
+  {
+    id: 110,
+    category: "Sensory Drugs",
+    question: "Paracetamol (acetaminophen) vs. ibuprofen: what is the key difference in their pharmacological profiles?",
+    answers: [
+      { text: "Paracetamol is anti-inflammatory and gastrotoxic; ibuprofen is not anti-inflammatory and causes no GI damage", correct: false },
+      { text: "Paracetamol = analgesic + antipyretic (NOT anti-inflammatory, acts in CNS, no GI damage, hepatotoxic in overdose); ibuprofen = analgesic + antipyretic + ANTI-INFLAMMATORY, GI damage risk", correct: true },
+      { text: "Both have identical mechanisms and adverse effects", correct: false },
+      { text: "Paracetamol is an opioid; ibuprofen is a local anesthetic", correct: false }
+    ],
+    explanation: "PARACETAMOL/ACETAMINOPHEN: analgesic + antipyretic (most used). NOT anti-inflammatory. Inhibits prostaglandin synthesis in the CNS (good for headaches). NO GI damage (safe on stomach). ADR: HEPATOTOXICITY → overdose → liver necrosis (can be fatal). ANTIDOTE: N-acetylcysteine. Max dose: 4g/day. CONTRAINDICATED in children/teenagers as anti-inflammatory. IBUPROFEN: analgesic + antipyretic + ANTI-INFLAMMATORY (full NSAID). Better GI profile than aspirin. For physio: prefer paracetamol over NSAIDs when possible — similar analgesia with fewer ADRs. NEVER use aspirin in children (Reye's syndrome risk)."
+  },
+
+  {
+    id: 111,
+    category: "Sensory Drugs",
+    question: "What is the WHO analgesic pain ladder and what are the three steps?",
+    answers: [
+      { text: "Step 1: opioids; Step 2: NSAIDs; Step 3: local anesthetics", correct: false },
+      { text: "Step 1: non-opioid analgesics (NSAIDs/paracetamol); Step 2: mild opioids (codeine, tramadol); Step 3: strong opioids (morphine, fentanyl)", correct: true },
+      { text: "Step 1: physiotherapy; Step 2: surgery; Step 3: palliative care", correct: false },
+      { text: "Step 1: antidepressants; Step 2: anticonvulsants; Step 3: opioids", correct: false }
+    ],
+    explanation: "The WHO PAIN MANAGEMENT LADDER guides analgesic prescribing by pain severity: STEP 1 (mild pain): NON-OPIOIDS — NSAIDs (ibuprofen, aspirin) + paracetamol ± adjuvants. STEP 2 (moderate pain): MILD OPIOIDS — codeine, dihydrocodeine, tramadol ± non-opioids. STEP 3 (severe/cancer pain): STRONG OPIOIDS — morphine, buprenorphine, fentanyl, methadone ± non-opioids. Key principles: individualize treatment, prefer oral administration, administer regularly (not just on demand), prevent side effects. Analgesics allow more active physiotherapy rehabilitation when at maximum efficiency."
+  },
+
+  {
+    id: 112,
+    category: "Sensory Drugs",
+    question: "What are the main adverse effects of opioids, and what is the antidote for opioid overdose?",
+    answers: [
+      { text: "Main ADR: hepatotoxicity; antidote: N-acetylcysteine", correct: false },
+      { text: "Main ADR: nausea/vomiting, constipation, RESPIRATORY DEPRESSION, sedation/confusion; antidote: IV Naloxone", correct: true },
+      { text: "Main ADR: GI bleeding and renal failure; antidote: omeprazole", correct: false },
+      { text: "Main ADR: cardiac arrhythmias and hypertension; antidote: atropine", correct: false }
+    ],
+    explanation: "OPIOID ADRs: nausea/vomiting, CONSTIPATION, RESPIRATORY DEPRESSION (most dangerous — potentially fatal), dry mouth, sedation/confusion. OVERDOSE signs: respiratory depression, excessive sedation, MIOSIS (pupil constriction), hypotension → WARN THE DOCTOR. ANTIDOTE: IV NALOXONE (opioid receptor antagonist). Also important: ADDICTION (uncontrolled need for more), TOLERANCE (need increased dose for same effect), DEPENDENCE (withdrawal symptoms on abrupt cessation: sweating, tremors, diarrhea, insomnia, anxiety). For physio: opioids cause respiratory depression → decreased respiratory response to exercise during rehabilitation."
   },
 
 ];
