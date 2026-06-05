@@ -607,8 +607,8 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Neurons are metabolically remarkable. Which of the following statements about their energy consumption is correct?",
     answers: [
-      { text: "Neurons use fatty acids as fuel and account for roughly 10% of total body weight", correct: false },
-      { text: "Neurons use only glucose, are ~2.5% of body weight, but consume 60% of glucose and 20% of O₂ at rest", correct: true },
+      { text: "Neurons use fatty acids as fuel and account for roughly 2.5% of total body weight", correct: false },
+      { text: "Neurons are ~2.5% of body weight, but consume 60% of glucose and 20% of O₂ at rest", correct: true },
       { text: "Neurons can freely switch between glucose and ketone bodies without any functional consequence", correct: false },
       { text: "Neurons consume 20% of total body glucose and 60% of total body oxygen during rest", correct: false },
     ],
@@ -633,10 +633,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "What is the role of astrocytes?",
     answers: [
-      { text: "They form myelin sheaths in the PNS and regenerate damaged peripheral axons after injury", correct: false },
+      { text: "They form myelin sheaths in the PNS AND regenerate damaged peripheral axons after injury", correct: false },
       { text: "They feed neurons by capturing blood glucose AND contribute to the blood-brain barrier via pseudopods", correct: true },
       { text: "They are the resident macrophages of the CNS, phagocytosing pathogens and cellular debris", correct: false },
-      { text: "They line the brain ventricles and form the choroid plexus that produces cerebrospinal fluid", correct: false },
+      { text: "They line the brain ventricles AND form the choroid plexus that produces cerebrospinal fluid", correct: false },
     ],
     explanation: "ASTROCYTES (star-shaped) have two key roles: (1) They FEED neurons by capturing glucose from the blood; (2) They cover brain capillaries with their 'pseudopods,' contributing to the BLOOD-BRAIN BARRIER (BBB). Microglia are the CNS macrophages. Ependymal cells line ventricles and form the choroid plexus. Oligodendrocytes form myelin in the CNS. Schwann cells and satellite cells serve PNS functions."
   },
@@ -670,12 +670,12 @@ const QUESTIONS = [
   {
     id: 52,
     category: "Nervous System",
-    question: "What is the threshold potential of a neuron, and what happens when it is reached?",
+    question: "What is the threshold potential of a neuron?",
     answers: [
-      { text: "-70 mV; the neuron maintains its resting membrane potential and no impulse is generated", correct: false },
-      { text: "-55 mV; voltage-gated Na⁺ channels open massively in a self-amplifying positive feedback loop", correct: true },
-      { text: "+30 mV; the action potential reaches its peak and all Na⁺ channels become inactivated", correct: false },
-      { text: "-90 mV; voltage-gated K⁺ channels open and the repolarization phase begins", correct: false },
+      { text: "-70 mV", correct: false },
+      { text: "-55 mV", correct: true },
+      { text: "+30 mV", correct: false },
+      { text: "-90 mV", correct: false },
     ],
     explanation: "The THRESHOLD is approximately -55 mV. When depolarization reaches -55 mV, voltage-gated Na⁺ channels open in a POSITIVE FEEDBACK LOOP: opening of Na⁺ channels → more Na⁺ enters → more depolarization → more channels open → etc. This produces a maximal, all-or-none action potential peaking at +30 mV. Below threshold, channels close and no action potential is generated."
   },
@@ -712,7 +712,7 @@ const QUESTIONS = [
     question: "How does stimulus intensity translate into nervous system signaling, given the all-or-none law?",
     answers: [
       { text: "Stronger stimuli generate action potentials with proportionally larger peak amplitudes", correct: false },
-      { text: "Intensity is coded by the NUMBER of neurons firing and the FREQUENCY of action potentials, not amplitude", correct: true },
+      { text: "Intensity is coded by the number of neurons firing and the frequency of action potentials", correct: true },
       { text: "Stronger stimuli produce action potentials that last longer in duration than weaker stimuli", correct: false },
       { text: "The all-or-none law means every stimulus, regardless of strength, produces the same sensation", correct: false },
     ],
@@ -764,7 +764,7 @@ const QUESTIONS = [
     question: "What is an EPSP vs. an IPSP?",
     answers: [
       { text: "EPSP = a full action potential; IPSP = a return to the baseline resting membrane potential", correct: false },
-      { text: "EPSP = transient depolarization via Na⁺ influx (excitatory); IPSP = hyperpolarization via Cl⁻/K⁺ (inhibitory)", correct: true },
+      { text: "EPSP = transient depolarization via Na⁺ influx; IPSP = hyperpolarization via Cl⁻/K⁺", correct: true },
       { text: "EPSP is produced exclusively by ACh; IPSP is produced exclusively by GABA at all synapses", correct: false },
       { text: "Both produce identical membrane effects but EPSP lasts longer and IPSP terminates more quickly", correct: false },
     ],
@@ -1063,7 +1063,7 @@ const QUESTIONS = [
     question: "What is the key structural difference between the somatic motor pathway and the ANS motor pathway?",
     answers: [
       { text: "The somatic motor pathway uses two neurons (upper and lower motor neurons); the ANS uses only one direct neuron", correct: false },
-      { text: "The somatic pathway uses ONE neuron (CNS to skeletal muscle); the ANS always uses TWO (preganglionic + postganglionic)", correct: true },
+      { text: "The somatic pathway uses one neuron and the ANS always uses two neurons", correct: true },
       { text: "Both pathways use exactly the same number of neurons, with identical myelin sheaths and conduction velocities throughout", correct: false },
       { text: "The ANS consists only of postganglionic neurons projecting directly from the spinal cord — no preganglionic neurons exist", correct: false },
     ],
@@ -1099,7 +1099,7 @@ const QUESTIONS = [
   {
     id: 85,
     category: "PNS",
-    question: "Which of the following effects are produced by SYMPATHETIC activation (fight-or-flight)?",
+    question: "Which of the following effects are produced by SYMPATHETIC activation?",
     answers: [
       { text: "Pupil constriction (miosis), bradycardia, increased digestive secretions, and sphincter relaxation to facilitate elimination", correct: false },
       { text: "Pupil dilation, tachycardia, increased blood flow to skeletal muscles, sphincter contraction, pale skin, dry mouth", correct: true },
