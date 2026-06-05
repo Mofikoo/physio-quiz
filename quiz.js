@@ -124,13 +124,13 @@ function selectAnswer(btn, chosen, allAnswers, q) {
   const expBox = document.getElementById('explanation-box');
   expBox.classList.add('visible', isCorrect ? 'correct' : 'wrong');
   expBox.innerHTML = `
-    <div class="exp-header">${isCorrect ? '✓ Bonne réponse !' : '✗ Mauvaise réponse'}</div>
+    <div class="exp-header">${isCorrect ? '✓ Correct!' : '✗ Wrong answer'}</div>
     <div class="exp-body">${q.explanation}</div>
   `;
 
   const nextBtn = document.getElementById('next-btn');
   nextBtn.classList.add('visible');
-  nextBtn.textContent = currentIndex + 1 < quizQuestions.length ? 'Question suivante →' : 'Voir les résultats →';
+  nextBtn.textContent = currentIndex + 1 < quizQuestions.length ? 'Next question →' : 'See results →';
 }
 
 // --- NEXT ---
@@ -173,10 +173,10 @@ function showResults() {
   document.getElementById('result-pct').textContent   = `${pct}%`;
 
   let msg = '';
-  if (pct >= 90)      msg = 'Excellent ! Maîtrise quasi parfaite.';
-  else if (pct >= 75) msg = 'Très bien ! Quelques points à revoir.';
-  else if (pct >= 50) msg = 'Pas mal, mais il reste du travail.';
-  else                msg = 'À retravailler — les explications sont là pour aider !';
+  if (pct >= 90)      msg = 'Excellent! Near-perfect mastery.';
+  else if (pct >= 75) msg = 'Very good! A few points to review.';
+  else if (pct >= 50) msg = 'Not bad, but there is still work to do.';
+  else                msg = 'Needs work — use the explanations to help!';
   document.getElementById('result-msg').textContent = msg;
 
   const ring         = document.getElementById('score-ring-fill');
@@ -195,7 +195,7 @@ function showResults() {
     div.innerHTML = `
       <div class="cat-stat-header">
         <span class="cat-name">${cat}</span>
-        <span class="cat-score">${stats.correct}/${stats.total} — <span class="cat-err" style="color:${errPct > 30 ? 'var(--red)' : errPct > 10 ? 'var(--yellow)' : 'var(--green)'}">${errPct}% d'erreurs</span></span>
+        <span class="cat-score">${stats.correct}/${stats.total} — <span class="cat-err" style="color:${errPct > 30 ? 'var(--red)' : errPct > 10 ? 'var(--yellow)' : 'var(--green)'}">${errPct}% errors</span></span>
       </div>
       <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${catPct}%; background:${catPct >= 75 ? 'var(--green)' : catPct >= 50 ? 'var(--yellow)' : 'var(--red)'}"></div></div>
     `;
@@ -212,7 +212,7 @@ function restartQuiz() {
 function initStartScreen() {
   // Category select
   const sel = document.getElementById('category-select');
-  sel.innerHTML = '<option value="all">Toutes les catégories</option>';
+  sel.innerHTML = '<option value="all">All categories</option>';
   CATEGORIES.slice().sort().forEach(cat => {
     const opt = document.createElement('option');
     opt.value = cat;

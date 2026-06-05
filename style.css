@@ -270,25 +270,25 @@ select:focus { border-color: var(--accent); }
 /* Answers inside the container */
 .answers-container {
   display: flex; flex-direction: column;
-  gap: 0;
-  padding: 8px 12px 12px;
+  gap: 6px;
+  padding: 10px 12px 14px;
 }
 
 .answer-btn {
   display: flex; align-items: flex-start; gap: 12px;
-  background: transparent;
-  border: 1px solid transparent;
+  background: var(--bg3);
+  border: 1px solid var(--border);
   color: var(--text);
-  padding: 11px 12px;
+  padding: 11px 14px;
   border-radius: var(--radius);
   font-family: var(--font-body); font-size: 14px;
   cursor: pointer; text-align: left;
   transition: border-color 0.15s, background 0.15s, transform 0.1s;
-  line-height: 1.5; margin: 3px 0;
+  line-height: 1.5;
 }
 .answer-btn:hover:not(:disabled) {
-  border-color: var(--border2);
-  background: var(--bg3);
+  border-color: var(--accent);
+  background: rgba(79,142,247,0.08);
   transform: translateX(2px);
 }
 .answer-btn:disabled { cursor: default; }
@@ -471,7 +471,7 @@ select:focus { border-color: var(--accent); }
 @media (max-width: 520px) {
   .question-text  { font-size: 15px; }
   .question-block { padding: 18px 16px 16px; }
-  .answers-container { padding: 6px 8px 10px; }
+  .answers-container { padding: 6px 8px 10px; gap: 5px; }
   .start-card     { padding: 20px; }
   .count-btns     { grid-template-columns: repeat(4, 1fr); }
 }
