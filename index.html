@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quiz de physiologie — révision personnelle" />
   <title>PhysioQuiz</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="theme-color" content="#0d0f14" />
@@ -30,19 +29,26 @@
 
     <div class="start-stats">
       <div class="stat-pill"><strong id="total-questions">0</strong> questions</div>
-      <div class="stat-pill"><strong id="total-cats">—</strong> categories</div>
+      <div class="stat-pill"><strong id="selected-count">0</strong> selected</div>
     </div>
 
     <div class="start-card">
-      <h2>Options</h2>
 
+      <!-- Categories -->
       <div class="form-group">
-        <label class="form-label">Category</label>
-        <select id="category-select" aria-label="Choose a category">
-          <option value="all">All categories</option>
-        </select>
+        <div class="cat-label-row">
+          <label class="form-label">Categories</label>
+          <div class="cat-toggle-row">
+            <button class="cat-toggle-btn" onclick="selectAllCats()">All</button>
+            <button class="cat-toggle-btn" onclick="selectNoneCats()">None</button>
+          </div>
+        </div>
+        <div class="cat-checklist" id="cat-checklist">
+          <!-- filled by JS -->
+        </div>
       </div>
 
+      <!-- Number of questions -->
       <div class="form-group">
         <label class="form-label">Number of questions</label>
         <div class="count-btns">
@@ -54,7 +60,7 @@
         <input type="hidden" id="count-select" value="20" />
       </div>
 
-      <button class="btn-primary btn-full" onclick="startQuiz()">
+      <button class="btn-primary btn-full" id="start-btn" onclick="startQuiz()">
         Start →
       </button>
       <p class="hint-text">Keys 1–4 to answer · Enter to continue</p>
@@ -67,7 +73,6 @@
   ══════════════════════════════════════════════════════ -->
   <div id="screen-quiz" class="screen">
 
-    <!-- Top bar: progress + quit -->
     <div class="progress-wrap">
       <div class="progress-track">
         <div class="progress-bar" id="progress-bar"></div>
@@ -77,27 +82,16 @@
       <button class="quit-btn" onclick="confirmQuit()" title="Quit quiz">✕</button>
     </div>
 
-    <!-- Question + answers unified container -->
     <div class="quiz-container">
-
-      <!-- Question -->
       <div class="question-block">
         <span class="question-category" id="question-category">—</span>
-        <p class="question-text" id="question-text">Chargement…</p>
+        <p class="question-text" id="question-text">Loading…</p>
       </div>
-
-      <!-- Divider -->
       <div class="quiz-divider"></div>
-
-      <!-- Answers -->
       <div class="answers-container" id="answers-container"></div>
-
     </div>
 
-    <!-- Explanation -->
     <div class="explanation-box" id="explanation-box"></div>
-
-    <!-- Next -->
     <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next question →</button>
     <p class="keyboard-hint">↵ Enter or → to continue</p>
 
@@ -150,16 +144,8 @@
     </div>
   </div>
 
-  <!-- ── SCRIPTS ─────────────────────────────────────────── -->
   <script src="questions.js"></script>
   <script src="quiz.js"></script>
-  <script>
-    function selectCount(btn) {
-      document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('count-select').value = btn.dataset.value;
-    }
-  </script>
 
 </body>
 </html>

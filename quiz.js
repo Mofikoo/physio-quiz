@@ -4,18 +4,16 @@
 
 // --- STATE ---
 let quizQuestions = [];
-let currentIndex = 0;
-let score = 0;
-let answered = false;
+let currentIndex  = 0;
+let score         = 0;
+let answered      = false;
 let categoryStats = {};
-let lastCategorySelect = 'all';
-let lastCountSelect = 'all';
 
-// --- DOM REFS ---
+// --- DOM ---
 const screens = {
-  start:   document.getElementById('screen-start'),
-  quiz:    document.getElementById('screen-quiz'),
-  result:  document.getElementById('screen-result'),
+  start:  document.getElementById('screen-start'),
+  quiz:   document.getElementById('screen-quiz'),
+  result: document.getElementById('screen-result'),
 };
 
 // --- UTILITIES ---
@@ -33,22 +31,77 @@ function showScreen(name) {
   screens[name].classList.add('active');
 }
 
-// --- START ---
+// ── CATEGORY CHECKLIST ──────────────────────────────────────
+
+function getSelectedCats() {
+  return [...document.querySelectorAll('.cat-checkbox:checked')].map(cb => cb.value);
+}
+
+function updateSelectedCount() {
+  const selected = getSelectedCats();
+  const pool = QUESTIONS.filter(q => selected.includes(q.category));
+  document.getElementById('selected-count').textContent = pool.length + ' available';
+
+  const btn = document.getElementById('start-btn');
+  btn.disabled = selected.length === 0;
+  btn.style.opacity = selected.length === 0 ? '0.4' : '';
+}
+
+function selectAllCats() {
+  document.querySelectorAll('.cat-checkbox').forEach(cb => cb.checked = true);
+  updateSelectedCount();
+}
+
+function selectNoneCats() {
+  document.querySelectorAll('.cat-checkbox').forEach(cb => cb.checked = false);
+  updateSelectedCount();
+}
+
+function selectCount(btn) {
+  document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('count-select').value = btn.dataset.value;
+}
+
+function buildCatChecklist() {
+  const list = document.getElementById('cat-checklist');
+  list.innerHTML = '';
+
+  // Category → question count map
+  const counts = {};
+  QUESTIONS.forEach(q => { counts[q.category] = (counts[q.category] || 0) + 1; });
+
+  CATEGORIES.slice().sort().forEach(cat => {
+    const id  = 'cat-' + cat.replace(/[^a-z0-9]/gi, '_');
+    const row = document.createElement('label');
+    row.className   = 'cat-row';
+    row.htmlFor     = id;
+    row.innerHTML   = `
+      <input type="checkbox" class="cat-checkbox" id="${id}" value="${cat}" checked />
+      <span class="cat-row-check"></span>
+      <span class="cat-row-name">${cat}</span>
+      <span class="cat-row-count">${counts[cat]}</span>
+    `;
+    row.querySelector('.cat-checkbox').addEventListener('change', updateSelectedCount);
+    list.appendChild(row);
+  });
+
+  updateSelectedCount();
+}
+
+// ── START ────────────────────────────────────────────────────
+
 function startQuiz() {
-  const catSel   = document.getElementById('category-select').value;
+  const selected = getSelectedCats();
+  if (selected.length === 0) return;
+
   const countSel = document.getElementById('count-select').value;
 
-  lastCategorySelect = catSel;
-  lastCountSelect    = countSel;
-
-  let pool = [...QUESTIONS];
-  if (catSel !== 'all') pool = pool.filter(q => q.category === catSel);
-
+  let pool = QUESTIONS.filter(q => selected.includes(q.category));
   pool = shuffle(pool);
 
   if (countSel !== 'all') {
-    const n = parseInt(countSel);
-    pool = pool.slice(0, Math.min(n, pool.length));
+    pool = pool.slice(0, Math.min(parseInt(countSel), pool.length));
   }
 
   quizQuestions = pool;
@@ -66,59 +119,51 @@ function startQuiz() {
   renderQuestion();
 }
 
-// --- RENDER QUESTION ---
+// ── RENDER QUESTION ──────────────────────────────────────────
+
 function renderQuestion() {
   answered = false;
   const q = quizQuestions[currentIndex];
 
-  // Progress
   const progress = (currentIndex / quizQuestions.length) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
   document.getElementById('progress-text').textContent = `${currentIndex + 1} / ${quizQuestions.length}`;
   document.getElementById('score-display').textContent = `✓ ${score}`;
 
-  // Category badge
   document.getElementById('question-category').textContent = q.category;
-
-  // Question text
   document.getElementById('question-text').textContent = q.question;
 
-  // Answers
   const container = document.getElementById('answers-container');
   container.innerHTML = '';
-  const shuffledAnswers = shuffle(q.answers);
-  shuffledAnswers.forEach((ans, i) => {
+  const shuffled = shuffle(q.answers);
+  shuffled.forEach((ans, i) => {
     const btn = document.createElement('button');
     btn.className = 'answer-btn';
     btn.innerHTML = `<span class="answer-letter">${String.fromCharCode(65 + i)}</span><span class="answer-text">${ans.text}</span>`;
-    btn.addEventListener('click', () => selectAnswer(btn, ans, shuffledAnswers, q));
+    btn.addEventListener('click', () => selectAnswer(btn, ans, shuffled, q));
     container.appendChild(btn);
   });
 
-  // Reset explanation + next btn
   const expBox = document.getElementById('explanation-box');
   expBox.classList.remove('visible', 'correct', 'wrong');
   expBox.innerHTML = '';
   document.getElementById('next-btn').classList.remove('visible');
 }
 
-// --- SELECT ANSWER ---
+// ── SELECT ANSWER ────────────────────────────────────────────
+
 function selectAnswer(btn, chosen, allAnswers, q) {
   if (answered) return;
   answered = true;
 
   const isCorrect = chosen.correct;
-  if (isCorrect) {
-    score++;
-    categoryStats[q.category].correct++;
-  }
+  if (isCorrect) { score++; categoryStats[q.category].correct++; }
 
   document.querySelectorAll('.answer-btn').forEach((b, i) => {
-    const ans = allAnswers[i];
     b.disabled = true;
-    if (ans.correct)              b.classList.add('correct');
-    else if (b === btn)           b.classList.add('wrong');
-    else                          b.classList.add('faded');
+    if (allAnswers[i].correct) b.classList.add('correct');
+    else if (b === btn)        b.classList.add('wrong');
+    else                       b.classList.add('faded');
   });
 
   const expBox = document.getElementById('explanation-box');
@@ -133,7 +178,8 @@ function selectAnswer(btn, chosen, allAnswers, q) {
   nextBtn.textContent = currentIndex + 1 < quizQuestions.length ? 'Next question →' : 'See results →';
 }
 
-// --- NEXT ---
+// ── NEXT ─────────────────────────────────────────────────────
+
 function nextQuestion() {
   currentIndex++;
   if (currentIndex < quizQuestions.length) {
@@ -144,26 +190,16 @@ function nextQuestion() {
   }
 }
 
-// --- QUIT MODAL ---
-function confirmQuit() {
-  document.getElementById('quit-modal').classList.add('visible');
-}
+// ── QUIT MODAL ───────────────────────────────────────────────
 
-function cancelQuit() {
-  document.getElementById('quit-modal').classList.remove('visible');
-}
+function confirmQuit() { document.getElementById('quit-modal').classList.add('visible'); }
+function cancelQuit()  { document.getElementById('quit-modal').classList.remove('visible'); }
+function doQuit()      { document.getElementById('quit-modal').classList.remove('visible'); showScreen('start'); }
 
-function doQuit() {
-  document.getElementById('quit-modal').classList.remove('visible');
-  showScreen('start');
-}
+document.addEventListener('click', e => { if (e.target.id === 'quit-modal') cancelQuit(); });
 
-// Close modal on backdrop click
-document.addEventListener('click', e => {
-  if (e.target.id === 'quit-modal') cancelQuit();
-});
+// ── RESULTS ──────────────────────────────────────────────────
 
-// --- RESULTS ---
 function showResults() {
   showScreen('result');
   const total = quizQuestions.length;
@@ -179,10 +215,10 @@ function showResults() {
   else                msg = 'Needs work — use the explanations to help!';
   document.getElementById('result-msg').textContent = msg;
 
-  const ring         = document.getElementById('score-ring-fill');
-  const circumference = 2 * Math.PI * 54;
-  ring.style.strokeDasharray  = circumference;
-  ring.style.strokeDashoffset = circumference * (1 - pct / 100);
+  const ring = document.getElementById('score-ring-fill');
+  const c    = 2 * Math.PI * 54;
+  ring.style.strokeDasharray  = c;
+  ring.style.strokeDashoffset = c * (1 - pct / 100);
   ring.style.stroke = pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--yellow)' : 'var(--red)';
 
   const catContainer = document.getElementById('category-stats');
@@ -190,7 +226,7 @@ function showResults() {
   Object.entries(categoryStats).sort((a, b) => a[0].localeCompare(b[0])).forEach(([cat, stats]) => {
     const catPct = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
     const errPct = 100 - catPct;
-    const div    = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'cat-stat';
     div.innerHTML = `
       <div class="cat-stat-header">
@@ -203,33 +239,14 @@ function showResults() {
   });
 }
 
-// --- RESTART ---
-function restartQuiz() {
-  showScreen('start');
-}
+// ── RESTART ──────────────────────────────────────────────────
 
-// --- INIT START SCREEN ---
-function initStartScreen() {
-  // Category select
-  const sel = document.getElementById('category-select');
-  sel.innerHTML = '<option value="all">All categories</option>';
-  CATEGORIES.slice().sort().forEach(cat => {
-    const opt = document.createElement('option');
-    opt.value = cat;
-    opt.textContent = cat;
-    sel.appendChild(opt);
-  });
-  document.getElementById('total-questions').textContent = QUESTIONS.length;
-  document.getElementById('total-cats').textContent      = CATEGORIES.length;
-}
+function restartQuiz() { showScreen('start'); }
 
-// --- KEYBOARD NAVIGATION ---
+// ── KEYBOARD ─────────────────────────────────────────────────
+
 document.addEventListener('keydown', e => {
-  // Escape closes modal
-  if (e.key === 'Escape') {
-    if (document.getElementById('quit-modal').classList.contains('visible')) cancelQuit();
-    return;
-  }
+  if (e.key === 'Escape') { if (document.getElementById('quit-modal').classList.contains('visible')) cancelQuit(); return; }
   if (!screens.quiz.classList.contains('active')) return;
   if (answered && (e.key === 'Enter' || e.key === 'ArrowRight')) nextQuestion();
   if (!answered) {
@@ -241,8 +258,10 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// --- BOOT ---
+// ── BOOT ─────────────────────────────────────────────────────
+
 window.addEventListener('DOMContentLoaded', () => {
-  initStartScreen();
+  document.getElementById('total-questions').textContent = QUESTIONS.length;
+  buildCatChecklist();
   showScreen('start');
 });
