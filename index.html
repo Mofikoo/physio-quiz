@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quiz de physiologie — révision personnelle" />
+  <title>PhysioQuiz</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PWA / mobile icon -->
+  <meta name="theme-color" content="#0d0f14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <header>
+    <div class="header-logo">🧬</div>
+    <span class="header-title">PhysioQuiz</span>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 1 — START
+  ══════════════════════════════════════════════════════ -->
+  <div id="screen-start" class="screen">
+
+    <div class="start-hero">
+      <h1>Révise ta<br><span>Physiologie</span></h1>
+      <p>Questions MCQ avec feedback immédiat et explications détaillées.</p>
+    </div>
+
+    <div class="start-stats">
+      <div class="stat-pill"><strong id="total-questions">0</strong> questions</div>
+      <div class="stat-pill"><strong id="total-cats">—</strong> catégories</div>
+    </div>
+
+    <div class="start-card">
+      <h2>Options</h2>
+      <div class="form-row">
+        <select id="category-select" aria-label="Choisir une catégorie">
+          <option value="all">Toutes les catégories</option>
+        </select>
+        <button class="btn-primary" onclick="startQuiz('category')">
+          Commencer →
+        </button>
+      </div>
+      <p class="hint-text">Touches 1–4 pour répondre · Entrée pour continuer</p>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 2 — QUIZ
+  ══════════════════════════════════════════════════════ -->
+  <div id="screen-quiz" class="screen">
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <span class="progress-text" id="progress-text">1 / —</span>
+      <span class="score-display" id="score-display">✓ 0</span>
+    </div>
+
+    <!-- Question -->
+    <div class="question-card">
+      <span class="question-category" id="question-category">—</span>
+      <p class="question-text" id="question-text">Chargement…</p>
+    </div>
+
+    <!-- Answers -->
+    <div class="answers-container" id="answers-container"></div>
+
+    <!-- Explanation -->
+    <div class="explanation-box" id="explanation-box"></div>
+
+    <!-- Next -->
+    <button class="next-btn" id="next-btn" onclick="nextQuestion()">Question suivante →</button>
+    <p class="keyboard-hint">↵ Entrée ou → pour continuer</p>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 3 — RESULTS
+  ══════════════════════════════════════════════════════ -->
+  <div id="screen-result" class="screen">
+
+    <div class="result-hero">
+      <div class="ring-container">
+        <svg class="score-ring" viewBox="0 0 120 120" width="120" height="120">
+          <circle class="score-ring-bg"   cx="60" cy="60" r="54" />
+          <circle class="score-ring-fill" id="score-ring-fill" cx="60" cy="60" r="54"
+            stroke-dasharray="339.3" stroke-dashoffset="339.3" />
+        </svg>
+        <div class="ring-text">
+          <span class="ring-score" id="result-score">—</span>
+          <span class="ring-pct"   id="result-pct">—</span>
+        </div>
+      </div>
+      <p class="result-msg" id="result-msg"></p>
+    </div>
+
+    <!-- Category breakdown -->
+    <div class="result-section">
+      <h2>Résultats par catégorie</h2>
+      <div id="category-stats"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="result-actions">
+      <button class="btn-secondary" onclick="restartQuiz()">← Retour au menu</button>
+      <button class="btn-primary"   onclick="startQuiz('category')">Recommencer →</button>
+    </div>
+
+  </div>
+
+  <!-- ── SCRIPTS ─────────────────────────────────────────── -->
+  <script src="questions.js"></script>
+  <script src="quiz.js"></script>
+  <script>
+    // Patch: afficher le nombre de catégories dans le menu
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('total-cats').textContent = CATEGORIES.length;
+    });
+  </script>
+
+</body>
+</html>
