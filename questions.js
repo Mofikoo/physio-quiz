@@ -1,6 +1,5 @@
 // ============================================================
 //  PHYSIOLOGY QUIZ — QUESTIONS DATABASE
-//  Sources: I.1 Introduction | I.2 Cell Physiology | II.1–6 Nervous System
 // ============================================================
 
 const QUESTIONS = [
@@ -1461,7 +1460,331 @@ const QUESTIONS = [
     explanation: "OPIOID ADRs: nausea/vomiting, CONSTIPATION, RESPIRATORY DEPRESSION (most dangerous — potentially fatal), dry mouth, sedation/confusion. OVERDOSE signs: respiratory depression, excessive sedation, MIOSIS (pupil constriction), hypotension → WARN THE DOCTOR. ANTIDOTE: IV NALOXONE (opioid receptor antagonist). Also important: ADDICTION (uncontrolled need for more), TOLERANCE (need increased dose for same effect), DEPENDENCE (withdrawal symptoms on abrupt cessation: sweating, tremors, diarrhea, insomnia, anxiety). For physio: opioids cause respiratory depression → decreased respiratory response to exercise during rehabilitation."
   },
 
+  {
+    id: 113,
+    category: "Endocrine System",
+    question: "What is the key structural difference between endocrine and exocrine glands?",
+    answers: [
+      { text: "Endocrine glands secrete hormones into the bloodstream without ducts; exocrine glands use ducts to deliver secretions to a specific site", correct: true },
+      { text: "Endocrine glands require ducts to transport their hormones into the bloodstream for wide systemic distribution to target organs", correct: false },
+      { text: "Exocrine glands secrete hormones directly into the bloodstream and target distant organs; endocrine glands use ducts to direct secretions locally", correct: false },
+      { text: "Endocrine glands produce digestive enzymes delivered via ducts to the gut lumen; exocrine glands release hormones into the general circulation", correct: false },
+    ],
+    explanation: "ENDOCRINE (ductless) glands release hormones directly into the bloodstream — examples: pituitary, thyroid, parathyroid. EXOCRINE glands secrete substances through DUCTS to the site of action — examples: salivary glands, sweat glands. MIXED glands do both: the pancreas has an endocrine portion (islets of Langerhans → insulin/glucagon into blood) and an exocrine portion (digestive enzymes via pancreatic duct)."
+  },
+
+  {
+    id: 114,
+    category: "Endocrine System",
+    question: "Compared to the nervous system, endocrine system effects are:",
+    answers: [
+      { text: "Slower in onset (seconds to days) but longer lasting; target cells can be anywhere in the body", correct: true },
+      { text: "Faster in onset (milliseconds) and longer lasting; target cells are limited to muscles and glands only", correct: false },
+      { text: "Slower in onset and shorter lasting; hormones are degraded at the synapse before reaching distant targets", correct: false },
+      { text: "Identical in speed to the nervous system but more diffuse in their distribution to target cells", correct: false },
+    ],
+    explanation: "Key comparison: ENDOCRINE system — hormones travel via blood, effects appear slowly (seconds to hours to days) but LAST A LONG TIME; target cells can be ANYWHERE in the body. NERVOUS system — nerve impulses are FAST (milliseconds) but SHORT-LIVED; target cells are mostly muscles and glands close to the release site. Adrenaline is the classic example of a molecule that can act as both a hormone (adrenal medulla → bloodstream) and a neurotransmitter (sympathetic synapse)."
+  },
+
+  {
+    id: 115,
+    category: "Endocrine System",
+    question: "Steroid hormones are lipid-soluble. How does this affect their transport and mechanism of action compared to non-steroid hormones?",
+    answers: [
+      { text: "Steroids travel bound to plasma proteins (longer half-life) and act on intracellular receptors; non-steroids travel free and bind membrane receptors using second messengers", correct: true },
+      { text: "Steroids travel freely in plasma (shorter half-life) and bind directly to membrane receptors; non-steroids bind albumin carrier proteins and act via intracellular nuclear receptors", correct: false },
+      { text: "Both steroid and non-steroid hormones bind to plasma carrier proteins and then act exclusively on nuclear receptors inside the target cell", correct: false },
+      { text: "Steroids and non-steroids both travel freely in plasma without carrier proteins, differing only in the speed at which they activate second messenger cascades", correct: false },
+    ],
+    explanation: "STEROID hormones (sex hormones, cortisol, aldosterone): LIPID-SOLUBLE → travel in plasma BOUND to carrier proteins (albumin, globulins) → longer half-life (hours–days). Because they are lipid-soluble, they CROSS THE PLASMA MEMBRANE and bind intracellular/nuclear receptors → SLOW response. NON-STEROID hormones (peptides, catecholamines): WATER-SOLUBLE → travel FREE in plasma → short half-life (1–30 min). They bind MEMBRANE RECEPTORS and use SECOND MESSENGERS → FASTER response with signal amplification."
+  },
+
+  {
+    id: 116,
+    category: "Endocrine System",
+    question: "What is the difference between paracrine and autocrine hormones?",
+    answers: [
+      { text: "Paracrine hormones act on nearby cells in the same tissue; autocrine hormones act on the very cell that secreted them", correct: true },
+      { text: "Paracrine hormones act on the secretory cell itself; autocrine hormones target cells in distant organs via the bloodstream", correct: false },
+      { text: "Both paracrine and autocrine hormones enter the bloodstream to reach their target cells throughout the body", correct: false },
+      { text: "Autocrine hormones regulate nearby cells in the same tissue; paracrine hormones feed back on the secretory cell", correct: false },
+    ],
+    explanation: "Classic endocrine hormones travel through the blood to DISTANT targets. But some have LOCAL effects: PARACRINE hormones act on NEARBY CELLS within the same tissue (not the secretory cell itself). AUTOCRINE hormones act on the SAME CELL that secreted them — a form of self-regulation. NEUROHORMONES are a third variant: released by neurons into the blood rather than into a synapse. All three expand the traditional 'gland → blood → distant target' concept."
+  },
+
+  {
+    id: 117,
+    category: "Endocrine System",
+    question: "Hormone secretion is primarily regulated by which type of feedback mechanism?",
+    answers: [
+      { text: "Primarily negative feedback, where the hormonal effect inhibits further secretion from the gland", correct: true },
+      { text: "Primarily positive feedback, where rising hormone levels stimulate even more hormone release continuously", correct: false },
+      { text: "Exclusively circadian rhythms, with no feedback from the hormone's own effects on the gland", correct: false },
+      { text: "Both negative and positive feedback occur equally and interchangeably in all endocrine axes", correct: false },
+    ],
+    explanation: "Hormone secretion is primarily controlled by NEGATIVE FEEDBACK: the hormone's own effect suppresses further release from the gland, keeping levels within a set range. POSITIVE FEEDBACK does occur but is the exception (e.g., oxytocin during labor). Many hormones also follow CIRCADIAN RHYTHMS (e.g., GH peaks during sleep; cortisol peaks in the morning). Once hormones have acted, they are metabolically degraded and excreted in urine or bile."
+  },
+
+  {
+    id: 118,
+    category: "Endocrine System",
+    question: "What connects the hypothalamus to the adenohypophysis, and why is this route important?",
+    answers: [
+      { text: "A portal capillary system (double capillary network): hypothalamic neurohormones reach the adenohypophysis via blood before entering general circulation", correct: true },
+      { text: "Direct axonal projections from hypothalamic neurons that form synapses on adenohypophysis secretory cells and release neurohormones into the gland tissue", correct: false },
+      { text: "The infundibulum (pituitary stalk) carries releasing hormones as electrical nerve impulses directly from hypothalamic nuclei to adenohypophysis cells", correct: false },
+      { text: "A single capillary network in which hypothalamic hormones first enter the general bloodstream and then re-enter the pituitary at random via arterial supply", correct: false },
+    ],
+    explanation: "The hypothalamus controls the adenohypophysis via a PORTAL SYSTEM (double capillary network: capillaries → portal vein → capillaries): hypothalamic releasing/inhibiting hormones are secreted into portal blood and reach the adenohypophysis BEFORE entering general circulation — allowing precise, high-concentration control with very small hormone amounts. The NEUROHYPOPHYSIS is different: it is directly innervated by hypothalamic axons that store and release ADH and oxytocin (produced in the hypothalamus). The INFUNDIBULUM is the physical stalk connecting the two structures."
+  },
+
+  {
+    id: 119,
+    category: "Endocrine System",
+    question: "Growth hormone (GH) has a paradoxical hyperglycemic effect despite promoting growth. Why?",
+    answers: [
+      { text: "GH decreases glucose uptake by cells to spare it for neurons, stimulates liver glycogenolysis, and shifts energy source to lipid catabolism", correct: true },
+      { text: "GH increases glucose uptake by all cells to fuel protein anabolism, resulting in transient hyperglycemia after meals", correct: false },
+      { text: "GH inhibits lipolysis and promotes glucose storage in adipocytes, raising blood glucose as a side effect of fat conservation", correct: false },
+      { text: "GH stimulates insulin secretion, which then paradoxically raises blood glucose through hepatic gluconeogenesis", correct: false },
+    ],
+    explanation: "GH has complex metabolic effects: on CARBOHYDRATES — it is HYPERGLYCEMIC: decreases glucose uptake by cells (reserves glucose for neurons that can only use glucose) and stimulates hepatic glycogenolysis. GH and INSULIN are ANTAGONISTS: both are vital for glucose homeostasis. On LIPIDS — GH is CATABOLIC: shifts energy use from glucose to fat. On PROTEINS — GH is ANABOLIC: stimulates muscle growth (hence its use in doping). Indirect growth effects are mediated by IGF-1 (insulin-like growth factor) produced by the liver, which stimulates cartilage growth. GH secretion peaks during sleep."
+  },
+
+  {
+    id: 120,
+    category: "Endocrine System",
+    question: "Prolactin hypersecretion in a non-pregnant woman would cause which combination of effects?",
+    answers: [
+      { text: "Milk production (galactorrhea), disrupted menstrual cycle due to inhibition of gonadotropins, and impotence if it occurs in men", correct: true },
+      { text: "Absence of milk production, enhanced FSH and LH secretion, and increased estrogen levels in non-pregnant women", correct: false },
+      { text: "Stimulation of uterine contractions, increased oxytocin release, and suppression of GH secretion by the adenohypophysis", correct: false },
+      { text: "Accelerated bone growth, increased IGF-1 production, and premature closure of epiphyseal cartilage plates", correct: false },
+    ],
+    explanation: "PROLACTIN (from lactotrophs of the adenohypophysis) initiates and maintains milk secretion by mammary glands. It also INHIBITS GONADOTROPINS (FSH/LH) → this is why breastfeeding women often have no menstruation (lactational amenorrhea). Suckling stimulates prolactin release. HYPERSECRETION: milk production in non-breastfeeding women (galactorrhea), disrupted menstrual cycle, impotence in men. HYPOSECRETION is clinically irrelevant. Regulation: PIH (prolactin-inhibiting hormone = dopamine) is the dominant control — without it, prolactin is secreted."
+  },
+
+  {
+    id: 121,
+    category: "Endocrine System",
+    question: "What is the functional difference between TSH and ACTH as trophic hormones?",
+    answers: [
+      { text: "TSH maintains the thyroid gland and triggers thyroid hormone secretion (regulated by TRH); ACTH maintains the adrenal cortex and triggers cortisol secretion (regulated by CRH)", correct: true },
+      { text: "TSH stimulates the adrenal cortex to produce cortisol and androgens; ACTH stimulates the thyroid follicular cells to produce and secrete T3 and T4", correct: false },
+      { text: "Both TSH and ACTH target the gonads — TSH controls testosterone secretion in men while ACTH controls estrogen production in women via the gonads", correct: false },
+      { text: "TSH is released directly from the hypothalamus; ACTH is stored and released by the neurohypophysis in response to prolonged physical or psychological stress", correct: false },
+    ],
+    explanation: "TROPHIC HORMONES from the adenohypophysis stimulate other endocrine glands. TSH (thyroid-stimulating hormone, from thyrotrophs): promotes thyroid growth and stimulates T3/T4 secretion. Regulated by TRH from the hypothalamus. ACTH (adrenocorticotropic hormone, from corticotrophs): promotes adrenal cortex growth and stimulates cortisol (glucocorticoid) secretion. Regulated by CRH. Both are under negative feedback from their target hormones. FSH and LH (gonadotropins, from gonadotrophs) target the gonads — stimulated by GnRH."
+  },
+
+  {
+    id: 122,
+    category: "Endocrine System",
+    question: "ADH (vasopressin) and oxytocin are both stored in the neurohypophysis. What is the origin of each and their primary function?",
+    answers: [
+      { text: "Both are synthesized in the hypothalamus, transported along axons, and released from the neurohypophysis; ADH retains water in kidneys, oxytocin drives uterine contraction and milk ejection", correct: true },
+      { text: "Both are synthesized directly by secretory cells within the neurohypophysis itself, then stored and released to act on the kidneys to regulate fluid and electrolyte balance", correct: false },
+      { text: "ADH is produced by the adenohypophysis and primarily regulates blood pressure through vasoconstriction; oxytocin is a paracrine hormone acting exclusively on uterine smooth muscle", correct: false },
+      { text: "ADH promotes Na⁺ and water excretion by inhibiting renal tubule reabsorption; oxytocin inhibits uterine contractions during gestation to prevent premature labor initiation", correct: false },
+    ],
+    explanation: "ADH (antidiuretic hormone/vasopressin) and oxytocin are both SYNTHESIZED IN THE HYPOTHALAMUS, transported down axons, and STORED AND RELEASED from the NEUROHYPOPHYSIS. ADH: prevents large urine volume by causing renal tubules to reabsorb water back to blood; also causes vasoconstriction (secondary). Triggered by dehydration (osmoreceptors detect high osmolarity). OXYTOCIN: stimulates uterine contraction during labor (positive feedback: pressure on cervix → more oxytocin → more contractions) and triggers milk EJECTION (collaborating with prolactin which makes the milk)."
+  },
+
+  {
+    id: 123,
+    category: "Endocrine System",
+    question: "Calcitonin and PTH are antagonists in calcium homeostasis. Which cell types do they stimulate or inhibit?",
+    answers: [
+      { text: "Calcitonin: stimulates osteoblasts (bone formation), inhibits osteoclasts → lowers blood Ca; PTH: stimulates osteoclasts (bone resorption), inhibits osteoblasts → raises blood Ca", correct: true },
+      { text: "Calcitonin: stimulates osteoclasts (bone resorption) and inhibits osteoblasts → raises blood Ca; PTH: stimulates osteoblasts and inhibits osteoclasts → lowers blood Ca", correct: false },
+      { text: "Both calcitonin and PTH simultaneously stimulate osteoblasts, but at different rates — the net change in blood Ca is determined entirely by hormone concentration", correct: false },
+      { text: "Calcitonin raises blood Ca by triggering hydroxyapatite crystal release from bone matrix; PTH lowers blood Ca by stimulating renal calcium filtration and excretion", correct: false },
+    ],
+    explanation: "CALCITONIN (from C/parafollicular cells of thyroid): released when Ca is HIGH → lowers blood calcium. It STIMULATES OSTEOBLASTS (bone formation) and INHIBITS OSTEOCLASTS (bone resorption) → calcium is deposited into bone. Used in osteoporosis treatment. PTH (parathyroid hormone): released when Ca is LOW → raises blood calcium. It STIMULATES OSTEOCLASTS (bone resorption) and INHIBITS OSTEOBLASTS → calcium extracted from bone. PTH also activates vitamin D in the kidney → increases intestinal calcium absorption. Together with vitamin D, calcitonin and PTH maintain calcium homeostasis."
+  },
+
+  {
+    id: 124,
+    category: "Endocrine System",
+    question: "Aldosterone from the adrenal cortex regulates blood pressure. What is its mechanism?",
+    answers: [
+      { text: "Aldosterone increases renal sodium reabsorption → water follows → blood volume and pressure rise; regulated by the renin-angiotensin system, NOT the pituitary", correct: true },
+      { text: "Aldosterone promotes renal Na⁺ excretion and water loss → reduces circulating blood volume → lowers arterial blood pressure; regulated by ACTH from the adenohypophysis", correct: false },
+      { text: "Aldosterone directly constricts arteriolar smooth muscle walls to raise systemic blood pressure, without any direct effect on renal sodium or water reabsorption", correct: false },
+      { text: "Aldosterone inhibits renin secretion from juxtaglomerular cells and promotes potassium reabsorption to increase blood volume and maintain plasma osmolarity", correct: false },
+    ],
+    explanation: "ALDOSTERONE (mineralocorticoid from adrenal cortex): increases Na⁺ reabsorption in the kidney. Since Na⁺ reabsorption brings water with it (osmosis), this INCREASES BLOOD VOLUME AND PRESSURE. Na⁺ reabsorption also causes K⁺ secretion into urine. Regulated by the RENIN-ANGIOTENSIN-ALDOSTERONE SYSTEM (RAAS) — NOT by the pituitary/hypothalamus axis (unlike cortisol). This distinguishes aldosterone from glucocorticoids, which ARE regulated via the hypothalamus-pituitary axis (CRH → ACTH → cortisol)."
+  },
+
+  {
+    id: 125,
+    category: "Endocrine System",
+    question: "Cortisol (glucocorticoid) has hyperglycemic effects. What are its metabolic actions across carbohydrate, lipid, and protein metabolism?",
+    answers: [
+      { text: "Carbohydrates: increases gluconeogenesis, inhibits glucose uptake → hyperglycemia. Lipids: catabolic (mobilizes lipids for gluconeogenesis). Proteins: catabolic (breaks down proteins to amino acids for gluconeogenesis)", correct: true },
+      { text: "Carbohydrates: increases cellular glucose uptake (hypoglycemic effect similar to insulin). Lipids: anabolic action (promotes TAG synthesis and fat storage in adipose). Proteins: anabolic effect (promotes muscle protein synthesis)", correct: false },
+      { text: "Carbohydrates: inhibits hepatic gluconeogenesis and promotes glycogen storage in liver. Lipids: promotes lipid synthesis from acetyl-CoA. Proteins: anabolic, similar strength to testosterone", correct: false },
+      { text: "Carbohydrates: no direct metabolic effect on glucose homeostasis. Lipids: promotes only ketone body formation without lipolysis. Proteins: selectively increases uptake of branched-chain amino acids", correct: false },
+    ],
+    explanation: "CORTISOL (glucocorticoid from adrenal cortex, stimulated by stress and ACTH): CARBOHYDRATES — increases gluconeogenesis + inhibits glucose uptake by cells = HYPERGLYCEMIA (opposes insulin). LIPIDS — CATABOLIC: mobilizes and degrades lipids; mobilized lipids feed hepatic gluconeogenesis. PROTEINS — CATABOLIC: breaks down proteins into amino acids for gluconeogenesis. Other important cortisol effects: ANTI-INFLAMMATORY, decreases pain perception, IMMUNOSUPPRESSIVE (depresses immunity), increases erythrocyte production. Long-term treatment with glucocorticoids causes Cushing-like features."
+  },
+
+  {
+    id: 126,
+    category: "Endocrine System",
+    question: "Insulin and glucagon are antagonists produced in the endocrine pancreas. Which cells produce each, and what triggers their release?",
+    answers: [
+      { text: "Insulin: β cells, triggered by hyperglycemia; glucagon: α cells, triggered by hypoglycemia. Both are found in the islets of Langerhans", correct: true },
+      { text: "Insulin: α cells in the islets of Langerhans, triggered by hypoglycemia; glucagon: β cells, triggered by postprandial hyperglycemia", correct: false },
+      { text: "Both insulin and glucagon are produced by β cells within the islets; their opposing metabolic effects result from different membrane receptor subtypes being activated", correct: false },
+      { text: "Insulin: δ (delta) cells, released continuously at a basal rate; glucagon: β cells, released only after a prolonged fast of more than 24 hours", correct: false },
+    ],
+    explanation: "The ISLETS OF LANGERHANS (endocrine portion of pancreas, 2–3% of total mass) contain two main cell types: α CELLS → produce GLUCAGON (hyperglycemic hormone): released during FASTING/HYPOGLYCEMIA; raises blood glucose by glycogenolysis, gluconeogenesis, lipolysis, protein breakdown (CATABOLIC, EXTRACTIVE action). β CELLS → produce INSULIN (hypoglycemic hormone): released after eating/HYPERGLYCEMIA; lowers blood glucose by increasing cellular glucose uptake, glycogenesis, lipogenesis, protein synthesis (ANABOLIC, STORAGE action). They are antagonists — insulin/glucagon balance is central to glucose homeostasis."
+  },
+
+  {
+    id: 127,
+    category: "Endocrine System",
+    question: "What are the metabolic consequences of a total absence of insulin, as seen in Type 1 diabetes?",
+    answers: [
+      { text: "Glucose cannot enter cells → neurons starve → brain damage; fats are used instead → ketone bodies → ketoacidosis; glucose accumulates in blood and spills into urine", correct: true },
+      { text: "Cells take up excessive amounts of glucose unchecked → hypoglycemia; fat storage is greatly enhanced and ketone body production is completely suppressed", correct: false },
+      { text: "Glucagon secretion is fully suppressed by residual insulin sensitivity, preventing all gluconeogenesis and causing permanent hypoglycemia without any ketone body formation", correct: false },
+      { text: "Glucose accumulates in blood but does not spill into urine at any concentration; cells shift entirely to amino acid catabolism as their exclusive energy source", correct: false },
+    ],
+    explanation: "With NO INSULIN (Type 1 diabetes): glucose cannot enter cells → HYPERGLYCEMIA → glucose appears in urine (glucosuria). Neurons 'starve' (they cannot access blood glucose normally) → brain damage risk. The body switches to FAT catabolism for energy → EXCESS ketone body production → KETOACIDOSIS (dangerous drop in blood pH). Blood lipids also rise. SYMPTOMS: the 3 Ps — Polyuria (increased urination), Polydipsia (increased thirst), Polyphagia (increased hunger) — plus weight loss. Treatment: insulin injections."
+  },
+
+  {
+    id: 128,
+    category: "Endocrine System",
+    question: "What is the role of erythropoietin (EPO) and why is it used in doping?",
+    answers: [
+      { text: "EPO is produced by the kidneys, targets bone marrow, increases red blood cell production when blood O₂ is low — doping increases O₂-carrying capacity for endurance sports", correct: true },
+      { text: "EPO is produced by the liver, targets skeletal muscle fibres directly, and increases contractile protein synthesis — used in strength sports as an alternative to testosterone", correct: false },
+      { text: "EPO is produced by the heart muscle, targets the kidneys to promote Na⁺ excretion and increase plasma volume, which indirectly boosts the red blood cell count", correct: false },
+      { text: "EPO is produced by the adrenal cortex as a steroid-like glucocorticoid that stimulates bone marrow only when circulating cortisol levels fall below baseline values", correct: false },
+    ],
+    explanation: "ERYTHROPOIETIN (EPO): synthesized by the KIDNEYS; target organ: BONE MARROW; stimulus: low partial pressure of O₂ in blood. Effect: increases PRODUCTION OF RED BLOOD CELLS (erythropoiesis). Used in DOPING in endurance sports (cycling, running, cross-country skiing): more RBCs → more haemoglobin → greater O₂-carrying capacity → improved aerobic performance. Note: atrial natriuretic peptide (ANP) is produced by the HEART and promotes Na⁺ and water LOSS via urine when blood volume/pressure is too high — the opposite of aldosterone."
+  },
+
+  {
+    id: 129,
+    category: "Endocrine System",
+    question: "In the male reproductive system, which cells produce testosterone and which produce sperm, and what hormones control each?",
+    answers: [
+      { text: "Leydig (interstitial) cells produce testosterone (stimulated by LH); Sertoli cells produce sperm (stimulated by FSH and testosterone)", correct: true },
+      { text: "Sertoli cells produce both testosterone and sperm; both processes are controlled exclusively by FSH from the adenohypophysis", correct: false },
+      { text: "Leydig cells produce sperm under FSH control; Sertoli cells produce testosterone under LH control", correct: false },
+      { text: "Both Leydig and Sertoli cells produce testosterone; sperm are produced independently in the epididymis under DHT control", correct: false },
+    ],
+    explanation: "The seminiferous tubules of the testes contain two cell types: SERTOLI CELLS: synthesize SPERMATOZOA and secrete inhibin (negative feedback on FSH). Stimulated by FSH and testosterone. LEYDIG (INTERSTITIAL) CELLS: endocrine cells that produce TESTOSTERONE. Stimulated by LH. Testosterone effects: stimulates spermatogenesis, develops male sexual characteristics (body hair, larynx growth → voice change, stops growth via closure of epiphyseal plates), increases RBC production, higher basal metabolism, ANABOLIC (increases muscle mass = doping). Testosterone production starts at 8 weeks of fetal development and continues until death."
+  },
+
+  {
+    id: 130,
+    category: "Endocrine System",
+    question: "During the ovarian cycle, what does the corpus luteum do and what hormone maintains it during pregnancy?",
+    answers: [
+      { text: "After ovulation, the empty follicle becomes the corpus luteum under LH influence, secreting estrogens and progesterone; hCG from the placenta maintains it if fertilization occurs", correct: true },
+      { text: "The corpus luteum forms before ovulation under FSH influence during the follicular phase; it secretes only estrogens and always regresses at the end of the cycle regardless of fertilization", correct: false },
+      { text: "The corpus luteum is a transient accessory structure that stores FSH and releases it as a surge to trigger ovulation when LH levels first begin to fall", correct: false },
+      { text: "The corpus luteum secretes oxytocin and ADH during the luteal phase to prepare the endometrium; it is maintained exclusively by prolactin if the ovum is fertilized", correct: false },
+    ],
+    explanation: "OVARIAN CYCLE (28 days): FSH stimulates follicle maturation → the Graafian follicle secretes ESTROGENS → LH surge on day 14 → OVULATION. After ovulation, the empty follicle becomes the CORPUS LUTEUM (under LH) → secretes ESTROGENS + PROGESTERONE (luteal phase). If no fertilization: corpus luteum regresses into corpus albicans → hormone drop → menstruation. If FERTILIZATION: the placenta secretes hCG (human chorionic gonadotropin) which MAINTAINS the corpus luteum → sustained estrogen/progesterone production. hCG is the hormone detected by PREGNANCY TESTS."
+  },
+
+  {
+    id: 131,
+    category: "Endocrine System",
+    question: "Why do estrogens cause a more sudden and complete cessation of growth than testosterone?",
+    answers: [
+      { text: "Estrogens cause earlier and more rapid closure of epiphyseal (growth) cartilage plates than testosterone does, leading to a shorter final adult height in women", correct: true },
+      { text: "Estrogens sustain cartilage plate activity for a longer period than testosterone, resulting in a taller final adult height compared to males exposed to testosterone", correct: false },
+      { text: "Estrogens completely inhibit GH secretion from the adenohypophysis during puberty, causing all height growth to stop simultaneously at the onset of puberty", correct: false },
+      { text: "Testosterone causes earlier and more complete epiphyseal plate closure than estrogens, which is why adult males are generally shorter than females on average", correct: false },
+    ],
+    explanation: "Both sex hormones eventually cause epiphyseal plate closure (stopping height growth), but ESTROGENS do so MORE ABRUPTLY AND STRONGLY than testosterone. This is one reason women typically stop growing earlier in puberty and reach a shorter final height than men. Testosterone also stops growth (disappearance of growing cartilage) but more gradually. Both hormones have anabolic effects on muscle mass — testosterone more powerfully so, which is why testosterone (and its analogs) is used in doping to increase muscle mass."
+  },
+
+  {
+    id: 132,
+    category: "Endocrine Drugs",
+    question: "What is the clinical distinction between gigantism and acromegaly, both caused by GH hypersecretion?",
+    answers: [
+      { text: "Gigantism: GH excess during childhood (open epiphyses) → proportional skeletal overgrowth; acromegaly: GH excess in adulthood (closed epiphyses) → disproportionate enlargement of face, hands, and feet", correct: true },
+      { text: "Gigantism: GH excess occurring in adulthood after epiphyseal closure → disproportionate enlargement of facial bones; acromegaly: GH excess in childhood → disproportionate short stature with abnormally large hands", correct: false },
+      { text: "Gigantism: caused by GH hyposecretion during childhood leading to proportionally short stature; acromegaly: caused by GH hypersecretion exclusively during childhood before epiphyseal fusion", correct: false },
+      { text: "Gigantism and acromegaly are pathologically identical conditions both caused by GH excess; they are distinguished only by the biological sex of the patient at the time of diagnosis", correct: false },
+    ],
+    explanation: "Both are caused by GH HYPERSECRETION (usually from a benign adenohypophysis tumor): GIGANTISM: occurs in CHILDHOOD, when epiphyseal cartilage is still open → exaggerated but PROPORTIONAL skeletal growth (the whole body is big). Treatment: GHIH (somatostatin). DWARFISM is the opposite: GH hyposecretion in childhood → short stature; treatment: GH injections. ACROMEGALY: occurs in ADULTHOOD, when epiphyseal plates are closed (changed to bone) → no increase in height possible. Instead: DISPROPORTIONATE enlargement of facial bones, hands, and feet. Treatment: GHIH."
+  },
+
+  {
+    id: 133,
+    category: "Endocrine Drugs",
+    question: "What distinguishes Cushing's syndrome from Addison's disease?",
+    answers: [
+      { text: "Cushing's: hypersecretion of glucocorticoids (buffalo hump, moon face); Addison's: hyposecretion of corticoids (weight loss, nausea, dehydration, emotional problems)", correct: true },
+      { text: "Cushing's: hyposecretion of all corticoids leading to weight loss; Addison's: hypersecretion of glucocorticoids causing fat redistribution to the face and neck", correct: false },
+      { text: "Both conditions involve glucocorticoid excess; Cushing's affects only the cortex while Addison's affects only the adrenal medulla", correct: false },
+      { text: "Cushing's is caused by adrenal medulla failure; Addison's is caused by an ACTH-secreting pituitary tumor driving cortisol excess", correct: false },
+    ],
+    explanation: "CUSHING'S SYNDROME: HYPERSECRETION of glucocorticoids (cortisol). Causes: prolonged high-dose glucocorticoid therapy (iatrogenic), ACTH-secreting pituitary tumor, or cortisol-secreting adrenal tumor. Symptoms: 'buffalo hump' (fat deposit between shoulders), 'moon face', hyperglycemia, immunosuppression. ADDISON'S DISEASE: HYPOSECRETION of corticoids (adrenal insufficiency). Symptoms: weight loss, nausea, emotional problems, dehydration (no aldosterone → Na⁺ and water loss). PHEOCHROMOCYTOMA: benign tumor of adrenal MEDULLA → excess adrenaline/noradrenaline → hypertension, tachycardia, vasoconstriction. Treatment: α and β-blockers then surgical removal."
+  },
+
+  {
+    id: 134,
+    category: "Endocrine Drugs",
+    question: "In thyroid disorders: what causes a goiter, and what are the contrasting symptoms of hypo- vs. hyperthyroidism?",
+    answers: [
+      { text: "Goiter: iodine deficiency → insufficient T3/T4 → no negative feedback → excess TSH → thyroid enlargement. Hypothyroidism: low metabolism, weight gain, lethargy. Hyperthyroidism: high metabolism, weight loss, heat sensitivity, nervousness", correct: true },
+      { text: "Goiter: iodine excess → overproduction of T3/T4 → thyroid expansion from excess hormone storage. Hypothyroidism: weight loss, heat sensitivity, palpitations. Hyperthyroidism: weight gain, lethargy, cold intolerance", correct: false },
+      { text: "Goiter: autoimmune destruction of thyroid follicular cells causing TSH receptor antibody formation → progressive gland shrinkage. Hypothyroidism and hyperthyroidism share identical initial symptoms in all patients", correct: false },
+      { text: "Goiter: excess GH from a pituitary tumor stimulates thyroid tissue growth independently of TSH. Both hypothyroidism and hyperthyroidism always produce weight loss and nervousness as cardinal features", correct: false },
+    ],
+    explanation: "GOITER: iodine deficiency → thyroid cannot make enough T3/T4 → loss of negative feedback → TSH keeps rising → TSH drives abnormal thyroid GROWTH (goiter). HYPOTHYROIDISM (hyposecretion of T3/T4): low basal metabolic rate, weight GAIN, lethargy, cold intolerance, myxedema (fluid accumulation in severe cases). CRETINISM = hypothyroidism in childhood: severe mental retardation and impaired NS development. HYPERTHYROIDISM (hypersecretion): heat sensitivity, palpitations, nervousness, weight LOSS, exophthalmos (protruding eyes in severe cases). GRAVES' DISEASE: autoimmune — antibodies mimic TSH, activating thyroid receptors; TSH levels are paradoxically LOW due to negative feedback."
+  },
+
+  {
+    id: 135,
+    category: "Endocrine Drugs",
+    question: "What is the difference between Type 1 and Type 2 diabetes mellitus in terms of pathophysiology and treatment?",
+    answers: [
+      { text: "Type 1: pancreas produces no insulin (genetic/autoimmune), appears in childhood, treated with insulin injections. Type 2: insulin is produced but cells are resistant, appears in adults, treated with oral hypoglycemics", correct: true },
+      { text: "Type 1: caused by insulin resistance in adult-onset obesity and metabolic syndrome, treated with oral hypoglycemic drugs. Type 2: autoimmune β-cell destruction in childhood requiring lifelong subcutaneous insulin injections", correct: false },
+      { text: "Type 1 and Type 2 both involve progressive insulin resistance in peripheral tissues; they are distinguished only by the degree of resistance and the patient's age at the time of first diagnosis", correct: false },
+      { text: "Type 1: caused by glucagon hypersecretion from α cells overwhelming insulin action. Type 2: caused by insulin hypersecretion from β cells leading to progressive receptor downregulation and resistance", correct: false },
+    ],
+    explanation: "DIABETES MELLITUS TYPE 1 (insulin-dependent): 10–20% of cases; appears in CHILDHOOD; genetic or autoimmune causes → pancreatic β cells destroyed → NO INSULIN PRODUCED; treatment: INSULIN INJECTIONS (subcutaneous). DIABETES MELLITUS TYPE 2 (non-insulin-dependent): 80–90% of cases; appears in ADULTS; risk factors: obesity, sedentary lifestyle, hypertension, dyslipidemia; insulin IS produced but cells become RESISTANT to it; treatment: ORAL HYPOGLYCEMICS (metformin, sulfonylureas, etc.). GESTATIONAL DIABETES: ~4% of pregnancies; usually resolves after delivery. Diagnosis: fasting glucose > 126 mg/dL, or random glucose > 200 mg/dL."
+  },
+
+  {
+    id: 136,
+    category: "Endocrine Drugs",
+    question: "Bisphosphonates are 1st-choice drugs for osteoporosis. What is their mechanism and a critical administration rule?",
+    answers: [
+      { text: "They reduce osteoclast activity and number; must be taken fasting with plain water, staying upright for 30 minutes — incorrect administration causes esophageal damage", correct: true },
+      { text: "They stimulate osteoblast activity and number to build new bone matrix; can be taken at any time with food, and the patient may lie down or eat normally immediately after ingestion", correct: false },
+      { text: "They inhibit both osteoblasts and osteoclasts equally to stabilize bone turnover; must be administered by subcutaneous injection to completely bypass gastrointestinal irritation", correct: false },
+      { text: "They increase intestinal calcium absorption by activating vitamin D in the kidney; taken at bedtime to maximize the nighttime peak in bone remodeling activity", correct: false },
+    ],
+    explanation: "BISPHOSPHONATES (etidronate, alendronate, risedronate, ibandronate): 1st-choice osteoporosis treatment. Mechanism: REDUCE OSTEOCLAST ACTIVITY AND NUMBER → less bone resorption → increased bone density. CRITICAL ADMINISTRATION RULE: swallow with tap water, while fasting, without chewing, do NOT lie down, eat, or take other medications for 30 MINUTES → failure to follow this causes serious ESOPHAGEAL DAMAGE. RALOXIFENE: also 1st-choice; reduces osteoclasts + increases osteoblasts; ADR: thromboembolism risk. CALCITONIN: used when patients can't tolerate the above. ESTROGENS: highly effective but questioned due to thromboembolism and cancer risks."
+  },
+
+  {
+    id: 137,
+    category: "Endocrine Drugs",
+    question: "Metformin (a biguanide) is the 1st-choice oral hypoglycemic for Type 2 diabetes. What is its mechanism compared to sulfonylureas?",
+    answers: [
+      { text: "Metformin decreases insulin resistance (increases cell sensitivity to insulin); sulfonylureas stimulate the pancreas to secrete more insulin", correct: true },
+      { text: "Metformin stimulates pancreatic insulin secretion; sulfonylureas decrease insulin resistance in peripheral tissues", correct: false },
+      { text: "Both metformin and sulfonylureas stimulate pancreatic insulin secretion but via different receptor subtypes on β cells", correct: false },
+      { text: "Metformin delays carbohydrate digestion in the small intestine; sulfonylureas increase insulin resistance to prevent hypoglycemia", correct: false },
+    ],
+    explanation: "ORAL HYPOGLYCEMICS for Type 2 diabetes: BIGUANIDES (METFORMIN): 1st CHOICE — very effective, acts on both fasting and post-meal glucose. Mechanism: DECREASES INSULIN RESISTANCE (increases peripheral cell sensitivity to insulin). SULFONYLUREAS (tolbutamide, glibenclamide) and MEGLITINIDES (repaglinide): stimulate PANCREATIC β CELLS to secrete more insulin. THIAZOLIDINEDIONES/GLITAZONES (pioglitazone, rosiglitazone): decrease insulin resistance. α-GLUCOSIDASE INHIBITORS (acarbose, miglitol): delay digestion of polysaccharides in the small intestine → slower glucose absorption → blunted post-meal glucose spike. All are for Type 2; Type 1 requires insulin."
+  },
+
 ];
 
-// Categories (auto-generated)
 const CATEGORIES = [...new Set(QUESTIONS.map(q => q.category))];
