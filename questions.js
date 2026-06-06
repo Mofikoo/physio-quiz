@@ -1920,7 +1920,7 @@ const QUESTIONS = [
     category: "Muscle System",
     question: "Compare slow/Type I and fast/Type IIx muscle fibers across the key characteristics:",
     answers: [
-      { text: "Type I: high myoglobin (red), aerobic, many mitochondria, fatigue-resistant, for endurance (e.g. soleus). Type IIx: low myoglobin (white), anaerobic, few mitochondria, fatigues quickly, for explosive short bursts (e.g. ocular muscles)", correct: true },
+      { text: "Type I: high myoglobin (red), aerobic, many mitochondria, fatigue-resistant, for endurance. Type IIx: low myoglobin (white), anaerobic, few mitochondria, fatigues quickly, for explosive short bursts", correct: true },
       { text: "Type I: low myoglobin (white), uses anaerobic metabolism exclusively, fast contraction speed, paradoxically high fatigue resistance. Type IIx: high myoglobin (red), aerobic, slow contraction, fatigues quickly during any sustained low-intensity activity", correct: false },
       { text: "Type I: intermediate myoglobin content, mixed aerobic and anaerobic capacity, moderate fatigue resistance, used primarily for high-speed sprinting activities. Type IIx: very high myoglobin content, purely aerobic metabolism, essentially never fatigues, found exclusively in postural muscles", correct: false },
       { text: "Both Type I and Type IIx fibers have identical fatigue resistance and capillary density; they differ only in contraction speed and the relative proportion of troponin isoforms within their thin filaments", correct: false },
@@ -1972,7 +1972,7 @@ const QUESTIONS = [
     category: "Muscle System",
     question: "What is the muscle stretch reflex and why is it described as monosynaptic?",
     answers: [
-      { text: "A skeletal muscle contracts in response to being stretched; monosynaptic = the sensory (Ia) neuron synapses DIRECTLY on the motor neuron in the spinal cord — no interneuron involved", correct: true },
+      { text: "A skeletal muscle contracts in response to being stretched; monosynaptic = the sensory neuron synapses directly on the motor neuron in the spinal cord", correct: true },
       { text: "A skeletal muscle relaxes in response to being stretched; monosynaptic = the motor neuron signals the muscle spindle directly without passing through the spinal cord", correct: false },
       { text: "It is a polysynaptic reflex that always requires at least one interneuron in the spinal cord between the sensory input and motor output to the muscle", correct: false },
       { text: "A skeletal muscle contracts when its tendon is compressed; monosynaptic = the Golgi tendon organ connects directly to the muscle fiber without passing through the CNS", correct: false },
