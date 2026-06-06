@@ -568,10 +568,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "What distinguishes afferent from efferent pathways?",
     answers: [
-      { text: "Afferent = motor (carries commands outward); efferent = sensory (carries signals inward)", correct: false },
       { text: "Afferent/sensory = centripetal (periphery → CNS); efferent/motor = centrifugal (CNS → periphery)", correct: true },
-      { text: "Afferent pathways are exclusively within the CNS; efferent pathways are exclusively in the PNS", correct: false },
-      { text: "Both terms apply only to the autonomic nervous system, not to somatic pathways at all", correct: false },
+      { text: "Afferent/motor = centrifugal (CNS → periphery); efferent/sensory = centripetal (periphery → CNS)", correct: false },
+      { text: "Afferent pathways = CNS only; efferent pathways = PNS only (periphery → effectors)", correct: false },
+      { text: "Afferent/autonomic = centrifugal (CNS → viscera); efferent/somatic = centripetal (muscles → CNS)", correct: false },
     ],
     explanation: "AFFERENT (sensory) pathways carry impulses CENTRIPETALLY — from the periphery (receptors) toward the center (CNS). EFFERENT (motor) pathways carry impulses CENTRIFUGALLY — from the center (CNS) out to the periphery (effectors: muscles and glands). A useful memory trick: Afferent = Arrives at CNS; Efferent = Exits CNS."
   },
@@ -685,10 +685,10 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Describe the correct sequence of ion movements during a full action potential:",
     answers: [
-      { text: "K⁺ rushes into the cell (depolarization) → Na⁺ exits via leak channels (repolarization) → resting state fully restored", correct: false },
       { text: "Na⁺ rushes in (→ +30 mV) → Na⁺ channels inactivate, K⁺ exits (repolarization) → hyperpolarization → pump restores gradients", correct: true },
-      { text: "Ca²⁺ enters through voltage-gated channels (depolarization) → Cl⁻ enters via GABA receptors (repolarization) → resting state restored", correct: false },
-      { text: "Na⁺ exits through active pumping (depolarization) → K⁺ is driven into the cell by the Na⁺/K⁺ pump (repolarization)", correct: false },
+      { text: "K⁺ rushes in (→ +30 mV) → K⁺ channels inactivate, Na⁺ exits (repolarization) → hyperpolarization → pump restores gradients", correct: false },
+      { text: "Ca²⁺ rushes in (→ +30 mV) → Ca²⁺ channels close, Cl⁻ enters (repolarization) → depolarization → channels reset", correct: false },
+      { text: "Na⁺ exits (→ −90 mV) → Na⁺ channels reopen, K⁺ enters (repolarization) → hyperpolarization → pump removes K⁺", correct: false },
     ],
     explanation: "Full sequence: (1) RESTING: -70 mV, all voltage-gated channels closed. (2) DEPOLARIZATION: stimulus → Na⁺ channels open → Na⁺ rushes IN → membrane reaches +30 mV. (3) REPOLARIZATION: at +30 mV, Na⁺ channels INACTIVATE, K⁺ channels open → K⁺ rushes OUT → membrane repolarizes. (4) HYPERPOLARIZATION: K⁺ channels remain briefly open → slight overshoot below -70 mV. (5) Na⁺/K⁺ pump restores original ionic gradients (70% of neuron's ATP is used for this)."
   },
@@ -815,11 +815,11 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "GABA is described as the most prevalent NT in the brain. What is its effect?",
     answers: [
-      { text: "GABA is inhibitory: opens Cl⁻ channels → hyperpolarization → IPSP", correct: true },
-      { text: "GABA is excitatory and opens Na⁺ channels, generating EPSPs throughout the brain", correct: false },
-      { text: "GABA is the main excitatory NT of the spinal cord and peripheral NS", correct: false },
-      { text: "GABA binds nicotinic receptors and produces muscle contraction at the NMJ", correct: false },
-    ],
+  { text: "GABA is inhibitory: opens Cl⁻ channels → hyperpolarization → IPSP", correct: true },
+  { text: "GABA is excitatory: opens Na⁺ channels → depolarization → EPSP", correct: false },
+  { text: "GABA is modulatory: opens K⁺ channels → partial depolarization → no IPSP or EPSP", correct: false },
+  { text: "GABA is inhibitory: blocks Na⁺ channels → prevents depolarization → no AP possible", correct: false },
+],
     explanation: "GABA (γ-aminobutyric acid, derived from glutamic acid) is the primary INHIBITORY neurotransmitter of the CNS — the most prevalent NT in the brain. GABA receptors are ligand-gated Cl⁻ channels: GABA binding → Cl⁻ enters → hyperpolarization → IPSP. Clinically important: BENZODIAZEPINES (e.g., Valium/diazepam) bind to GABA receptors, enhancing their effect → reducing anxiety, promoting sleep, treating muscle spasms. Contrast with GLUTAMATE, the main EXCITATORY NT."
   },
 
@@ -828,11 +828,11 @@ const QUESTIONS = [
     category: "Nervous System",
     question: "Regarding catecholamines (dopamine, noradrenaline, adrenaline), which statement is correct?",
     answers: [
-      { text: "Dopamine deficiency → Parkinson's; adrenaline/noradrenaline act as NT or hormones; all bind adrenergic receptors", correct: true },
-      { text: "Dopamine excess causes Parkinson's; noradrenaline is found exclusively in the peripheral NS", correct: false },
-      { text: "Adrenaline preferentially stimulates β receptors; noradrenaline stimulates all adrenergic receptors equally", correct: false },
-      { text: "All catecholamines are synthesized from the amino acid tryptophan as their precursor", correct: false },
-    ],
+  { text: "Dopamine deficiency → Parkinson's; adrenaline/noradrenaline act as NT or hormones; all bind adrenergic receptors", correct: true },
+  { text: "Dopamine excess → Parkinson's; adrenaline acts as NT only; noradrenaline binds exclusively β receptors", correct: false },
+  { text: "Dopamine deficiency → depression; adrenaline/noradrenaline bind muscarinic receptors; all synthesised from tryptophan", correct: false },
+  { text: "Dopamine excess → schizophrenia only; adrenaline acts as hormone only; noradrenaline binds α receptors exclusively", correct: false },
+],
     explanation: "Key catecholamine facts: (1) DOPAMINE: deficiency in basal ganglia → Parkinson's disease (movement control); also involved in emotion and memory. L-DOPA crosses the BBB and is converted to dopamine (used in Parkinson's treatment). (2) NORADRENALINE: preferentially stimulates α receptors. (3) ADRENALINE: stimulates all adrenergic receptors (α1, α2, β1, β2) equally. All bind G-protein-coupled ADRENERGIC RECEPTORS. Adrenaline and noradrenaline can act as NT (synapse) or hormones (released by adrenal medulla into blood)."
   },
 
@@ -1074,12 +1074,12 @@ const QUESTIONS = [
     id: 83,
     category: "PNS",
     question: "Which neurotransmitters are used at each synapse in the sympathetic and parasympathetic systems?",
-    answers: [
-      { text: "All ANS synapses — both preganglionic and postganglionic — exclusively use noradrenaline (NA) as their neurotransmitter", correct: false },
-      { text: "All preganglionic neurons release ACh (nicotinic); sympathetic postganglionic → NA; parasympathetic postganglionic → ACh (muscarinic)", correct: true },
-      { text: "Sympathetic preganglionic neurons release NA onto nicotinic receptors; parasympathetic preganglionic neurons release ACh", correct: false },
-      { text: "All autonomic synapses use ACh at every junction — NA is produced solely by the adrenal medulla for hormonal release", correct: false },
-    ],
+   answers: [
+  { text: "All preganglionic neurons release ACh (nicotinic); sympathetic postganglionic → NA; parasympathetic postganglionic → ACh (muscarinic)", correct: true },
+  { text: "All preganglionic neurons release NA (adrenergic); sympathetic postganglionic → ACh (nicotinic); parasympathetic postganglionic → NA (α receptors)", correct: false },
+  { text: "Sympathetic preganglionic → NA (adrenergic); parasympathetic preganglionic → ACh (nicotinic); all postganglionic → ACh (muscarinic)", correct: false },
+  { text: "All preganglionic → ACh (muscarinic); sympathetic postganglionic → NA (nicotinic); parasympathetic postganglionic → ACh (adrenergic)", correct: false },
+],
     explanation: "NT distribution in the ANS: ALL PREGANGLIONIC neurons (both sympathetic AND parasympathetic): release ACh → acts on NICOTINIC receptors. POSTGANGLIONIC: SYMPATHETIC → releases NORADRENALINE (NA) → acts on α and β adrenergic receptors (EXCEPTION: sweat glands = ACh). PARASYMPATHETIC → releases ACh → acts on MUSCARINIC receptors. Memory aid: ACh = parasympathetic NT (and all preganglionic); NA = sympathetic NT at target organs."
   },
 
@@ -1179,11 +1179,11 @@ const QUESTIONS = [
     category: "Nervous System Drugs",
     question: "Benzodiazepines are the 1st-choice anxiolytics. What is their mechanism of action?",
     answers: [
-      { text: "They block D2 dopamine receptors in the mesolimbic pathway, reducing psychomotor agitation and anxiety-related arousal", correct: false },
-      { text: "They enhance GABA action → hyperpolarization → CNS depression producing anxiolytic, hypnotic, and muscle-relaxant effects", correct: true },
-      { text: "They selectively inhibit serotonin reuptake transporters, gradually raising 5-HT synaptic levels and stabilizing mood over weeks", correct: false },
-      { text: "They block voltage-gated Na⁺ channels throughout the CNS, broadly reducing neuronal excitability and preventing seizure propagation", correct: false },
-    ],
+  { text: "They enhance GABA action → hyperpolarization → CNS depression producing anxiolytic, hypnotic, and muscle-relaxant effects", correct: true },
+  { text: "They block D2 receptors → reduced dopamine signaling → CNS depression producing antipsychotic and sedative effects", correct: false },
+  { text: "They inhibit serotonin reuptake → increased 5-HT → CNS stimulation producing anxiolytic and antidepressant effects", correct: false },
+  { text: "They block Na⁺ channels → reduced neuronal firing → CNS depression producing anticonvulsant and muscle-relaxant effects", correct: false },
+],
     explanation: "Benzodiazepines (BZDs) ENHANCE GABA action at GABA-A receptors → increased Cl⁻ influx → hyperpolarization → CNS depression. This produces: ANXIOLYTIC (anxiety reduction), HYPNOTIC (sleep induction), MUSCLE RELAXANT, and ANTICONVULSANT effects. Short-acting BZDs (alprazolam, midazolam) are preferred for insomnia; long-acting BZDs (diazepam/Valium®, flurazepam) for anxiety. Key ADRs: sedation, ataxia, motor incoordination, amnesia, dependence. Interactions: alcohol, opioids, antihistamines all enhance CNS depression."
   },
 
@@ -1256,12 +1256,12 @@ const QUESTIONS = [
     id: 97,
     category: "Nervous System Drugs",
     question: "Parasympatholytic (anticholinergic) drugs BLOCK muscarinic receptors. Match the drug to its clinical use:",
-    answers: [
-      { text: "Ipratropium → Parkinson's (blocks cholinergic excess); biperiden → asthma; scopolamine → intestinal spasms", correct: false },
-      { text: "Scopolamine → intestinal spasms; ipratropium/tiotropium → asthma (bronchodilation); biperiden → Parkinson's", correct: true },
-      { text: "All anticholinergic drugs are used exclusively for asthma and COPD treatment", correct: false },
-      { text: "Scopolamine → Parkinson's; ipratropium → intestinal spasms; biperiden → glaucoma treatment", correct: false },
-    ],
+   answers: [
+  { text: "Scopolamine → intestinal spasms; ipratropium/tiotropium → asthma (bronchodilation); biperiden → Parkinson's", correct: true },
+  { text: "Scopolamine → asthma (bronchodilation); ipratropium/tiotropium → Parkinson's; biperiden → intestinal spasms", correct: false },
+  { text: "Scopolamine → Parkinson's; ipratropium/tiotropium → intestinal spasms; biperiden → asthma (bronchodilation)", correct: false },
+  { text: "Scopolamine → glaucoma (miosis); ipratropium/tiotropium → Parkinson's; biperiden → asthma (bronchodilation)", correct: false },
+],
     explanation: "ANTICHOLINERGIC drugs block muscarinic receptors: SCOPOLAMINE/HYOSCINE → blocks muscarinic receptors in GI smooth muscle → reduces motility → used for INTESTINAL SPASMS. IPRATROPIUM/TIOTROPIUM BROMIDE → blocks muscarinic receptors in airways → bronchodilation → used for ASTHMA/COPD. BIPERIDEN/TRIHEXYPHENIDYL → blocks cholinergic transmission → reduces excess ACh activity in Parkinson's (remember: Parkinson's = dopamine deficiency + excess cholinergic activity). Physio precaution for ALL anticholinergics: elderly more sensitive → confusion, disorientation; drowsiness + blurred vision → fall prevention needed."
   },
 
@@ -1270,11 +1270,11 @@ const QUESTIONS = [
     category: "Sensory Physiology",
     question: "Somatic sensory pathways always involve how many neurons, and what is decussation?",
     answers: [
-      { text: "2 neurons only; decussation refers to the splitting of sensory and motor pathways at the level of the thalamus", correct: false },
-      { text: "At least 3 neurons (periphery → spinal cord/brainstem → thalamus → cortex); decussation = crossing to the opposite brain side", correct: true },
-      { text: "A single continuous neuron projects directly from the receptor all the way to the cortex; no decussation occurs in sensory pathways", correct: false },
-      { text: "Exactly 4 neurons are always required, and decussation refers to signal duplication for simultaneous bilateral cortical processing", correct: false },
-    ],
+  { text: "At least 3 neurons (periphery → spinal cord/brainstem → thalamus → cortex); decussation = crossing to the opposite brain side", correct: true },
+  { text: "Exactly 2 neurons (periphery → thalamus → cortex directly); decussation = splitting into bilateral pathways at the spinal cord", correct: false },
+  { text: "Exactly 1 neuron (periphery → cortex directly); decussation = branching of one axon to both hemispheres simultaneously", correct: false },
+  { text: "At least 3 neurons (periphery → cerebellum → thalamus → cortex); decussation = ipsilateral projection to the same brain side", correct: false },
+],
     explanation: "Somatic sensory pathways always pass through AT LEAST 3 NEURON STATIONS: (1) PRIMARY neuron: periphery → spinal cord or brainstem; (2) SECONDARY neuron: spinal cord/brainstem → thalamus; (3) TERTIARY neuron: thalamus → cerebral cortex (sensory areas). Most sensory pathways are CROSSED (DECUSSATION): each side of the brain registers sensations from the OPPOSITE side of the body. This is why a stroke in the LEFT cortex causes sensory loss on the RIGHT side of the body."
   },
 
@@ -1308,12 +1308,12 @@ const QUESTIONS = [
     id: 101,
     category: "Sensory Physiology",
     question: "Match the following enclosed nerve endings (mechanoreceptors) to their location and function:",
-    answers: [
-      { text: "Pacinian = dermis/pressure; Meissner = epidermis/touch; Muscle spindle = muscle length; Golgi tendon = muscle tension", correct: true },
-      { text: "Meissner corpuscle = dermis, detects deep pressure; Pacinian corpuscle = epidermis, detects fine light touch", correct: false },
-      { text: "Muscle spindle = tendon, detects tension load; Golgi tendon organ = skeletal muscle, detects length changes", correct: false },
-      { text: "All enclosed nerve endings (Pacinian, Meissner, Ruffini, Krausse) are found exclusively in the skin layers", correct: false },
-    ],
+   answers: [
+  { text: "Pacinian = dermis/pressure; Meissner = epidermis/touch; Muscle spindle = muscle length; Golgi tendon = muscle tension", correct: true },
+  { text: "Pacinian = epidermis/touch; Meissner = dermis/pressure; Muscle spindle = tendon/tension; Golgi tendon = muscle/length", correct: false },
+  { text: "Pacinian = dermis/touch; Meissner = epidermis/pressure; Muscle spindle = joint/position; Golgi tendon = skin/vibration", correct: false },
+  { text: "Pacinian = muscle/length; Meissner = tendon/tension; Muscle spindle = epidermis/touch; Golgi tendon = dermis/pressure", correct: false },
+],
     explanation: "ENCLOSED nerve endings (mechanoreceptors, have connective tissue capsule): PACINIAN corpuscle: dermis → PRESSURE. MEISSNER corpuscle: epidermis → TOUCH. Krausse end bulbs: mucous membranes → touch. Ruffini endings: dermis → touch. MUSCLE SPINDLE: skeletal muscle → provides information about MUSCLE LENGTH (stretch reflex). GOLGI TENDON ORGAN: tendon → provides information about TENSION the muscle exerts on tendons. Both muscle spindles and Golgi tendon organs are key proprioceptors for physiotherapy assessment and rehabilitation."
   },
 
@@ -1413,11 +1413,11 @@ const QUESTIONS = [
     category: "Sensory Drugs",
     question: "What is the mechanism of NSAIDs (non-steroidal anti-inflammatory drugs), and what are their main adverse effects?",
     answers: [
-      { text: "They competitively block mu-opioid receptors in the dorsal horn, reducing descending pain modulation and causing rebound hyperalgesia", correct: false },
-      { text: "They inhibit COX enzymes → reduce prostaglandin synthesis → analgesic, antipyretic, anti-inflammatory, antiplatelet effects; main ADR: GI damage", correct: true },
-      { text: "They potentiate GABA-A receptor activity at inhibitory interneurons, producing widespread CNS depression and dose-dependent sedation", correct: false },
-      { text: "They reversibly block voltage-gated Na⁺ channels in peripheral afferent sensory axons, preventing action potential conduction to the CNS", correct: false },
-    ],
+  { text: "They inhibit COX enzymes → reduce prostaglandin synthesis → analgesic, antipyretic, anti-inflammatory, antiplatelet effects; main ADR: GI damage", correct: true },
+  { text: "They block mu-opioid receptors → reduce pain transmission → analgesic, sedative effects; main ADR: respiratory depression, constipation", correct: false },
+  { text: "They enhance GABA-A receptors → hyperpolarization → anxiolytic, sedative, muscle-relaxant effects; main ADR: CNS depression, dependence", correct: false },
+  { text: "They block voltage-gated Na⁺ channels → prevent AP conduction → analgesic, local anesthetic effects; main ADR: cardiac arrhythmias", correct: false },
+],
     explanation: "NSAIDs inhibit COX (cyclooxygenase) enzymes → ↓ prostaglandin synthesis. COX-1 inhibition → GI mucosal protection ↓, platelet aggregation ↓ → GI ADRs (the main problem: heartburn, ulcers, bleeding). COX-2 inhibition → ANTI-INFLAMMATORY effect (desired). Main ADRs: GI damage (heartburn, gastritis, ulcers, bleeding), BLEEDING, renal failure. Omeprazole (PPI) only needed in HIGH-RISK patients. Never combine 2+ NSAIDs (increases toxicity without extra benefit). For physio: NSAIDs interact with oral anticoagulants → increased bleeding/bruising risk during sessions."
   },
 
@@ -1427,7 +1427,7 @@ const QUESTIONS = [
     question: "Paracetamol (acetaminophen) vs. ibuprofen: what is the key difference in their pharmacological profiles?",
     answers: [
       { text: "Paracetamol inhibits both COX-1 and COX-2 peripherally, making it anti-inflammatory; ibuprofen acts only centrally with no GI risk", correct: false },
-      { text: "Paracetamol = analgesic + antipyretic, NOT anti-inflammatory, no GI damage, hepatotoxic in overdose; ibuprofen = full NSAID with GI risk", correct: true },
+      { text: "Paracetamol = analgesic + antipyretic, no GI damage; ibuprofen = full NSAID with GI risk", correct: true },
       { text: "Both drugs share identical COX-inhibition mechanisms and produce the same gastrointestinal and hepatic adverse effect profiles", correct: false },
       { text: "Paracetamol is a weak mu-opioid receptor agonist with central analgesic action; ibuprofen is a reversible topical local anesthetic", correct: false },
     ],
@@ -1595,11 +1595,11 @@ const QUESTIONS = [
     category: "Endocrine System",
     question: "Calcitonin and PTH are antagonists in calcium homeostasis. Which cell types do they stimulate or inhibit?",
     answers: [
-      { text: "Calcitonin: stimulates osteoblasts (bone formation), inhibits osteoclasts → lowers blood Ca; PTH: stimulates osteoclasts (bone resorption), inhibits osteoblasts → raises blood Ca", correct: true },
-      { text: "Calcitonin: stimulates osteoclasts (bone resorption) and inhibits osteoblasts → raises blood Ca; PTH: stimulates osteoblasts and inhibits osteoclasts → lowers blood Ca", correct: false },
-      { text: "Both calcitonin and PTH simultaneously stimulate osteoblasts, but at different rates — the net change in blood Ca is determined entirely by hormone concentration", correct: false },
-      { text: "Calcitonin raises blood Ca by triggering hydroxyapatite crystal release from bone matrix; PTH lowers blood Ca by stimulating renal calcium filtration and excretion", correct: false },
-    ],
+  { text: "Calcitonin: stimulates osteoblasts (bone formation), inhibits osteoclasts → lowers blood Ca; PTH: stimulates osteoclasts (bone resorption), inhibits osteoblasts → raises blood Ca", correct: true },
+  { text: "Calcitonin: stimulates osteoclasts (bone resorption), inhibits osteoblasts → raises blood Ca; PTH: stimulates osteoblasts (bone formation), inhibits osteoclasts → lowers blood Ca", correct: false },
+  { text: "Calcitonin: stimulates both osteoblasts and osteoclasts equally → no net Ca change; PTH: inhibits both cell types → lowers blood Ca via renal excretion", correct: false },
+  { text: "Calcitonin: stimulates osteoclasts (bone formation), inhibits osteoblasts → raises blood Ca; PTH: stimulates osteoblasts (bone resorption), inhibits osteoclasts → lowers blood Ca", correct: false },
+],
     explanation: "CALCITONIN (from C/parafollicular cells of thyroid): released when Ca is HIGH → lowers blood calcium. It STIMULATES OSTEOBLASTS (bone formation) and INHIBITS OSTEOCLASTS (bone resorption) → calcium is deposited into bone. Used in osteoporosis treatment. PTH (parathyroid hormone): released when Ca is LOW → raises blood calcium. It STIMULATES OSTEOCLASTS (bone resorption) and INHIBITS OSTEOBLASTS → calcium extracted from bone. PTH also activates vitamin D in the kidney → increases intestinal calcium absorption. Together with vitamin D, calcitonin and PTH maintain calcium homeostasis."
   },
 
@@ -1608,11 +1608,11 @@ const QUESTIONS = [
     category: "Endocrine System",
     question: "Aldosterone from the adrenal cortex regulates blood pressure. What is its mechanism?",
     answers: [
-      { text: "Aldosterone increases renal sodium reabsorption → water follows → blood volume and pressure rise; regulated by the renin-angiotensin system, NOT the pituitary", correct: true },
-      { text: "Aldosterone promotes renal Na⁺ excretion and water loss → reduces circulating blood volume → lowers arterial blood pressure; regulated by ACTH from the adenohypophysis", correct: false },
-      { text: "Aldosterone directly constricts arteriolar smooth muscle walls to raise systemic blood pressure, without any direct effect on renal sodium or water reabsorption", correct: false },
-      { text: "Aldosterone inhibits renin secretion from juxtaglomerular cells and promotes potassium reabsorption to increase blood volume and maintain plasma osmolarity", correct: false },
-    ],
+  { text: "Aldosterone increases renal sodium reabsorption → water follows → blood volume and pressure rise; regulated by the renin-angiotensin system, NOT the pituitary", correct: true },
+  { text: "Aldosterone increases renal sodium excretion → water lost → blood volume falls; regulated by the renin-angiotensin system → lowers pressure", correct: false },
+  { text: "Aldosterone increases renal sodium reabsorption → water follows → blood volume rises; regulated by ACTH from the pituitary, like cortisol", correct: false },
+  { text: "Aldosterone decreases renal sodium reabsorption → osmolarity falls → water lost; regulated by ADH from the neurohypophysis", correct: false },
+],
     explanation: "ALDOSTERONE (mineralocorticoid from adrenal cortex): increases Na⁺ reabsorption in the kidney. Since Na⁺ reabsorption brings water with it (osmosis), this INCREASES BLOOD VOLUME AND PRESSURE. Na⁺ reabsorption also causes K⁺ secretion into urine. Regulated by the RENIN-ANGIOTENSIN-ALDOSTERONE SYSTEM (RAAS) — NOT by the pituitary/hypothalamus axis (unlike cortisol). This distinguishes aldosterone from glucocorticoids, which ARE regulated via the hypothalamus-pituitary axis (CRH → ACTH → cortisol)."
   },
 
@@ -1647,11 +1647,11 @@ const QUESTIONS = [
     category: "Endocrine System",
     question: "What are the metabolic consequences of a total absence of insulin, as seen in Type 1 diabetes?",
     answers: [
-      { text: "Glucose cannot enter cells → neurons starve → brain damage; fats are used instead → ketone bodies → ketoacidosis; glucose accumulates in blood and spills into urine", correct: true },
-      { text: "Cells take up excessive amounts of glucose unchecked → hypoglycemia; fat storage is greatly enhanced and ketone body production is completely suppressed", correct: false },
-      { text: "Glucagon secretion is fully suppressed by residual insulin sensitivity, preventing all gluconeogenesis and causing permanent hypoglycemia without any ketone body formation", correct: false },
-      { text: "Glucose accumulates in blood but does not spill into urine at any concentration; cells shift entirely to amino acid catabolism as their exclusive energy source", correct: false },
-    ],
+  { text: "Glucose cannot enter cells → neurons starve → brain damage; fats are used instead → ketone bodies → ketoacidosis; glucose accumulates in blood and spills into urine", correct: true },
+  { text: "Glucose enters cells uncontrolled → hypoglycemia → seizures; fats are stored (not burned) → no ketones; glucose disappears from blood and urine", correct: false },
+  { text: "Glucose cannot enter cells → muscle catabolism only; protein breakdown → urea excess → renal failure; no fat catabolism and no ketonuria", correct: false },
+  { text: "Glucose enters cells but cannot be oxidised → lactic acidosis; fats are spared → no ketones; glucose stays in blood only, never spilling into urine", correct: false },
+],
     explanation: "With NO INSULIN (Type 1 diabetes): glucose cannot enter cells → HYPERGLYCEMIA → glucose appears in urine (glucosuria). Neurons 'starve' (they cannot access blood glucose normally) → brain damage risk. The body switches to FAT catabolism for energy → EXCESS ketone body production → KETOACIDOSIS (dangerous drop in blood pH). Blood lipids also rise. SYMPTOMS: the 3 Ps — Polyuria (increased urination), Polydipsia (increased thirst), Polyphagia (increased hunger) — plus weight loss. Treatment: insulin injections."
   },
 
@@ -1712,11 +1712,11 @@ const QUESTIONS = [
     category: "Endocrine Drugs",
     question: "What is the clinical distinction between gigantism and acromegaly, both caused by GH hypersecretion?",
     answers: [
-      { text: "Gigantism: GH excess during childhood (open epiphyses) → proportional skeletal overgrowth; acromegaly: GH excess in adulthood (closed epiphyses) → disproportionate enlargement of face, hands, and feet", correct: true },
-      { text: "Gigantism: GH excess occurring in adulthood after epiphyseal closure → disproportionate enlargement of facial bones; acromegaly: GH excess in childhood → disproportionate short stature with abnormally large hands", correct: false },
-      { text: "Gigantism: caused by GH hyposecretion during childhood leading to proportionally short stature; acromegaly: caused by GH hypersecretion exclusively during childhood before epiphyseal fusion", correct: false },
-      { text: "Gigantism and acromegaly are pathologically identical conditions both caused by GH excess; they are distinguished only by the biological sex of the patient at the time of diagnosis", correct: false },
-    ],
+  { text: "Gigantism: GH excess during childhood (open epiphyses) → proportional skeletal overgrowth; acromegaly: GH excess in adulthood (closed epiphyses) → disproportionate enlargement of face, hands, and feet", correct: true },
+  { text: "Gigantism: GH excess in adulthood (closed epiphyses) → disproportionate bone growth; acromegaly: GH excess in childhood (open epiphyses) → proportional short stature", correct: false },
+  { text: "Gigantism: GH deficiency in childhood (open epiphyses) → disproportionate short stature; acromegaly: GH excess in adulthood (closed epiphyses) → proportional gigantism", correct: false },
+  { text: "Gigantism: GH excess in childhood (closed epiphyses) → disproportionate facial growth only; acromegaly: GH excess in adulthood (open epiphyses) → proportional skeletal overgrowth", correct: false },
+],
     explanation: "Both are caused by GH HYPERSECRETION (usually from a benign adenohypophysis tumor): GIGANTISM: occurs in CHILDHOOD, when epiphyseal cartilage is still open → exaggerated but PROPORTIONAL skeletal growth (the whole body is big). Treatment: GHIH (somatostatin). DWARFISM is the opposite: GH hyposecretion in childhood → short stature; treatment: GH injections. ACROMEGALY: occurs in ADULTHOOD, when epiphyseal plates are closed (changed to bone) → no increase in height possible. Instead: DISPROPORTIONATE enlargement of facial bones, hands, and feet. Treatment: GHIH."
   },
 
@@ -1738,11 +1738,11 @@ const QUESTIONS = [
     category: "Endocrine Drugs",
     question: "In thyroid disorders: what causes a goiter, and what are the contrasting symptoms of hypo- vs. hyperthyroidism?",
     answers: [
-      { text: "Goiter: iodine deficiency → insufficient T3/T4 → no negative feedback → excess TSH → thyroid enlargement. Hypothyroidism: low metabolism, weight gain, lethargy. Hyperthyroidism: high metabolism, weight loss, heat sensitivity, nervousness", correct: true },
-      { text: "Goiter: iodine excess → overproduction of T3/T4 → thyroid expansion from excess hormone storage. Hypothyroidism: weight loss, heat sensitivity, palpitations. Hyperthyroidism: weight gain, lethargy, cold intolerance", correct: false },
-      { text: "Goiter: autoimmune destruction of thyroid follicular cells causing TSH receptor antibody formation → progressive gland shrinkage. Hypothyroidism and hyperthyroidism share identical initial symptoms in all patients", correct: false },
-      { text: "Goiter: excess GH from a pituitary tumor stimulates thyroid tissue growth independently of TSH. Both hypothyroidism and hyperthyroidism always produce weight loss and nervousness as cardinal features", correct: false },
-    ],
+  { text: "Goiter: iodine deficiency → insufficient T3/T4 → no negative feedback → excess TSH → thyroid enlargement. Hypothyroidism: low metabolism, weight gain, lethargy. Hyperthyroidism: high metabolism, weight loss, heat sensitivity, nervousness", correct: true },
+  { text: "Goiter: iodine excess → T3/T4 overproduction → excess TSH suppression → thyroid enlargement. Hypothyroidism: high metabolism, weight loss, heat sensitivity. Hyperthyroidism: low metabolism, weight gain, lethargy", correct: false },
+  { text: "Goiter: excess TSH → T3/T4 overproduction → negative feedback failure → thyroid enlargement. Hypothyroidism: weight loss, nervousness, tachycardia. Hyperthyroidism: weight gain, bradycardia, cold intolerance", correct: false },
+  { text: "Goiter: iodine deficiency → excess T3/T4 → positive feedback → excess TSH → thyroid enlargement. Hypothyroidism: high metabolism, heat sensitivity. Hyperthyroidism: low metabolism, cold intolerance, lethargy", correct: false },
+],
     explanation: "GOITER: iodine deficiency → thyroid cannot make enough T3/T4 → loss of negative feedback → TSH keeps rising → TSH drives abnormal thyroid GROWTH (goiter). HYPOTHYROIDISM (hyposecretion of T3/T4): low basal metabolic rate, weight GAIN, lethargy, cold intolerance, myxedema (fluid accumulation in severe cases). CRETINISM = hypothyroidism in childhood: severe mental retardation and impaired NS development. HYPERTHYROIDISM (hypersecretion): heat sensitivity, palpitations, nervousness, weight LOSS, exophthalmos (protruding eyes in severe cases). GRAVES' DISEASE: autoimmune — antibodies mimic TSH, activating thyroid receptors; TSH levels are paradoxically LOW due to negative feedback."
   },
 
@@ -1868,11 +1868,11 @@ const QUESTIONS = [
     category: "Muscle System",
     question: "List the correct sequence of events in skeletal muscle contraction (sliding filament theory):",
     answers: [
-      { text: "AP arrives → ACh released → sarcolemma depolarizes → impulse travels via T tubules → Ca²⁺ released from SR → Ca²⁺ binds troponin → tropomyosin shifts → myosin binds actin → power stroke → filaments slide → sarcomere shortens", correct: true },
-      { text: "AP arrives → Ca²⁺ released from SR → ACh binds nicotinic receptors → sarcolemma depolarizes → troponin blocks actin → myosin heads energized by ATP → filaments slide apart → sarcomere lengthens", correct: false },
-      { text: "AP arrives → myosin heads hydrolyze ATP first → sarcolemma depolarizes → Ca²⁺ binds tropomyosin directly → actin active sites blocked → cross-bridges form → power stroke pushes filaments outward", correct: false },
-      { text: "AP arrives → ACh released → T tubules depolarize first → Ca²⁺ binds myosin directly → troponin unblocks the thick filaments → actin pulls myosin toward Z discs → sarcomere shortens", correct: false },
-    ],
+  { text: "AP arrives → ACh released → sarcolemma depolarizes → impulse travels via T tubules → Ca²⁺ released from SR → Ca²⁺ binds troponin → tropomyosin shifts → myosin binds actin → power stroke → filaments slide → sarcomere shortens", correct: true },
+  { text: "AP arrives → ACh released → sarcolemma depolarizes → impulse travels via T tubules → Ca²⁺ released from SR → Ca²⁺ binds tropomyosin → troponin shifts → actin binds myosin → power stroke → filaments slide → sarcomere lengthens", correct: false },
+  { text: "AP arrives → NA released → sarcolemma depolarizes → impulse travels via gap junctions → Ca²⁺ released from SR → Ca²⁺ binds troponin → tropomyosin shifts → myosin binds actin → power stroke → filaments slide → sarcomere shortens", correct: false },
+  { text: "AP arrives → ACh released → sarcolemma depolarizes → impulse travels via T tubules → Ca²⁺ enters from ECF → Ca²⁺ binds calmodulin → myosin kinase activated → myosin binds actin → power stroke → filaments slide → sarcomere shortens", correct: false },
+],
     explanation: "Complete sequence: (1) AP depolarizes motor axon terminal → ACh released by exocytosis; (2) ACh binds NICOTINIC receptors on motor end plate → sarcolemma depolarizes; (3) AP travels along sarcolemma and through T TUBULES; (4) T tubule AP triggers Ca²⁺ RELEASE from sarcoplasmic reticulum; (5) Ca²⁺ binds TROPONIN → tropomyosin shifts → ACTIN ACTIVE SITES EXPOSED; (6) ATP binds myosin heads (ATPase) → myosin heads energized; (7) Myosin binds actin → CROSS-BRIDGE; (8) Pi release → POWER STROKE (myosin pulls thin filaments toward sarcomere center); (9) ADP released, new ATP binds → cross-bridge detaches → cycle repeats. = SLIDING FILAMENT THEORY."
   },
 
@@ -1985,11 +1985,11 @@ const QUESTIONS = [
     category: "Muscle System",
     question: "How does smooth muscle differ from skeletal muscle in its contraction mechanism?",
     answers: [
-      { text: "Smooth muscle: Ca²⁺ comes from OUTSIDE the cell and binds CALMODULIN (not troponin); no sarcomeres/striations; actin:myosin ratio 16:1; can contract when greatly stretched", correct: true },
-      { text: "Smooth muscle: Ca²⁺ comes from the sarcoplasmic reticulum and binds troponin; has clear sarcomeres and striations; actin:myosin ratio identical to skeletal muscle", correct: false },
-      { text: "Smooth muscle: uses phosphocreatine exclusively for ATP; contracts via the same sliding filament mechanism but with inverted actin and myosin roles", correct: false },
-      { text: "Smooth muscle: contains T tubules and a well-developed SR identical to skeletal muscle; differs only in having no Z discs and using calmodulin instead of troponin for Ca²⁺ binding", correct: false },
-    ],
+  { text: "Smooth muscle: Ca²⁺ comes from OUTSIDE the cell and binds CALMODULIN (not troponin); no sarcomeres/striations; actin:myosin ratio 16:1; can contract when greatly stretched", correct: true },
+  { text: "Smooth muscle: Ca²⁺ comes from SR (like skeletal muscle) and binds TROPONIN (not calmodulin); no sarcomeres/striations; actin:myosin ratio 2:1; cannot contract when stretched", correct: false },
+  { text: "Smooth muscle: Ca²⁺ comes from OUTSIDE the cell and binds TROPONIN (not calmodulin); has clear sarcomeres and striations; actin:myosin ratio 6:1; cannot sustain contraction when stretched", correct: false },
+  { text: "Smooth muscle: Ca²⁺ comes from SR and binds CALMODULIN (not troponin); has sarcomeres but no striations; actin:myosin ratio 16:1; contracts identically to skeletal muscle when stretched", correct: false },
+],
     explanation: "SMOOTH MUSCLE differences from skeletal/cardiac: (1) NO STRIATIONS — no sarcomeres; filaments form a network; thin filaments attach to DENSE BODIES (analogous to Z discs); (2) HIGH ACTIN:MYOSIN ratio (16:1); (3) Ca²⁺ comes from OUTSIDE THE CELL (not SR) and binds CALMODULIN (not troponin) → calmodulin-Ca²⁺ complex activates myosin; (4) Myosin stacks vertically → BALL-SHAPED contraction; (5) Can contract when greatly stretched (essential for hollow organs like bladder, uterus); (6) SINGLE-UNIT type has gap junctions → behaves as syncytium (like cardiac). MULTIUNIT type: each cell individually innervated (iris, arrector pili)."
   },
 
@@ -1998,11 +1998,11 @@ const QUESTIONS = [
     category: "Muscle System",
     question: "What distinguishes cardiac muscle from skeletal and smooth muscle?",
     answers: [
-      { text: "Cardiac: striated with sarcomeres; involuntary; cells joined by intercalated discs (gap junctions) → acts as a syncytium; generates APs automatically but is regulated by the ANS", correct: true },
-      { text: "Cardiac: no striations; voluntary control; each cell independently innervated; Ca²⁺ binds calmodulin; does not generate action potentials automatically", correct: false },
-      { text: "Cardiac: striated; voluntarily controlled for heart rate adjustments; cells connected by tight junctions that prevent electrical spread between cardiomyocytes", correct: false },
-      { text: "Cardiac: no sarcomeres; involuntary; connected by desmosomes that mechanically link cells without electrical conduction between adjacent cardiomyocytes", correct: false },
-    ],
+  { text: "Cardiac: striated with sarcomeres; involuntary; cells joined by intercalated discs (gap junctions) → acts as a syncytium; generates APs automatically but is regulated by the ANS", correct: true },
+  { text: "Cardiac: striated with sarcomeres; voluntary; cells joined by tight junctions (no gap junctions) → each cell fires independently; generates APs automatically without ANS regulation", correct: false },
+  { text: "Cardiac: no sarcomeres, no striations; involuntary; cells joined by intercalated discs (gap junctions) → acts as a syncytium; requires ANS stimulation to generate every AP", correct: false },
+  { text: "Cardiac: striated with sarcomeres; involuntary; cells joined by desmosomes only (no gap junctions) → electrical isolation between cells; no automatic AP generation, fully ANS-dependent", correct: false },
+],
     explanation: "CARDIAC MUSCLE: STRIATED — contains actin and myosin in sarcomeres (same sliding filament mechanism). INVOLUNTARY. Cells (cardiomyocytes) are SHORT, BRANCHED, and connected by INTERCALATED DISCS (gap junctions) → electrical impulses spread to ALL connected cells → myocardium behaves as a SYNCYTIUM (single functional unit). Can generate action potentials AUTOMATICALLY (autorhythmicity — pacemaker potentials). Regulated by the ANS (sympathetic speeds up, parasympathetic slows down). Does NOT fatigue. Relies more on extracellular Ca²⁺ than skeletal muscle for contraction."
   },
 
@@ -2024,11 +2024,11 @@ const QUESTIONS = [
     category: "Muscle Drugs",
     question: "What is the clinical distinction between rheumatoid arthritis and osteoarthritis (arthrosis), and how do their treatments differ?",
     answers: [
-      { text: "RA: autoimmune — immune system attacks synovium → joint inflammation and pain (same joint bilaterally). Arthrosis: degenerative — cartilage wear and tear → pain, stiffness, decreased mobility. RA uses DMARDs (methotrexate); arthrosis uses paracetamol and cartilage protectors", correct: true },
-      { text: "RA: a degenerative cartilage disease predominantly affecting elderly patients, treated with cartilage protectors such as chondroitin sulphate. Arthrosis: an autoimmune condition affecting young adults, treated with methotrexate and sulfasalazine as first-line disease-modifying agents", correct: false },
-      { text: "RA and arthrosis are pathologically identical joint diseases; RA simply refers to the early inflammatory stage while arthrosis describes the end-stage requiring total surgical joint replacement", correct: false },
-      { text: "RA: caused by uric acid crystal deposition in joint spaces; treated with colchicine and allopurinol as first-line agents. Arthrosis: an autoimmune synovitis primarily treated with biological agents and anti-TNF therapies as the first therapeutic choice", correct: false },
-    ],
+  { text: "RA: autoimmune — immune system attacks synovium → inflammation and pain (bilateral); treated with DMARDs. Arthrosis: degenerative — cartilage wear → pain, stiffness; treated with paracetamol and cartilage protectors", correct: true },
+  { text: "RA: degenerative — cartilage wear → pain, stiffness (bilateral); treated with paracetamol. Arthrosis: autoimmune — immune system attacks synovium → inflammation; treated with DMARDs and biologics", correct: false },
+  { text: "RA: autoimmune — immune system attacks cartilage → stiffness only (unilateral); treated with NSAIDs only. Arthrosis: metabolic — uric acid crystals → acute pain; treated with colchicine", correct: false },
+  { text: "RA: infectious — bacteria attack synovium → acute fever and joint pain (unilateral); treated with antibiotics. Arthrosis: autoimmune — cartilage antibodies → chronic bilateral inflammation; treated with DMARDs", correct: false },
+],
     explanation: "RHEUMATOID ARTHRITIS (RA): AUTOIMMUNE — immune system attacks the SYNOVIUM (joint lining) → inflammation, pain; typically BILATERAL (same joint both sides), commonly hands, knees, ankles. Treatment: (1) NSAIDs (early pain management); (2) glucocorticoids (low dose oral or intra-articular); (3) DMARDs — METHOTREXATE, SULFASALAZINE (delay disease PROGRESSION). OSTEOARTHRITIS/ARTHROSIS: DEGENERATIVE — chronic wear of joint CARTILAGE → pain, stiffness, reduced mobility. Treatment: (1) PARACETAMOL + intra-articular glucocorticoids (pain); (2) CARTILAGE PROTECTORS — chondroitin sulphate (best), glucosamine sulphate, hyaluronic acid."
   },
 
@@ -2122,7 +2122,7 @@ const QUESTIONS = [
     ],
     explanation: "OXYTOCIN, synthesised in the HYPOTHALAMUS and released from the NEUROHYPOPHYSIS, has two key actions: (1) UTERINE CONTRACTIONS during labor — positive feedback loop: cervical pressure → more oxytocin → stronger contractions → more pressure → delivery; (2) MILK EJECTION (not production) from mammary glands in response to suckling. Trap: PROLACTIN produces the milk; oxytocin ejects it. WATER reabsorption is ADH's role, not oxytocin's. Synthetic oxytocin (Pitocin) is used clinically to induce or augment labor."
   },
-  
+
 ];
 
 const CATEGORIES = [...new Set(QUESTIONS.map(q => q.category))];
