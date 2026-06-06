@@ -1556,7 +1556,7 @@ const QUESTIONS = [
     category: "Endocrine System",
     question: "Prolactin hypersecretion in a non-pregnant woman would cause which combination of effects?",
     answers: [
-      { text: "Milk production (galactorrhea), disrupted menstrual cycle due to inhibition of gonadotropins, and impotence if it occurs in men", correct: true },
+      { text: "Milk production (galactorrhea), disrupted menstrual cycle, and impotence if it occurs in men", correct: true },
       { text: "Absence of milk production, enhanced FSH and LH secretion, and increased estrogen levels in non-pregnant women", correct: false },
       { text: "Stimulation of uterine contractions, increased oxytocin release, and suppression of GH secretion by the adenohypophysis", correct: false },
       { text: "Accelerated bone growth, increased IGF-1 production, and premature closure of epiphyseal cartilage plates", correct: false },
@@ -2032,6 +2032,97 @@ const QUESTIONS = [
     explanation: "RHEUMATOID ARTHRITIS (RA): AUTOIMMUNE — immune system attacks the SYNOVIUM (joint lining) → inflammation, pain; typically BILATERAL (same joint both sides), commonly hands, knees, ankles. Treatment: (1) NSAIDs (early pain management); (2) glucocorticoids (low dose oral or intra-articular); (3) DMARDs — METHOTREXATE, SULFASALAZINE (delay disease PROGRESSION). OSTEOARTHRITIS/ARTHROSIS: DEGENERATIVE — chronic wear of joint CARTILAGE → pain, stiffness, reduced mobility. Treatment: (1) PARACETAMOL + intra-articular glucocorticoids (pain); (2) CARTILAGE PROTECTORS — chondroitin sulphate (best), glucosamine sulphate, hyaluronic acid."
   },
 
+    {
+    id: 157,
+    category: "Endocrine System",
+    question: "TSH is secreted by the pituitary. What is its target and primary action?",
+    answers: [
+      { text: "Target: thyroid gland → stimulates T3/T4 secretion and maintains thyroid tissue", correct: true },
+      { text: "Target: adrenal cortex → stimulates cortisol and aldosterone secretion under CRH control", correct: false },
+      { text: "Target: thyroid gland → inhibits T3/T4 secretion to prevent hyperthyroidism after stress", correct: false },
+      { text: "Target: liver → stimulates IGF-1 production to mediate linear bone and muscle growth", correct: false },
+    ],
+    explanation: "TSH (thyroid-stimulating hormone) from the adenohypophysis targets the THYROID GLAND: it stimulates T3/T4 secretion AND maintains thyroid tissue (trophic effect). Regulated by TRH from the hypothalamus; T3/T4 provide negative feedback. Trap: ACTH targets the adrenal cortex for cortisol — not TSH. IGF-1 is stimulated by GH, not TSH."
+  },
+ 
+  {
+    id: 158,
+    category: "Endocrine System",
+    question: "ACTH is secreted by the pituitary. What is its target and primary action?",
+    answers: [
+      { text: "Target: adrenal CORTEX → stimulates cortisol (glucocorticoid) secretion", correct: true },
+      { text: "Target: adrenal MEDULLA → stimulates adrenaline and noradrenaline release", correct: false },
+      { text: "Target: adrenal CORTEX → stimulates aldosterone secretion only", correct: false },
+      { text: "Target: thyroid gland → stimulates T3/T4 in response to stress", correct: false },
+    ],
+    explanation: "ACTH (adrenocorticotropic hormone) from the adenohypophysis targets the ADRENAL CORTEX specifically, stimulating CORTISOL (glucocorticoid) secretion. Regulated by CRH from the hypothalamus; cortisol feeds back negatively. Key trap: the adrenal MEDULLA releases adrenaline/noradrenaline — but that is controlled by the SYMPATHETIC NERVOUS SYSTEM, not ACTH. Aldosterone is regulated by the renin-angiotensin system, not ACTH."
+  },
+ 
+  {
+    id: 159,
+    category: "Endocrine System",
+    question: "FSH and LH are gonadotropins secreted by the pituitary. In males, FSH and LH target respectively:",
+    answers: [
+      { text: "FSH → Sertoli cells (spermatogenesis); LH → Leydig cells (testosterone secretion)", correct: true },
+      { text: "FSH → Leydig cells (testosterone); LH → Sertoli cells (sperm production)", correct: false },
+      { text: "Both FSH and LH target Leydig cells but stimulate different steps of testosterone synthesis", correct: false },
+      { text: "FSH → seminiferous tubules (testosterone); LH → epididymis (sperm maturation)", correct: false },
+    ],
+    explanation: "In males: FSH targets SERTOLI CELLS → stimulates SPERMATOGENESIS (sperm production). LH targets LEYDIG (interstitial) CELLS → stimulates TESTOSTERONE secretion. Both are regulated by GnRH from the hypothalamus; testosterone and inhibin feed back negatively on FSH/LH. Classic trap: inverting FSH and LH targets — Leydig/LH is the pairing to remember (both start with L)."
+  },
+ 
+  {
+    id: 160,
+    category: "Endocrine System",
+    question: "Growth hormone (GH) is secreted by the pituitary. Which statement about its secretion pattern and key actions is correct?",
+    answers: [
+      { text: "Peaks during sleep; directly stimulates bone/muscle growth and indirectly via IGF-1; hyperglycemic and lipolytic", correct: true },
+      { text: "Peaks after meals; directly promotes adipose storage and is hypoglycemic; its secretion is inhibited by GHRH", correct: false },
+      { text: "Secreted at a constant basal rate with no pulsatility; acts only indirectly via IGF-1 with no direct metabolic role", correct: false },
+      { text: "Peaks exclusively during psychological stress; stimulates cellular glucose uptake; promotes protein catabolism in muscle", correct: false },
+    ],
+    explanation: "GH from somatotrophs: secretion PEAKS DURING SLEEP (and exercise/stress). Acts DIRECTLY (anabolic on muscle, lipolytic on fat, HYPERGLYCEMIC on carbohydrates) and INDIRECTLY via IGF-1 produced by the liver (stimulates cartilage/bone growth). Stimulated by GHRH; inhibited by GHIH (somatostatin). Trap: GH is HYPERGLYCEMIC (opposes insulin, spares glucose for neurons) — not hypoglycemic. It peaks during sleep, not after meals (that's insulin)."
+  },
+ 
+  {
+    id: 161,
+    category: "Endocrine System",
+    question: "Prolactin is secreted by the pituitary. What is its primary function, and what is the dominant control over its secretion?",
+    answers: [
+      { text: "Initiates and maintains milk secretion; dominantly INHIBITED by dopamine (PIH) — without dopamine, prolactin is secreted", correct: true },
+      { text: "Triggers uterine contractions during labor and cervical dilation; dominantly STIMULATED by dopamine from the hypothalamus", correct: false },
+      { text: "Initiates and maintains milk secretion; dominantly STIMULATED by PRH — without active stimulation, secretion stops entirely", correct: false },
+      { text: "Stimulates mammary gland development during puberty only; has no secretory role after delivery of the placenta", correct: false },
+    ],
+    explanation: "PROLACTIN from lactotrophs: initiates and maintains MILK SECRETION by mammary glands. Unique regulation: unlike most pituitary hormones, it is dominantly under INHIBITORY control — DOPAMINE (= PIH, prolactin-inhibiting hormone) continuously suppresses it. Remove dopamine → prolactin is secreted. Suckling inhibits dopamine → prolactin rises → milk produced. Trap: oxytocin causes milk EJECTION and uterine contractions — not prolactin. Prolactin makes the milk; oxytocin ejects it."
+  },
+ 
+  {
+    id: 162,
+    category: "Endocrine System",
+    question: "ADH (vasopressin) is released from the neurohypophysis. What is its primary renal action and what triggers its release?",
+    answers: [
+      { text: "Increases water reabsorption in kidney tubules → concentrated urine; triggered by high plasma osmolarity (dehydration)", correct: true },
+      { text: "Increases Na⁺ reabsorption in the proximal tubule → raises blood pressure; triggered by low plasma osmolarity after overhydration", correct: false },
+      { text: "Promotes K⁺ excretion in the collecting duct → lowers blood K⁺ levels; triggered by a rise in aldosterone secretion", correct: false },
+      { text: "Decreases water reabsorption in collecting tubules → produces dilute urine to flush excess solutes; triggered by high osmolarity", correct: false },
+    ],
+    explanation: "ADH (antidiuretic hormone / vasopressin), SYNTHESISED IN THE HYPOTHALAMUS and released from the NEUROHYPOPHYSIS: acts on renal collecting tubules → inserts aquaporin channels → INCREASES WATER REABSORPTION → produces concentrated, low-volume urine. Triggered by HIGH PLASMA OSMOLARITY detected by hypothalamic osmoreceptors (dehydration). Also causes vasoconstriction at high doses. Trap: Na⁺ reabsorption is aldosterone's job. Low osmolarity inhibits ADH (produces dilute urine — the opposite). The term 'antidiuretic' = against urine production."
+  },
+ 
+  {
+    id: 163,
+    category: "Endocrine System",
+    question: "Oxytocin is released from the neurohypophysis. Which TWO actions does it mediate? (Choose the most complete answer)",
+    answers: [
+      { text: "Uterine contractions during labor (positive feedback) AND milk ejection from mammary glands when suckling", correct: true },
+      { text: "Milk PRODUCTION in mammary alveolar cells AND initiation of the next menstrual cycle after delivery", correct: false },
+      { text: "Uterine contractions during labor AND water reabsorption in the kidney collecting duct via aquaporin channels", correct: false },
+      { text: "Cervical dilation only during the first stage of labor AND inhibition of prolactin secretion to pause milk after birth", correct: false },
+    ],
+    explanation: "OXYTOCIN, synthesised in the HYPOTHALAMUS and released from the NEUROHYPOPHYSIS, has two key actions: (1) UTERINE CONTRACTIONS during labor — positive feedback loop: cervical pressure → more oxytocin → stronger contractions → more pressure → delivery; (2) MILK EJECTION (not production) from mammary glands in response to suckling. Trap: PROLACTIN produces the milk; oxytocin ejects it. WATER reabsorption is ADH's role, not oxytocin's. Synthetic oxytocin (Pitocin) is used clinically to induce or augment labor."
+  },
+  
 ];
 
 const CATEGORIES = [...new Set(QUESTIONS.map(q => q.category))];
